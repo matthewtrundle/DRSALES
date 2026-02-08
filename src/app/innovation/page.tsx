@@ -34,7 +34,7 @@ const publications = [
 const patents = [
   {
     title: 'Automated DMEK Graft Preparation Device',
-    description: 'A revolutionary device that standardizes and simplifies the preparation of corneal grafts for DMEK surgery.',
+    description: 'A revolutionary device that standardizes and simplifies the preparation of corneal grafts for DMEK surgery. Being commercialized through Oko-Tek Inc.',
     status: 'US Patent Pending',
     year: 2024,
     icon: (
@@ -85,8 +85,8 @@ const researchAreas = [
     ),
   },
   {
-    title: 'AI in Diagnostics',
-    description: 'Developing machine learning models for early detection of corneal diseases.',
+    title: 'MedTech Commercialization',
+    description: 'Translating academic innovations into commercial products through Oko-Tek Inc. and industry partnerships.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
@@ -131,7 +131,7 @@ export default function InnovationPage() {
               transition={{ duration: 0.6 }}
               className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-6"
             >
-              Research & Development
+              Research & Innovation
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -151,8 +151,9 @@ export default function InnovationPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-neutral-400 max-w-2xl mb-12"
             >
-              From laboratory breakthroughs to surgical innovations, Dr. Sales is advancing
-              the science of ophthalmology through research, device development, and global education.
+              From laboratory breakthroughs to commercial medical devices, Dr. Sales has spent
+              his career advancing the science of ophthalmology through research, device development,
+              and global education.
             </motion.p>
 
             {/* Stats Row */}
@@ -187,55 +188,114 @@ export default function InnovationPage() {
         </div>
       </section>
 
-      {/* Iowa Eye Device Lab Feature */}
+      {/* Oko-Tek Inc. Feature */}
       <section className="py-24 bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Content Side */}
+            <div>
+              <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
+                Commercial Innovation
+              </p>
+              <h2 className="text-4xl md:text-5xl font-display text-neutral-900 mb-6">
+                Oko-Tek Inc.
+              </h2>
+              <p className="text-lg text-neutral-600 mb-6">
+                Founded by Dr. Sales in 2024, Oko-Tek Inc. is a medical device company dedicated to
+                commercializing innovations developed during his years of academic research. The company
+                is bringing patented surgical devices from the laboratory to the operating room.
+              </p>
+              <p className="text-neutral-600 mb-8">
+                Oko-Tek represents the natural evolution of Dr. Sales&apos; work at the Iowa Eye Device Lab,
+                transforming promising prototypes into FDA-ready commercial products that will improve
+                surgical outcomes for ophthalmologists and their patients worldwide.
+              </p>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: '2024', label: 'Founded' },
+                  { value: '2+', label: 'Products in Pipeline' },
+                  { value: 'Stanford', label: 'BioDesign Program' },
+                  { value: 'IP', label: 'Multiple Patents' },
+                ].map((item, index) => (
+                  <div key={index} className="bg-neutral-50 p-4 rounded-lg">
+                    <p className="text-2xl font-display font-bold text-primary">{item.value}</p>
+                    <p className="text-sm text-neutral-600">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Image Side */}
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100">
                 <Image
                   src="/images/innovation/research-lab.jpg"
-                  alt="Iowa Eye Device Lab research laboratory"
+                  alt="Medical device research and development"
                   fill
                   className="object-cover"
                 />
               </div>
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-primary text-white px-6 py-4 rounded-xl shadow-xl">
-                <p className="text-3xl font-display font-bold">Est. 2018</p>
+              <div className="absolute -bottom-6 -right-6 bg-gold text-white px-6 py-4 rounded-xl shadow-xl">
+                <p className="text-3xl font-display font-bold">2024</p>
+                <p className="text-sm text-gold-100">Oko-Tek Inc. Founded</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Iowa Eye Device Lab - Legacy Section */}
+      <section className="py-24 bg-neutral-50">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
+            <div className="relative order-2 lg:order-1">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100">
+                <Image
+                  src="/images/innovation/futuristic-eye-device.jpg"
+                  alt="Iowa Eye Device Lab innovation"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -left-6 bg-primary text-white px-6 py-4 rounded-xl shadow-xl">
+                <p className="text-3xl font-display font-bold">2018-2026</p>
                 <p className="text-sm text-primary-100">Iowa Eye Device Lab</p>
               </div>
             </div>
 
             {/* Content Side */}
-            <div>
-              <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
-                Innovation Hub
+            <div className="order-1 lg:order-2">
+              <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+                Academic Innovation Legacy
               </p>
               <h2 className="text-4xl md:text-5xl font-display text-neutral-900 mb-6">
                 Iowa Eye Device Lab
               </h2>
               <p className="text-lg text-neutral-600 mb-6">
-                Founded by Dr. Sales, the Iowa Eye Device Lab brings together ophthalmologists,
-                biomedical engineers, and industry partners to develop innovative solutions for
-                unmet clinical needs in eye care.
+                Dr. Sales founded the Iowa Eye Device Lab in 2018 at the University of Iowa, bringing
+                together ophthalmologists, biomedical engineers, and industry partners to develop
+                innovative solutions for unmet clinical needs in eye care.
               </p>
               <p className="text-neutral-600 mb-8">
-                The lab focuses on translating clinical observations into practical devices that
-                improve surgical outcomes, enhance patient safety, and advance the state of the
-                art in ophthalmic surgery.
+                During his tenure as Founding Director (2018-2026), the lab focused on translating
+                clinical observations into practical devices that improve surgical outcomes, enhance
+                patient safety, and advance the state of the art in ophthalmic surgery. The innovations
+                developed there are now being commercialized through Oko-Tek Inc.
               </p>
 
-              {/* Lab Stats */}
+              {/* Lab Achievements */}
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '5+', label: 'Active Projects' },
+                  { value: '5+', label: 'Completed Projects' },
                   { value: '3+', label: 'Industry Partners' },
-                  { value: '10+', label: 'Annual Presentations' },
-                  { value: '$500K+', label: 'Research Funding' },
+                  { value: '10+', label: 'Conference Presentations' },
+                  { value: '$500K+', label: 'Research Funding Secured' },
                 ].map((item, index) => (
-                  <div key={index} className="bg-neutral-50 p-4 rounded-lg">
+                  <div key={index} className="bg-white p-4 rounded-lg border border-neutral-100">
                     <p className="text-2xl font-display font-bold text-primary">{item.value}</p>
                     <p className="text-sm text-neutral-600">{item.label}</p>
                   </div>
@@ -267,7 +327,8 @@ export default function InnovationPage() {
               Focus Areas
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Exploring the frontiers of ophthalmic science through multi-disciplinary collaboration.
+              Exploring the frontiers of ophthalmic science through multi-disciplinary collaboration
+              and entrepreneurial innovation.
             </p>
           </div>
 
@@ -341,7 +402,6 @@ export default function InnovationPage() {
                     <p className="text-neutral-600 mb-4">{patent.description}</p>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-neutral-500">Filed {patent.year}</span>
-                      <span className="text-primary font-medium">View Details →</span>
                     </div>
                   </div>
                 </div>
@@ -431,7 +491,7 @@ export default function InnovationPage() {
               { award: 'AAO Achievement Award', year: '2017' },
               { award: 'NAI Fellow', year: '2023' },
               { award: 'Gold Medal - IIRSC', year: '2024' },
-              { award: 'Innovation Award', year: '2023' },
+              { award: 'Oko-Tek Inc. Founded', year: '2024' },
             ].map((item, index) => (
               <div key={index} className="text-center text-white">
                 <p className="text-2xl font-display font-bold">{item.award}</p>

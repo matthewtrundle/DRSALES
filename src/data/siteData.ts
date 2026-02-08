@@ -1,21 +1,33 @@
 export const siteConfig = {
   name: "Christopher S. Sales, MD, MPH",
   title: "Dr. Christopher S. Sales - Ophthalmologist",
-  description: "Board-certified ophthalmologist specializing in corneal transplantation, DMEK surgery, vision correction, and innovative eye care. Starling Physicians, Connecticut.",
+  description: "Board-certified ophthalmologist specializing in corneal transplantation, DMEK surgery, vision correction, and innovative eye care. Starling Physicians, Wethersfield, Connecticut.",
   phone: "(914) 629-2946",
+  email: "info@drsalesophthalmology.com",
   location: "Starling Physicians, Wethersfield, CT",
-  address: "Wethersfield, CT",
-  tagline: "The Art of Vision Innovation",
+  address: {
+    practice: "Starling Physicians",
+    city: "Wethersfield",
+    state: "CT",
+    zip: "06109",
+  },
+  tagline: "World-Class Eye Surgery. Now in Connecticut.",
 };
 
 export const doctorBio = {
-  shortBio: `Dr. Christopher S. Sales is a board-certified, fellowship-trained cornea and refractive surgeon with extensive expertise in Descemet Membrane Endothelial Keratoplasty (DMEK), LASIK, and advanced corneal procedures. He is recognized internationally as a leader in surgical innovation, having trained over 13 cornea fellows and 39 ophthalmology residents throughout his career.`,
+  shortBio: `Dr. Christopher S. Sales is a board-certified, fellowship-trained cornea and refractive surgeon now practicing with Starling Physicians in Wethersfield, Connecticut. Formerly a tenured Associate Professor of Ophthalmology and founding director of the Iowa Eye Device Lab at the University of Iowa, Dr. Sales brings over two decades of experience in DMEK corneal transplantation, LASIK, and advanced surgical innovation. He has trained more than 13 cornea fellows and 39 ophthalmology residents and is recognized internationally as a leader in surgical education and ophthalmic device development.`,
 
-  fullBio: `Dr. Christopher S. Sales is a tenured Associate Professor of Ophthalmology and a board-certified, fellowship-trained cornea and refractive surgeon. He completed his medical education at Tufts University School of Medicine, where he earned both his MD and MPH degrees with Research Honors. His training continued with an internship at Harvard's Beth Israel Deaconess Medical Center, residency at Stanford University's Byers Eye Institute, and a clinical fellowship in Cornea, External Diseases, and Refractive Surgery at the prestigious Devers Eye Institute and Joint Warfighter Refractive Surgery Center.
+  fullBio: `Dr. Christopher S. Sales is a board-certified, fellowship-trained cornea and refractive surgeon practicing with Starling Physicians in Wethersfield, Connecticut. He brings an extraordinary career spanning the nation's premier medical institutions to serve patients in the greater Hartford area.
 
-Dr. Sales is the Founding Director of the Iowa Eye Device Lab, where he develops and studies needs-based, impactful innovations in ophthalmic surgery. He has authored 49+ peer-reviewed publications and holds multiple patents for surgical devices. His expertise in DMEK surgery has made him a sought-after educator, and he has led skills transfer courses at major conferences including the American Academy of Ophthalmology, ASCRS, and the Cornea Society.
+Dr. Sales earned his B.A. in International Relations from Brown University before pursuing medicine at Tufts University School of Medicine, where he received both his MD and MPH degrees with Research Honors. He completed his internship at Harvard's Beth Israel Deaconess Medical Center, his ophthalmology residency at Stanford University's Byers Eye Institute, and a clinical fellowship in Cornea, External Diseases, and Refractive Surgery at the Devers Eye Institute and Joint Warfighter Refractive Surgery Center.
 
-His commitment to advancing the field is reflected in his roles as Associate Medical Director of the Iowa Lions Eye Bank, Medical Advisory Board Member of the Eye Bank Association of America, and his 2023 induction into the National Academy of Inventors. Dr. Sales has received numerous awards, including the AAO Achievement Award and the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention.`,
+After fellowship, Dr. Sales served as an attending surgeon at the Ophthalmic Consultants of Boston before joining Weill Cornell Medicine and NewYork-Presbyterian Hospital, where he spent four years as an Assistant Professor of Ophthalmology. In 2020, he joined the University of Iowa as a tenure-track faculty member, rising to tenured Associate Professor and serving as Vice Chair for Health Equity and a CIRCA (Center for Inclusive Research, Community, and Access) Fellow. At Iowa, he founded the Iowa Eye Device Lab, a multidisciplinary innovation hub that brought together ophthalmologists, biomedical engineers, and industry partners to develop patented surgical devices. He also served as Associate Medical Director of the Iowa Lions Eye Bank.
+
+In 2024, Dr. Sales founded Oko-Tek Inc., a medical device company dedicated to commercializing innovations from his research. He was selected as an inaugural member of the Stanford BioDesign Global Faculty Training Program in MedTech Entrepreneurship that same year.
+
+Dr. Sales has authored 49+ peer-reviewed publications, holds multiple patents for surgical devices, and was inducted into the National Academy of Inventors in 2023. His expertise in DMEK surgery has made him a sought-after educator worldwide, leading skills transfer courses at the American Academy of Ophthalmology, ASCRS, and the Cornea Society. He received the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention in 2024.
+
+Beyond his clinical and academic work, Dr. Sales has dedicated time to volunteer surgical missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to global eye health and health equity runs throughout his career.`,
 
   philosophy: `My approach to patient care is rooted in the belief that every individual deserves access to the most advanced, evidence-based treatments available. I combine cutting-edge surgical techniques with compassionate, personalized care to help each patient achieve their best possible vision. Innovation in surgery should ultimately serve one purpose: improving outcomes for patients.`,
 };
@@ -59,11 +71,74 @@ export const education = [
   },
 ];
 
+export const careerHistory = [
+  {
+    years: "2026-Present",
+    title: "Ophthalmologist",
+    organization: "Starling Physicians",
+    location: "Wethersfield, CT",
+    description: "Comprehensive cornea, cataract, and refractive surgery practice serving the greater Hartford area.",
+    current: true,
+  },
+  {
+    years: "2024-Present",
+    title: "Founder & CEO",
+    organization: "Oko-Tek Inc.",
+    location: "Medical Device Company",
+    description: "Founded a medical device company to commercialize patented ophthalmic surgical innovations.",
+    current: true,
+  },
+  {
+    years: "2020-2026",
+    title: "Tenured Associate Professor of Ophthalmology",
+    organization: "University of Iowa",
+    location: "Iowa City, IA",
+    description: "Founding Director of the Iowa Eye Device Lab. Vice Chair for Health Equity. Associate Medical Director, Iowa Lions Eye Bank. CIRCA Fellow.",
+    current: false,
+  },
+  {
+    years: "2016-2020",
+    title: "Assistant Professor of Ophthalmology",
+    organization: "Weill Cornell Medicine / NewYork-Presbyterian Hospital",
+    location: "New York, NY",
+    description: "Clinical cornea and refractive surgery, residency and fellowship education, surgical innovation research.",
+    current: false,
+  },
+  {
+    years: "2015-2016",
+    title: "Attending Surgeon",
+    organization: "Ophthalmic Consultants of Boston",
+    location: "Boston, MA",
+    description: "Cornea, cataract, and refractive surgery at one of New England's premier eye care practices.",
+    current: false,
+  },
+];
+
 export const awards = [
   {
     year: "2024",
     title: "Gold Medal for Notable Contributions to Endothelial Keratoplasty",
     organization: "Indian Intraocular Implant & Refractive Surgery Convention",
+  },
+  {
+    year: "2024",
+    title: "William E. Scott Award",
+    organization: "University of Iowa Department of Ophthalmology",
+  },
+  {
+    year: "2024",
+    title: "Inaugural Member, Global Faculty Training Program in MedTech Entrepreneurship",
+    organization: "Stanford Byers Center for BioDesign",
+  },
+  {
+    year: "2024",
+    title: "Best Paper of Session Award (x2)",
+    organization: "Eye Bank Association of America Annual Meeting",
+  },
+  {
+    year: "2024",
+    title: "P.J. Leinfelder Award for Outstanding Ophthalmic Research",
+    organization: "University of Iowa Department of Ophthalmology",
   },
   {
     year: "2023",
@@ -74,6 +149,21 @@ export const awards = [
     year: "2023",
     title: "First Place ($20,000) Innovation Challenge Award",
     organization: "John Pappajohn Entrepreneurial Center, University of Iowa",
+  },
+  {
+    year: "2023",
+    title: "Best Paper of Session Award",
+    organization: "Eye Bank Association of America Annual Meeting",
+  },
+  {
+    year: "2022",
+    title: "P.J. Leinfelder Award for Outstanding Ophthalmic Research",
+    organization: "University of Iowa Department of Ophthalmology",
+  },
+  {
+    year: "2022",
+    title: "Weingeist Award for Excellence in Teaching",
+    organization: "University of Iowa Department of Ophthalmology",
   },
   {
     year: "2017",
@@ -87,8 +177,56 @@ export const awards = [
   },
   {
     year: "2013-2014",
-    title: "Best Poster Award (2 years)",
+    title: "Best Poster Award (2 consecutive years)",
     organization: "American Academy of Ophthalmology Annual Meeting",
+  },
+  {
+    year: "2013",
+    title: "Resident Consultant of the Year (x2)",
+    organization: "Stanford University Byers Eye Institute",
+  },
+  {
+    year: "2009",
+    title: "Alpha Omega Alpha Honor Medical Society Election",
+    organization: "Tufts University School of Medicine",
+  },
+];
+
+export const memberships = [
+  "American Academy of Ophthalmology",
+  "American Society of Cataract and Refractive Surgeons",
+  "Cornea Society",
+  "Eye Bank Association of America",
+  "Association for Research in Vision and Ophthalmology (ARVO)",
+  "Alpha Omega Alpha Honor Medical Society",
+  "Paton Society",
+];
+
+export const humanitarianWork = [
+  {
+    year: "2016",
+    location: "Mauritius",
+    description: "Volunteer ophthalmic surgery mission providing corneal procedures to underserved patients.",
+  },
+  {
+    year: "2013",
+    location: "Guatemala",
+    description: "Remote surgical outreach delivering cataract and corneal surgery to rural communities.",
+  },
+  {
+    year: "2011-2014",
+    location: "Stanford Free Clinics, Palo Alto, CA",
+    description: "Provided eye care services at Stanford's free clinic during residency training.",
+  },
+  {
+    year: "2005",
+    location: "Gulf Coast, USA",
+    description: "Hurricane Katrina relief efforts and community health support.",
+  },
+  {
+    year: "2002",
+    location: "Tanzania",
+    description: "Volunteer ophthalmology surgery mission serving communities with limited access to eye care.",
   },
 ];
 
@@ -96,6 +234,7 @@ export const affiliations = [
   { name: "Stanford University", logo: "/images/logos/stanford.png" },
   { name: "University of Iowa", logo: "/images/logos/iowa.png" },
   { name: "Harvard Medical School", logo: "/images/logos/harvard.png" },
+  { name: "Weill Cornell Medicine", logo: "/images/logos/cornell.png" },
   { name: "Brown University", logo: "/images/logos/brown.png" },
   { name: "Tufts University", logo: "/images/logos/tufts.png" },
 ];
@@ -186,7 +325,16 @@ export const navigation = [
   { name: "Services", href: "/services" },
   { name: "Innovation", href: "/innovation" },
   { name: "Education", href: "/education" },
+  { name: "For Physicians", href: "/for-physicians" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
+];
+
+export const socialLinks = [
+  { name: "Facebook", href: "", placeholder: true },
+  { name: "YouTube", href: "", placeholder: true },
+  { name: "Instagram", href: "", placeholder: true },
+  { name: "LinkedIn", href: "", placeholder: true },
 ];
 
 export const videoLinks = [
@@ -231,6 +379,6 @@ export const faqs = [
   },
   {
     question: "What makes Dr. Sales' approach unique?",
-    answer: "Dr. Sales combines clinical excellence with surgical innovation. As the founder of the Iowa Eye Device Lab and an internationally recognized educator, he brings cutting-edge techniques and personalized care to every patient.",
+    answer: "Dr. Sales combines clinical excellence with surgical innovation. As the founder of the Iowa Eye Device Lab and Oko-Tek Inc., a National Academy of Inventors inductee, and an internationally recognized educator who has trained surgeons worldwide, he brings cutting-edge techniques refined through two decades of academic medicine and research to every patient encounter.",
   },
 ];

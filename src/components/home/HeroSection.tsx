@@ -1,147 +1,104 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import VideoPlayButton from '@/components/ui/VideoPlayButton';
-import VideoModal from '@/components/ui/VideoModal';
+import Link from 'next/link';
 
 export default function HeroSection() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Parallax values
-  const parallaxOffset = scrollY * 0.3;
-  const overlayOpacity = Math.min(0.5 + scrollY * 0.0005, 0.7);
-
   return (
-    <>
-      <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Full-bleed Background Image with Parallax */}
-        <div
-          className="absolute inset-0 scale-110"
-          style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
-        >
-          <Image
-            src="/images/headshots/dr-sales-primary.jpg"
-            alt="Dr. Christopher S. Sales"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-        </div>
+    <section className="relative flex items-center overflow-hidden bg-white">
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-primary-50/30" />
 
-        {/* Dynamic Dark Overlay */}
-        <div
-          className="absolute inset-0 transition-opacity duration-300"
-          style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})` }}
-        />
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-1/3 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-breathe" />
+      <div className="absolute bottom-20 left-10 w-48 h-48 bg-gold/5 rounded-full blur-2xl animate-breathe" />
+      <div className="absolute inset-0 gradient-mesh opacity-30" />
 
-        {/* AI-generated particles overlay */}
-        <div
-          className="absolute inset-0 opacity-30 mix-blend-screen"
-          style={{
-            backgroundImage: 'url(/images/backgrounds/hero-particles.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+      {/* Content */}
+      <div className="container-custom relative z-10 py-14 md:py-20 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          {/* Left - Text Content */}
+          <div>
+            {/* Credential badges */}
+            <div className="flex flex-wrap gap-2.5 mb-6">
+              {['Harvard', 'Stanford', 'Weill Cornell', 'Iowa'].map((inst) => (
+                <span
+                  key={inst}
+                  className="px-3 py-1 text-xs font-medium tracking-wider uppercase text-neutral-500 border border-neutral-200 rounded-full bg-white"
+                >
+                  {inst}
+                </span>
+              ))}
+            </div>
 
-        {/* Gradient Mesh Overlay for depth */}
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-primary/10 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-gold/10 to-transparent" />
-        </div>
-
-        {/* Content - Centered with Stagger Animation */}
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          {/* Main Headline */}
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-normal mb-6 leading-tight">
-            <span className="hero-text-line">
-              <span style={{ animationDelay: '0.1s' }} className={`inline-block ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                The <em className="italic">Art</em> Of
+            {/* Main Headline */}
+            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-normal text-neutral-900 mb-5 leading-[1.15]">
+              <span className="text-primary">See Clearly Again.</span>{' '}
+              World-Class Corneal &amp; Vision Surgery,{' '}
+              <span className="text-primary">
+                Now in Connecticut.
               </span>
-            </span>
-            <br />
-            <span className="hero-text-line">
-              <span style={{ animationDelay: '0.3s' }} className={`inline-block ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                Vision Innovation
-              </span>
-            </span>
-          </h1>
+            </h1>
 
-          {/* Subtitle */}
-          <p
-            className={`font-display text-xl md:text-2xl font-light mb-2 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
-            style={{ animationDelay: '0.5s' }}
-          >
-            Christopher S. Sales, MD, MPH
-          </p>
+            {/* Subtitle */}
+            <p className="text-lg text-neutral-600 mb-3 max-w-xl leading-relaxed">
+              Dr. Christopher S. Sales brings two decades of academic medicine, surgical innovation, and international training to serve patients in the greater Hartford area.
+            </p>
 
-          {/* Tagline */}
-          <p
-            className={`text-sm md:text-base tracking-[0.2em] uppercase text-neutral-300 mb-12 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
-            style={{ animationDelay: '0.6s' }}
-          >
-            Corneal Transplantation & Refractive Surgery in Connecticut
-          </p>
+            {/* Subtitle 2 - Starling */}
+            <p className="text-sm tracking-[0.15em] uppercase text-neutral-400 mb-8">
+              Starling Physicians &bull; Wethersfield, CT
+            </p>
 
-          {/* Video Play Button with delay */}
-          <div
-            className={`${isLoaded ? 'animate-fade-in-scale' : 'opacity-0'}`}
-            style={{ animationDelay: '0.8s' }}
-          >
-            <VideoPlayButton
-              onClick={() => setIsVideoOpen(true)}
-              label="Watch Overview Video"
-              size="md"
-            />
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2 btn-interactive shine-effect"
+              >
+                Schedule a Consultation
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/about"
+                className="border border-neutral-300 hover:border-primary text-neutral-700 hover:text-primary px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2"
+              >
+                Meet Dr. Sales
+              </Link>
+            </div>
+          </div>
+
+          {/* Right - Headshot in white coat */}
+          <div className="relative hidden lg:flex justify-center">
+            {/* Photo container with background for contrast */}
+            <div className="relative">
+              <div className="relative w-[420px] xl:w-[460px] aspect-[3/4] overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-100 to-neutral-50 shadow-xl ring-1 ring-neutral-100">
+                <Image
+                  src="/images/headshots/dr-sales-secondary.jpg"
+                  alt="Dr. Christopher S. Sales, MD, MPH in white coat"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+
+              {/* Floating credential card - bottom left */}
+              <div className="absolute bottom-6 -left-6 bg-white border border-neutral-100 shadow-lg rounded-lg px-5 py-3 z-10 animate-float">
+                <p className="text-neutral-900 font-display font-semibold text-sm">49+ Publications</p>
+                <p className="text-neutral-500 text-xs">National Academy of Inventors</p>
+              </div>
+
+              {/* Floating credential card - top right */}
+              <div className="absolute top-6 -right-6 bg-white border border-neutral-100 shadow-lg rounded-lg px-5 py-3 z-10 animate-float" style={{ animationDelay: '2s' }}>
+                <p className="text-neutral-900 font-display font-semibold text-sm">Board Certified</p>
+                <p className="text-neutral-500 text-xs">Fellowship Trained</p>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Decorative floating element */}
-        <div className="absolute top-1/4 right-10 w-32 h-32 rounded-full border border-white/10 animate-breathe hidden lg:block" />
-        <div className="absolute bottom-1/3 left-10 w-20 h-20 rounded-full border border-white/5 animate-breathe hidden lg:block" style={{ animationDelay: '2s' }} />
-
-        {/* Bottom CTA Button */}
-        <a
-          href="/contact"
-          className={`absolute bottom-8 right-8 bg-primary hover:bg-primary-600 text-white px-6 py-3 rounded flex items-center gap-2 font-medium btn-interactive z-10 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
-          style={{ animationDelay: '1s' }}
-        >
-          Request an Appointment
-          <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-
-        {/* Scroll Indicator with animation */}
-        <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10 ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}
-          style={{ animationDelay: '1.2s' }}
-        >
-          <span className="text-xs text-white/50 tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent animate-pulse-soft" />
-        </div>
-      </section>
-
-      {/* Video Modal */}
-      <VideoModal
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        title="Meet Dr. Christopher S. Sales"
-      />
-    </>
+      </div>
+    </section>
   );
 }

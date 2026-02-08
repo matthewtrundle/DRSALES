@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import ContactForm from '@/components/forms/ContactForm';
 
 const contactInfo = {
@@ -8,10 +9,10 @@ const contactInfo = {
   email: 'info@drsalesophthalmology.com',
   practice: 'Starling Physicians',
   address: {
-    street: '100 Grand Street',
-    city: 'West Hartford',
+    street: 'Wethersfield',
+    city: 'Wethersfield',
     state: 'CT',
-    zip: '06119',
+    zip: '06109',
   },
   hours: [
     { day: 'Monday', hours: '8:00 AM - 5:00 PM' },
@@ -157,6 +158,17 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
+              {/* Office Image */}
+              <div className="relative h-48 rounded-lg overflow-hidden shadow-soft border border-neutral-100">
+                <Image
+                  src="/images/contact/office-reception.jpg"
+                  alt="Starling Physicians office reception"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+
               {/* Office Hours Card */}
               <div className="bg-white rounded-lg p-8 shadow-soft border border-neutral-100">
                 <h3 className="font-display text-xl text-neutral-900 mb-6 flex items-center gap-2">
@@ -244,7 +256,7 @@ export default function ContactPage() {
                 Visit Our Office
               </h2>
               <p className="text-neutral-600">
-                Conveniently located in West Hartford, Connecticut
+                Conveniently located in Wethersfield, Connecticut
               </p>
             </motion.div>
           </div>
@@ -253,7 +265,7 @@ export default function ContactPage() {
         {/* Map Container */}
         <div className="relative h-[400px] md:h-[500px] bg-neutral-100">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.5!2d-72.757!3d41.762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65371c74e89e3%3A0x9c8b6a8b6c8b6a8b!2s100%20Grand%20St%2C%20West%20Hartford%2C%20CT%2006119!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23870.4!2d-72.6823!3d41.7143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65525bfe9a7c7%3A0x8a1b0124db3a06d7!2sWethersfield%2C%20CT%2006109!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
