@@ -51,6 +51,10 @@ const imagesToGenerate = [
   // Results images
   { path: 'results/iris-before.jpg', prompt: 'Clinical photograph of eye with traumatic iris defect showing missing iris tissue and visible lens, medical documentation, professional lighting, shows condition requiring treatment, photorealistic' },
   { path: 'results/iris-after.jpg', prompt: 'Clinical photograph of same eye after successful iris reconstruction with prosthetic implant, natural blue iris appearance restored, medical documentation, excellent surgical outcome, photorealistic' },
+
+  // Innovation page images
+  { path: 'innovation/futuristic-eye-device.jpg', prompt: 'Futuristic eye scanning device with holographic display showing eye diagnostics, advanced medical technology, blue and gold accent lighting, dark sleek modern design, professional product photography, photorealistic' },
+  { path: 'innovation/research-lab.jpg', prompt: 'Modern medical research laboratory with scientist working at microscope, clean white environment with blue accent lighting, high-tech equipment and computer displays, professional medical photography, photorealistic' },
 ];
 
 function generateImage(imageConfig) {

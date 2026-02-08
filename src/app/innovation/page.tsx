@@ -174,19 +174,15 @@ export default function InnovationPage() {
           </div>
         </div>
 
-        {/* Floating Device Mockup - Placeholder for AI Image */}
+        {/* Floating Device Mockup */}
         <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-1/3">
-          <div className="relative">
-            {/* Placeholder: AI-generate "futuristic eye scanning device with holographic display, medical technology, blue and gold accents, dark background" */}
-            <div className="aspect-square bg-gradient-to-br from-primary/20 to-gold/10 rounded-3xl backdrop-blur border border-white/10 flex items-center justify-center">
-              <div className="text-center text-white/50 p-8">
-                <svg className="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-                <p className="text-sm">AI Image: Futuristic Eye Device</p>
-              </div>
-            </div>
+          <div className="relative aspect-square rounded-3xl overflow-hidden border border-white/10">
+            <Image
+              src="/images/innovation/futuristic-eye-device.jpg"
+              alt="Futuristic eye scanning device"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -198,15 +194,12 @@ export default function InnovationPage() {
             {/* Image Side */}
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-100">
-                {/* Placeholder: AI-generate "modern medical research laboratory, scientist working with microscope, clean white environment, blue accent lighting" */}
-                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-neutral-100 flex items-center justify-center">
-                  <div className="text-center text-neutral-400 p-8">
-                    <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
-                    <p className="text-sm">AI Image: Research Lab</p>
-                  </div>
-                </div>
+                <Image
+                  src="/images/innovation/research-lab.jpg"
+                  alt="Iowa Eye Device Lab research laboratory"
+                  fill
+                  className="object-cover"
+                />
               </div>
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -right-6 bg-primary text-white px-6 py-4 rounded-xl shadow-xl">
