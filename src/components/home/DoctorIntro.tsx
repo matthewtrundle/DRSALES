@@ -35,7 +35,7 @@ export default function DoctorIntro() {
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: 'url(/images/backgrounds/doctor-texture.png)',
+          backgroundImage: 'url(/images/backgrounds/doctor-texture.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

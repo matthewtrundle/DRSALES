@@ -311,7 +311,7 @@ export default function InnovationPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <Image
-            src="/images/backgrounds/education-nodes.png"
+            src="/images/backgrounds/education-nodes.jpg"
             alt=""
             fill
             className="object-cover"
@@ -506,7 +506,7 @@ export default function InnovationPage() {
       <section className="py-24 bg-neutral-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/images/backgrounds/cta-glow.png"
+            src="/images/backgrounds/cta-glow.jpg"
             alt=""
             fill
             className="object-cover"

@@ -112,7 +112,7 @@ export default function TestimonialsCarousel() {
       <div
         className="absolute inset-0 opacity-35"
         style={{
-          backgroundImage: 'url(/images/backgrounds/testimonials-gradient.png)',
+          backgroundImage: 'url(/images/backgrounds/testimonials-gradient.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

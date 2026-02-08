@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(/images/backgrounds/about-geometric.png)',
+            backgroundImage: 'url(/images/backgrounds/about-geometric.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -77,7 +77,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: 'url(/images/backgrounds/education-nodes.png)',
+            backgroundImage: 'url(/images/backgrounds/education-nodes.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -204,7 +204,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(/images/backgrounds/awards-shimmer.png)',
+            backgroundImage: 'url(/images/backgrounds/awards-shimmer.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -262,7 +262,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(/images/backgrounds/vision-clarity.png)',
+            backgroundImage: 'url(/images/backgrounds/vision-clarity.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

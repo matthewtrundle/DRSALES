@@ -40,7 +40,7 @@ export default function ServiceHighlights() {
       <div
         className="absolute inset-0 opacity-25"
         style={{
-          backgroundImage: 'url(/images/backgrounds/services-waves.png)',
+          backgroundImage: 'url(/images/backgrounds/services-waves.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
