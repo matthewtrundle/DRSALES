@@ -189,7 +189,7 @@ export default function ForPhysiciansPage() {
                   Call to Refer: {siteConfig.phone}
                 </a>
                 <Link
-                  href="/contact"
+                  href="/refer"
                   className="border border-neutral-600 hover:border-neutral-400 text-white px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2"
                 >
                   Send a Referral
@@ -419,8 +419,8 @@ export default function ForPhysiciansPage() {
               </svg>
               Call {siteConfig.phone}
             </a>
-            <Button href="/contact" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              Contact Form
+            <Button href="/refer" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              Send a Referral
             </Button>
           </div>
         </div>

@@ -1,9 +1,12 @@
 'use client';
 
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   return (
     <section className="relative flex items-center overflow-hidden bg-white">
       {/* Subtle background texture */}
@@ -70,18 +73,31 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right - Headshot in white coat */}
+          {/* Right - Motion Graphic Video */}
           <div className="relative hidden lg:flex justify-center">
-            {/* Photo container with background for contrast */}
             <div className="relative">
               <div className="relative w-[420px] xl:w-[460px] aspect-[3/4] overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-100 to-neutral-50 shadow-xl ring-1 ring-neutral-100">
-                <Image
-                  src="/images/headshots/dr-sales-secondary.jpg"
-                  alt="Dr. Christopher S. Sales, MD, MPH in white coat"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                />
+                {/* Video: plays once on load, freezes on last frame */}
+                <video
+                  ref={videoRef}
+                  autoPlay
+                  muted
+                  playsInline
+                  poster="/DrSaleshero-poster.jpg"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                >
+                  <source src="/DrSaleshero.mp4" type="video/mp4" />
+                </video>
+                {/* Poster fallback for browsers / reduced-motion */}
+                <noscript>
+                  <Image
+                    src="/DrSaleshero-poster.jpg"
+                    alt="Dr. Christopher S. Sales, MD, MPH in white coat"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </noscript>
               </div>
 
               {/* Floating credential card - bottom left */}
