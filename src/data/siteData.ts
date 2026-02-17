@@ -1,31 +1,45 @@
 export const siteConfig = {
   name: "Christopher S. Sales, MD, MPH",
   title: "Dr. Christopher S. Sales - Ophthalmologist",
-  description: "Board-certified ophthalmologist specializing in corneal transplantation, DMEK surgery, vision correction, and innovative eye care. Starling Physicians, Wethersfield, Connecticut.",
-  phone: "(914) 629-2946",
+  description: "Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplantation, EVO ICL vision correction, and dry eye treatment. Starling Physicians, Wethersfield & New Britain, Connecticut.",
+  phone: "(860) 826-4460",
   email: "info@drsalesophthalmology.com",
-  location: "Starling Physicians, Wethersfield, CT",
+  location: "Starling Physicians — Wethersfield & New Britain, CT",
   address: {
     practice: "Starling Physicians",
     city: "Wethersfield",
     state: "CT",
     zip: "06109",
   },
-  tagline: "World-Class Eye Surgery. Now in Connecticut.",
+  locations: [
+    {
+      name: "Wethersfield",
+      practice: "Starling Physicians",
+      address: "Wethersfield, CT 06109",
+    },
+    {
+      name: "New Britain",
+      practice: "Starling Physicians",
+      address: "1 Lake St Building C, New Britain, CT 06052",
+    },
+  ],
+  tagline: "World-Class Cataract, DMEK, & ICL Surgery. Now in Connecticut.",
 };
 
 export const doctorBio = {
-  shortBio: `Dr. Christopher S. Sales is a board-certified, fellowship-trained cornea and refractive surgeon now practicing with Starling Physicians in Wethersfield, Connecticut. Formerly a tenured Associate Professor of Ophthalmology and founding director of the Iowa Eye Device Lab at the University of Iowa, Dr. Sales brings over two decades of experience in DMEK corneal transplantation, LASIK, and advanced surgical innovation. He has trained more than 13 cornea fellows and 39 ophthalmology residents and is recognized internationally as a leader in surgical education and ophthalmic device development.`,
+  shortBio: `Board-certified ophthalmologist, internationally recognized eye surgeon, surgical innovator and coach -- now serving patients in Connecticut. After training at some of the country's most respected eye programs, Dr. Christopher Sales chose to bring his expertise home to Connecticut, specializing in advanced cataract surgery, DMEK corneal transplants, and EVO ICL vision correction.`,
 
-  fullBio: `Dr. Christopher S. Sales is a board-certified, fellowship-trained cornea and refractive surgeon practicing with Starling Physicians in Wethersfield, Connecticut. He brings an extraordinary career spanning the nation's premier medical institutions to serve patients in the greater Hartford area.
+  fullBio: `Dr. Christopher S. Sales is a board-certified ophthalmologist and fellowship-trained cornea and refractive surgeon practicing with Starling Physicians in Wethersfield, Connecticut. He brings an extraordinary career spanning the nation's premier medical institutions to serve patients in the greater Hartford area.
 
-Dr. Sales earned his B.A. in International Relations from Brown University before pursuing medicine at Tufts University School of Medicine, where he received both his MD and MPH degrees with Research Honors. He completed his internship at Harvard's Beth Israel Deaconess Medical Center, his ophthalmology residency at Stanford University's Byers Eye Institute, and a clinical fellowship in Cornea, External Diseases, and Refractive Surgery at the Devers Eye Institute and Joint Warfighter Refractive Surgery Center.
+Dr. Sales earned his B.A. in International Relations from Brown University before pursuing medicine at Tufts University School of Medicine, where he received both his MD and MPH degrees with Research Honors. He completed his internship at Harvard's Beth Israel Deaconess Medical Center, his ophthalmology residency at Stanford University's Byers Eye Institute under the mentorship of Dr. Mark Blumenkranz, and a clinical fellowship in Cornea, External Diseases, and Refractive Surgery at the Devers Eye Institute under Dr. Mark Terry and at the Joint Warfighter Refractive Surgery Center under Dr. Charles Reilly.
 
-After fellowship, Dr. Sales served as an attending surgeon at the Ophthalmic Consultants of Boston before joining Weill Cornell Medicine and NewYork-Presbyterian Hospital, where he spent four years as an Assistant Professor of Ophthalmology. In 2020, he joined the University of Iowa as a tenure-track faculty member, rising to tenured Associate Professor and serving as Vice Chair for Health Equity and a CIRCA (Center for Inclusive Research, Community, and Access) Fellow. At Iowa, he founded the Iowa Eye Device Lab, a multidisciplinary innovation hub that brought together ophthalmologists, biomedical engineers, and industry partners to develop patented surgical devices. He also served as Associate Medical Director of the Iowa Lions Eye Bank.
+After fellowship, Dr. Sales served as an attending surgeon at the Ophthalmic Consultants of Boston before joining Weill Cornell Medicine and NewYork-Presbyterian Hospital, where he spent four years as an Assistant Professor of Ophthalmology and became the first surgeon in New York City to perform DMEK corneal transplant surgery. He launched the EVO ICL program at Weill Cornell and established himself as a leader in advanced corneal and refractive surgery.
+
+In 2020, he joined the University of Iowa as a tenure-track faculty member, rising to tenured Associate Professor and serving as Vice Chair for Health Equity and a CIRCA Fellow. At Iowa, he founded the Iowa Eye Device Lab, a multidisciplinary innovation hub that brought together ophthalmologists, biomedical engineers, and industry partners to develop patented surgical devices. He also served as Associate Medical Director of the Iowa Lions Eye Bank and launched the university's EVO ICL program.
 
 In 2024, Dr. Sales founded Oko-Tek Inc., a medical device company dedicated to commercializing innovations from his research. He was selected as an inaugural member of the Stanford BioDesign Global Faculty Training Program in MedTech Entrepreneurship that same year.
 
-Dr. Sales has authored 49+ peer-reviewed publications, holds multiple patents for surgical devices, and was inducted into the National Academy of Inventors in 2023. His expertise in DMEK surgery has made him a sought-after educator worldwide, leading skills transfer courses at the American Academy of Ophthalmology, ASCRS, and the Cornea Society. He received the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention in 2024.
+Dr. Sales has authored 50+ peer-reviewed publications, holds multiple patents for surgical devices, and was inducted into the National Academy of Inventors in 2023. His expertise in DMEK surgery has made him a sought-after educator worldwide, having trained 15+ cornea fellows and 40+ ophthalmology residents, and leading skills transfer courses at the American Academy of Ophthalmology, ASCRS, and the Cornea Society. He received the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention in 2024.
 
 Beyond his clinical and academic work, Dr. Sales has dedicated time to volunteer surgical missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to global eye health and health equity runs throughout his career.`,
 
@@ -240,82 +254,66 @@ export const affiliations = [
 ];
 
 export const stats = [
-  { value: 49, label: "Peer-Reviewed Publications", suffix: "+" },
-  { value: 13, label: "Cornea Fellows Trained", suffix: "+" },
-  { value: 39, label: "Residents Trained", suffix: "+" },
-  { value: 20, label: "Years of Experience", suffix: "+" },
+  { value: 50, label: "Peer-Reviewed Publications", suffix: "+" },
+  { value: 15, label: "Cornea Fellows Trained", suffix: "+" },
+  { value: 40, label: "Residents Trained", suffix: "+" },
+  { value: 10, label: "Years of Experience", suffix: "+" },
 ];
 
 export const services = [
   {
     id: "corneal-transplant",
     title: "Corneal Transplantation",
-    shortDescription: "Advanced partial and full-thickness corneal transplant procedures including DMEK, DSAEK, DALK, and PK.",
-    description: "Dr. Sales is internationally recognized for his expertise in Descemet Membrane Endothelial Keratoplasty (DMEK), the most advanced form of corneal transplantation. He has performed thousands of these procedures and has trained surgeons worldwide in his techniques.",
+    shortDescription: "Advanced DMEK corneal transplant surgery -- the gold standard for Fuchs' Dystrophy and corneal disease.",
+    description: "DMEK is the most advanced form of corneal transplant surgery, offering faster recovery and better visual outcomes than older techniques. Dr. Sales was the first surgeon in New York City to perform DMEK and has trained surgeons worldwide in this technique. He specializes in DMEK for Fuchs' Dystrophy and other conditions causing corneal swelling and vision loss.",
     procedures: [
       { name: "DMEK", description: "Descemet Membrane Endothelial Keratoplasty - the gold standard for treating Fuchs' Dystrophy" },
       { name: "DSAEK", description: "Descemet Stripping Automated Endothelial Keratoplasty" },
       { name: "DALK", description: "Deep Anterior Lamellar Keratoplasty for stromal disease" },
       { name: "PK", description: "Penetrating Keratoplasty - full-thickness corneal transplant" },
-      { name: "Corneal Crosslinking", description: "Treatment to strengthen the cornea in keratoconus" },
     ],
     icon: "eye",
     href: "/services/corneal-transplant",
   },
   {
+    id: "cataract",
+    title: "Cataract Surgery",
+    shortDescription: "Premium cataract surgery with advanced technology lens implants and laser-assisted options.",
+    description: "Dr. Sales has performed thousands of cataract procedures, including complex cases that other surgeons may not take on. From standard cataract removal to laser-assisted surgery with premium lens implants, every procedure is tailored to your visual goals.",
+    procedures: [
+      { name: "Advanced Technology Cataract Surgery", description: "Laser-assisted and premium IOL options" },
+      { name: "Standard Cataract Surgery", description: "Phacoemulsification with IOL implantation" },
+      { name: "Premium IOLs", description: "Multifocal, toric, and extended depth of focus lenses" },
+    ],
+    icon: "cataract",
+    href: "/services/cataract",
+  },
+  {
     id: "vision-correction",
     title: "Vision Correction",
-    shortDescription: "LASIK, PRK, and implantable contact lens (ICL) procedures for freedom from glasses and contacts.",
-    description: "Using the latest laser technology and implantable lens options, Dr. Sales helps patients achieve visual freedom. His research contributions have advanced the safety and efficacy of refractive surgery.",
+    shortDescription: "EVO ICL implantable lens and refractive surgery for freedom from glasses and contacts.",
+    description: "The EVO ICL is an implantable lens that corrects vision without permanently altering your cornea -- unlike LASIK or PRK. It's an excellent option for patients with high prescriptions, thin corneas, or dry eyes. Dr. Sales launched ICL programs at both Weill Cornell and the University of Iowa before bringing this technology to Connecticut.",
     procedures: [
+      { name: "EVO ICL", description: "Implantable Collamer Lens for high prescriptions and those not suited for LASIK" },
       { name: "LASIK", description: "Laser-assisted in situ keratomileusis for myopia, hyperopia, and astigmatism" },
       { name: "PRK", description: "Photorefractive keratectomy - surface laser vision correction" },
-      { name: "ICL", description: "Implantable Collamer Lens for high prescriptions" },
-      { name: "Laser Cataract Surgery", description: "Femtosecond laser-assisted cataract removal" },
     ],
     icon: "glasses",
     href: "/services/vision-correction",
   },
   {
-    id: "iris-reconstruction",
-    title: "Iris Reconstruction",
-    shortDescription: "Prosthetic iris implantation and surgical repair for traumatic or congenital iris defects.",
-    description: "Dr. Sales performs complex iris reconstruction procedures to restore both function and cosmesis for patients with iris damage from trauma, surgery, or congenital conditions.",
+    id: "dry-eye",
+    title: "Dry Eye Treatment",
+    shortDescription: "Comprehensive evaluation and treatment for dry eye disease and meibomian gland dysfunction.",
+    description: "Dr. Sales takes a systematic approach to identifying the root cause of your symptoms and developing a personalized treatment plan -- from in-office procedures to advanced therapies.",
     procedures: [
-      { name: "Iris Prosthesis", description: "Custom silicone iris implants for cosmetic and functional restoration" },
-      { name: "Trauma Repair", description: "Surgical repair of iris damage from injury" },
-      { name: "Congenital Defect Correction", description: "Treatment for aniridia and coloboma" },
-    ],
-    icon: "iris",
-    href: "/services/iris-reconstruction",
-  },
-  {
-    id: "ocular-surface",
-    title: "Ocular Surface Disease",
-    shortDescription: "Comprehensive treatment for Fuchs' Dystrophy, keratoconus, dry eye, and other corneal conditions.",
-    description: "Dr. Sales specializes in the diagnosis and treatment of complex corneal and ocular surface diseases, using both medical and surgical approaches to restore comfort and vision.",
-    procedures: [
-      { name: "Fuchs' Dystrophy Management", description: "Medical and surgical treatment options" },
-      { name: "Keratoconus Treatment", description: "Including crosslinking and specialty contact lenses" },
-      { name: "Dry Eye Disease", description: "Advanced therapies for chronic dry eye" },
-      { name: "Pterygium Surgery", description: "Surgical removal of conjunctival growths" },
+      { name: "Diagnostic Evaluation", description: "Comprehensive dry eye assessment and meibomian gland imaging" },
+      { name: "In-Office Treatments", description: "Thermal pulsation, intense pulsed light, and other advanced therapies" },
+      { name: "Medical Management", description: "Prescription medications and customized drop regimens" },
+      { name: "Lifestyle Optimization", description: "Environmental and behavioral modifications for lasting relief" },
     ],
     icon: "surface",
-    href: "/services/ocular-surface",
-  },
-  {
-    id: "cataract",
-    title: "Cataract Surgery",
-    shortDescription: "Premium cataract surgery with advanced lens implant options for optimal vision outcomes.",
-    description: "Dr. Sales offers state-of-the-art cataract surgery, including laser-assisted techniques and premium intraocular lens options to reduce or eliminate dependence on glasses after surgery.",
-    procedures: [
-      { name: "Standard Cataract Surgery", description: "Phacoemulsification with IOL implantation" },
-      { name: "Laser Cataract Surgery", description: "Femtosecond laser-assisted procedure" },
-      { name: "Premium IOLs", description: "Multifocal, toric, and extended depth of focus lenses" },
-      { name: "Complex Cataract Cases", description: "Management of complicated cataracts" },
-    ],
-    icon: "cataract",
-    href: "/services/cataract",
+    href: "/services/dry-eye",
   },
 ];
 
@@ -323,10 +321,7 @@ export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Innovation", href: "/innovation" },
-  { name: "Education", href: "/education" },
-  { name: "For Physicians", href: "/for-physicians" },
-  { name: "Blog", href: "/blog" },
+  { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
 ];
 

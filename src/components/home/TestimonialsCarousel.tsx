@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import Section from '@/components/ui/Section';
+import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Testimonial {
   id: number;
@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     quote:
       "Dr. Sales restored my vision when I thought I'd never see clearly again. His expertise in DMEK surgery gave me a second chance at life.",
     initials: 'M.R.',
-    procedure: 'DMEK Surgery',
+    procedure: 'DMEK surgery',
     location: 'Hartford, CT',
   },
   {
@@ -25,66 +25,61 @@ const testimonials: Testimonial[] = [
     quote:
       "After years of struggling with Fuchs' Dystrophy, Dr. Sales performed my corneal transplant with incredible precision. The recovery was faster than I expected.",
     initials: 'J.K.',
-    procedure: 'Corneal Transplant',
+    procedure: 'Corneal transplant',
     location: 'New Haven, CT',
   },
   {
     id: 3,
     quote:
-      "I was told by other surgeons that my case was too complex. Dr. Sales took the time to understand my unique situation and developed a treatment plan that worked.",
-    initials: 'S.L.',
-    procedure: 'Complex Cataract Surgery',
-    location: 'Stamford, CT',
+      "I'd been putting off cataract surgery for years because I was nervous. Dr. Sales walked me through everything so clearly that I actually felt excited about it. Best decision I ever made.",
+    initials: 'A.T.',
+    procedure: 'Cataract surgery',
+    location: 'Glastonbury, CT',
   },
   {
     id: 4,
     quote:
       "Freedom from glasses after 30 years. Dr. Sales' thorough evaluation and clear communication throughout the process gave me complete confidence.",
     initials: 'D.P.',
-    procedure: 'LASIK',
+    procedure: 'Vision correction',
     location: 'West Hartford, CT',
   },
 ];
 
+function StarRating() {
+  return (
+    <div className="flex gap-1 mb-6">
+      {[...Array(5)].map((_, i) => (
+        <svg
+          key={i}
+          className="w-4 h-4 text-gold"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 export default function TestimonialsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const nextTestimonial = useCallback(() => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-      setIsAnimating(false);
-    }, 300);
-  }, [isAnimating]);
-
-  const prevTestimonial = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-      setIsAnimating(false);
-    }, 300);
-  };
-
-  const goToTestimonial = (index: number) => {
+  const goTo = (index: number) => {
     if (isAnimating || index === currentIndex) return;
     setIsAnimating(true);
     setTimeout(() => {
       setCurrentIndex(index);
       setIsAnimating(false);
-    }, 300);
+    }, 250);
   };
 
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(nextTestimonial, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused, nextTestimonial]);
+  const next = () => goTo((currentIndex + 1) % testimonials.length);
+  const prev = () => goTo((currentIndex - 1 + testimonials.length) % testimonials.length);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -104,126 +99,89 @@ export default function TestimonialsCarousel() {
     return () => observer.disconnect();
   }, []);
 
-  const currentTestimonial = testimonials[currentIndex];
+  const current = testimonials[currentIndex];
 
   return (
-    <Section background="light" className="relative overflow-hidden">
-      {/* AI-generated background */}
-      <div
-        className="absolute inset-0 opacity-35"
-        style={{
-          backgroundImage: 'url(/images/backgrounds/testimonials-gradient.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div ref={sectionRef} className="max-w-4xl mx-auto relative">
+    <section className="relative overflow-hidden py-16 md:py-24">
+      {/* Full-bleed background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/secondary-background.png"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-warm-cream/85" />
+      </div>
+
+      <div ref={sectionRef} className="container-custom max-w-3xl mx-auto relative z-10">
         {/* Header */}
-        <div className={`text-center mb-12 transition-all duration-700 ease-smooth ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-primary font-medium mb-3 tracking-[0.2em] uppercase text-sm">
-            Patient Stories
+        <div
+          className={`text-center mb-12 transition-all duration-700 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <p className="text-warm-gray font-body text-sm tracking-wide mb-3">
+            From our patients
           </p>
-          <h2 className="font-display text-3xl md:text-4xl text-neutral-900">
-            What Our Patients Say
-          </h2>
+          <h2 className="heading-lg text-charcoal">What people say</h2>
         </div>
 
         <div
-          className={`relative transition-all duration-700 ease-smooth ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`relative transition-all duration-700 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
           style={{ transitionDelay: '0.2s' }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          role="region"
+          aria-label="Patient testimonials"
         >
-          {/* Quote Container */}
-          <div className="text-center px-4 md:px-12 relative min-h-[280px] flex flex-col justify-center">
-            {/* Large quotation mark decoration */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 font-display text-[120px] leading-none text-primary/10 select-none pointer-events-none">
-              &ldquo;
-            </div>
+          {/* Quote */}
+          <div className="text-center px-4 md:px-8 min-h-[240px] flex flex-col justify-center">
+            <StarRating />
 
-            {/* Quote with crossfade */}
-            <div className="relative">
+            <div aria-live="polite">
               <blockquote
-                className={`font-display text-2xl md:text-3xl text-neutral-800 leading-relaxed mb-8 italic transition-all duration-500 ease-smooth ${
-                  isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+                className={`font-body text-xl md:text-2xl text-charcoal leading-relaxed mb-8 transition-all duration-400 ease-out ${
+                  isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'
                 }`}
               >
-                &ldquo;{currentTestimonial.quote}&rdquo;
+                &ldquo;{current.quote}&rdquo;
               </blockquote>
 
-              {/* Attribution */}
               <div
-                className={`flex flex-col items-center transition-all duration-500 ease-smooth ${
+                className={`transition-all duration-400 ease-out ${
                   isAnimating ? 'opacity-0' : 'opacity-100'
                 }`}
-                style={{ transitionDelay: '0.1s' }}
               >
-                <p className="font-medium text-neutral-900 text-lg">
-                  {currentTestimonial.initials}
-                </p>
-                <p className="text-sm text-neutral-500">
-                  {currentTestimonial.procedure} &bull; {currentTestimonial.location}
+                <p className="text-warm-gray text-sm font-body">
+                  {current.initials} · {current.procedure} · {current.location}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Navigation */}
-          <div className="flex justify-center items-center gap-8 mt-12">
-            {/* Previous */}
+          {/* Simple navigation */}
+          <div className="flex justify-center items-center gap-6 mt-10">
             <button
-              onClick={prevTestimonial}
-              className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-neutral-900 hover:border-neutral-400 transition-all duration-300 hover:scale-105"
+              onClick={prev}
+              className="text-warm-gray hover:text-charcoal transition-colors text-sm font-body"
               aria-label="Previous testimonial"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
-              </svg>
+              Previous
             </button>
-
-            {/* Dots */}
-            <div className="flex gap-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToTestimonial(index)}
-                  className="group p-1"
-                  aria-label={`Go to testimonial ${index + 1}`}
-                >
-                  <div
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex
-                        ? 'bg-primary scale-125'
-                        : 'bg-neutral-300 group-hover:bg-neutral-400'
-                    }`}
-                  />
-                </button>
-              ))}
-            </div>
-
-            {/* Next */}
+            <span className="text-neutral-300">|</span>
             <button
-              onClick={nextTestimonial}
-              className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-neutral-900 hover:border-neutral-400 transition-all duration-300 hover:scale-105"
+              onClick={next}
+              className="text-warm-gray hover:text-charcoal transition-colors text-sm font-body"
               aria-label="Next testimonial"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-              </svg>
+              Next
             </button>
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-8 max-w-xs mx-auto">
-            <div className="h-px bg-neutral-200 relative overflow-hidden">
-              <div
-                className="absolute left-0 top-0 h-full bg-primary transition-all duration-300"
-                style={{ width: `${((currentIndex + 1) / testimonials.length) * 100}%` }}
-              />
-            </div>
           </div>
         </div>
       </div>
-    </Section>
+
+    </section>
   );
 }
