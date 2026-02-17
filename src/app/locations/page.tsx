@@ -64,10 +64,10 @@ export default function LocationsPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary-50 to-white py-16 md:py-20">
+      <section className="bg-gradient-to-b from-charcoal/5 to-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-primary-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
               Serving All of Connecticut
             </h1>
             <p className="text-xl text-gray-600">
@@ -91,14 +91,14 @@ export default function LocationsPage() {
                 {/* Location header */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h2 className="text-2xl font-display font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
+                    <h2 className="text-2xl font-display font-semibold text-charcoal group-hover:text-accent-600 transition-colors">
                       {location.city}
                     </h2>
                     <p className="text-gray-500">{location.region}</p>
                   </div>
-                  <span className="flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full group-hover:bg-accent-100 transition-colors">
+                  <span className="flex items-center justify-center w-12 h-12 bg-charcoal/10 rounded-full group-hover:bg-accent-100 transition-colors">
                     <svg
-                      className="w-6 h-6 text-primary-600 group-hover:text-accent-600 transition-colors"
+                      className="w-6 h-6 text-charcoal group-hover:text-accent-600 transition-colors"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -174,7 +174,7 @@ export default function LocationsPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-display font-bold text-primary-900 mb-4">
+            <h2 className="text-3xl font-display font-bold text-charcoal mb-4">
               Main Practice Location
             </h2>
             <p className="text-gray-600 mb-6">
@@ -182,12 +182,12 @@ export default function LocationsPage() {
               conveniently located in the Greater Hartford area.
             </p>
             <div className="bg-white rounded-xl p-6 border border-gray-200 inline-block">
-              <p className="text-lg font-medium text-primary-900">
+              <p className="text-lg font-medium text-charcoal">
                 Starling Physicians
               </p>
               <p className="text-gray-600">Wethersfield, CT</p>
               <p className="text-accent-600 font-medium mt-2">
-                (914) 629-2946
+                (860) 826-4460
               </p>
             </div>
           </div>
@@ -195,19 +195,19 @@ export default function LocationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary-900 text-white">
+      <section className="py-16 bg-charcoal text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-display font-bold mb-4">
               Ready to Schedule?
             </h2>
-            <p className="text-primary-100 mb-8">
+            <p className="text-white/70 mb-8">
               Whether you need a consultation for corneal disease, vision correction,
               or cataract surgery, we&apos;re here to help.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-lg transition-colors shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold/90 text-charcoal font-medium rounded-[40px] transition-colors"
             >
               Contact Us Today
               <svg

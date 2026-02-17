@@ -72,7 +72,7 @@ export default function TableOfContents({
 
   return (
     <nav className="bg-white rounded-xl border border-gray-200 p-5 sticky top-24">
-      <h3 className="text-sm font-semibold text-primary-900 uppercase tracking-wide mb-4">
+      <h3 className="text-sm font-semibold text-charcoal mb-4">
         {title}
       </h3>
       <ul className="space-y-2">
@@ -86,8 +86,8 @@ export default function TableOfContents({
               onClick={(e) => handleClick(e, id)}
               className={`block text-sm py-1 border-l-2 pl-3 transition-colors ${
                 activeId === id
-                  ? 'border-accent-500 text-accent-600 font-medium'
-                  : 'border-transparent text-gray-600 hover:text-primary-900 hover:border-gray-300'
+                  ? 'border-gold text-charcoal font-medium'
+                  : 'border-transparent text-gray-600 hover:text-charcoal hover:border-gray-300'
               }`}
             >
               {text}

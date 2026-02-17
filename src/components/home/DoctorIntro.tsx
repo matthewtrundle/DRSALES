@@ -1,121 +1,118 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Section from '@/components/ui/Section';
-import { doctorBio, education } from '@/data/siteData';
+import { motion, useInView } from 'framer-motion';
+import { useParallax } from '@/hooks/useParallax';
 
 export default function DoctorIntro() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
+  const [parallaxRef, offset] = useParallax(0.08);
 
   return (
-    <Section className="relative overflow-hidden">
-      {/* AI-generated background */}
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: 'url(/images/backgrounds/doctor-texture.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div ref={sectionRef} className="grid lg:grid-cols-2 gap-16 items-center relative">
-        {/* Image with hover zoom */}
-        <div
-          className={`relative transition-all duration-1000 ease-smooth ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
-        >
-          <div className="aspect-[4/5] relative overflow-hidden image-zoom">
-            <Image
-              src="/images/headshots/dr-sales-secondary.jpg"
-              alt="Dr. Christopher S. Sales"
-              fill
-              className={`object-cover transition-all duration-700 ${imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-              onLoad={() => setImageLoaded(true)}
-            />
-            {/* Loading shimmer */}
-            {!imageLoaded && (
-              <div className="absolute inset-0 shimmer" />
-            )}
-          </div>
+    <section className="relative overflow-hidden py-16 md:py-24">
+      {/* Full-bleed background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/secondary-background.png"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Warm overlay to soften background and ensure text readability */}
+        <div className="absolute inset-0 bg-warm-cream/80" />
+      </div>
 
-          {/* Decorative frame */}
-          <div className="absolute -bottom-4 -right-4 w-full h-full border border-primary/20 -z-10 hidden md:block" />
+      <div ref={sectionRef} className="container-custom relative z-10">
+        <div ref={parallaxRef} className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image column */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="relative">
+              {/* Main photo — consultation with patient */}
+              <div
+                className="aspect-[4/5] rounded-xl overflow-hidden shadow-card-hover"
+                style={{ transform: `translateY(${offset * -0.3}px)` }}
+              >
+                <Image
+                  src="/images/dr-sales-patient.png"
+                  alt="Dr. Sales consulting with a patient"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 500px"
+                />
+              </div>
 
-          {/* Floating accent */}
-          <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-primary/10 to-transparent rounded-full animate-breathe hidden md:block" />
-        </div>
+              {/* Gold accent border */}
+              <div className="absolute -bottom-3 -left-3 w-full h-full rounded-xl border-2 border-gold/20 -z-10" />
 
-        {/* Content */}
-        <div className={`transition-all duration-1000 ease-smooth ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`} style={{ transitionDelay: '0.2s' }}>
-          <p className="text-primary font-medium mb-3 tracking-[0.2em] uppercase text-sm">
-            About
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-6">
-            Dr. Christopher S. Sales
-          </h2>
-          <p className="text-neutral-600 leading-relaxed mb-8">
-            {doctorBio.shortBio}
-          </p>
-
-          {/* Education Timeline */}
-          <div className="mb-8 border-t border-neutral-200 pt-8">
-            <h3 className="text-sm font-medium text-neutral-900 uppercase tracking-wide mb-6">
-              Training
-            </h3>
-            <div className="space-y-4">
-              {education.slice(0, 3).map((edu, index) => (
-                <div
-                  key={index}
-                  className={`flex items-baseline gap-4 transition-all duration-500 ease-smooth ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}
-                  style={{ transitionDelay: `${0.4 + index * 0.1}s` }}
-                >
-                  <span className="text-sm text-primary font-mono w-16 flex-shrink-0">
-                    {edu.year}
-                  </span>
-                  <div className="relative pl-4 border-l border-neutral-200">
-                    <p className="text-neutral-900 font-medium">{edu.institution}</p>
-                    <p className="text-sm text-neutral-500">{edu.degree}</p>
-                  </div>
-                </div>
-              ))}
+              {/* Decorative element */}
+              <motion.div
+                className="absolute -top-6 -left-6 w-12 h-12 border-t-2 border-l-2 border-gold/20 rounded-tl-lg"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: 0.6, duration: 0.5 }}
+              />
             </div>
-          </div>
+          </motion.div>
 
-          {/* CTA */}
-          <div className={`flex gap-4 transition-all duration-500 ease-smooth ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '0.7s' }}>
-            <Link
-              href="/about"
-              className="group text-primary font-medium inline-flex items-center gap-2 hover:gap-3 transition-all duration-300"
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <p className="text-warm-gray font-body text-sm tracking-wide mb-3">
+              Your doctor
+            </p>
+            <h2 className="heading-lg text-charcoal mb-6">
+              Chris Sales, MD
+            </h2>
+
+            <div className="space-y-4 mb-8">
+              <p className="text-body leading-relaxed font-body">
+                Dr. Sales spent 15 years at places like Stanford, Harvard, and Weill Cornell
+                before coming home to Connecticut. He&apos;s done over a thousand corneal transplants.
+                He&apos;s published 50+ research papers. But what his patients tend to mention
+                first is that he actually listens.
+              </p>
+              <p className="text-body leading-relaxed font-body">
+                Everything he does is elective — meaning there&apos;s no pressure, no urgency,
+                and no scare tactics. You come in, you talk, and together you figure out
+                if something makes sense for you.
+              </p>
+            </div>
+
+            {/* Subtle credentials line */}
+            <p className="text-warm-gray text-sm font-body mb-8 tracking-wide">
+              Brown · Tufts · Harvard · Stanford · Iowa · Cornell
+            </p>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5, duration: 0.5 }}
             >
-              Full Biography
-              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
+              <Link
+                href="/about"
+                className="text-gold-700 font-body font-medium inline-flex items-center gap-2 hover:gap-3 transition-all duration-300 group"
+              >
+                More about Dr. Sales
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

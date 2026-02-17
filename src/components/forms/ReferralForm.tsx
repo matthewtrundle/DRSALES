@@ -54,9 +54,9 @@ export default function ReferralForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-gold/5 border border-gold/20 rounded-lg p-8 text-center">
+        <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -71,7 +71,7 @@ export default function ReferralForm() {
     );
   }
 
-  const inputClasses = "w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none";
+  const inputClasses = "w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded focus:bg-white focus:ring-2 focus:ring-charcoal/20 focus:border-charcoal transition-all outline-none";
   const labelClasses = "block text-sm font-medium text-neutral-700 mb-2";
 
   return (
@@ -79,7 +79,7 @@ export default function ReferralForm() {
       {/* Referring Physician Section */}
       <div>
         <h3 className="text-lg font-display font-semibold text-neutral-800 mb-4 flex items-center gap-2">
-          <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
           Referring Physician
@@ -88,7 +88,7 @@ export default function ReferralForm() {
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="physicianName" className={labelClasses}>
-                Your Name <span className="text-primary">*</span>
+                Your Name <span className="text-charcoal">*</span>
               </label>
               <input
                 type="text"
@@ -119,7 +119,7 @@ export default function ReferralForm() {
           <div className="grid md:grid-cols-3 gap-4">
             <div>
               <label htmlFor="physicianPhone" className={labelClasses}>
-                Phone <span className="text-primary">*</span>
+                Phone <span className="text-charcoal">*</span>
               </label>
               <input
                 type="tel"
@@ -173,7 +173,7 @@ export default function ReferralForm() {
       {/* Patient Information */}
       <div>
         <h3 className="text-lg font-display font-semibold text-neutral-800 mb-1 flex items-center gap-2">
-          <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
           Patient Information
@@ -182,7 +182,7 @@ export default function ReferralForm() {
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label htmlFor="patientName" className={labelClasses}>
-              Patient Name <span className="text-primary">*</span>
+              Patient Name <span className="text-charcoal">*</span>
             </label>
             <input
               type="text"
@@ -230,7 +230,7 @@ export default function ReferralForm() {
       {/* Referral Details */}
       <div>
         <h3 className="text-lg font-display font-semibold text-neutral-800 mb-4 flex items-center gap-2">
-          <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
           Referral Details
@@ -239,7 +239,7 @@ export default function ReferralForm() {
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="referralReason" className={labelClasses}>
-                Reason for Referral <span className="text-primary">*</span>
+                Reason for Referral <span className="text-charcoal">*</span>
               </label>
               <select
                 id="referralReason"
@@ -258,7 +258,7 @@ export default function ReferralForm() {
                 <option value="lasik-prk">LASIK / PRK Evaluation</option>
                 <option value="icl">ICL Evaluation</option>
                 <option value="complex-cataract">Complex Cataract</option>
-                <option value="iris-reconstruction">Iris Reconstruction / Aniridia</option>
+                <option value="dry-eye">Dry Eye Treatment</option>
                 <option value="anterior-segment-trauma">Anterior Segment Trauma</option>
                 <option value="pterygium">Pterygium</option>
                 <option value="dry-eye-severe">Severe Dry Eye Disease</option>
@@ -305,7 +305,7 @@ export default function ReferralForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full md:w-auto px-8 py-3.5 bg-primary text-white font-medium rounded hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="w-full md:w-auto px-8 py-3.5 bg-gold text-charcoal rounded-[40px] font-display font-semibold hover:bg-gold/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {isSubmitting ? (
           <>

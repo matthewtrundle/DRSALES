@@ -14,10 +14,10 @@ export function PhysicianSchema() {
     honorificSuffix: 'MD, MPH',
     image: `${baseUrl}/images/dr-sales-headshot.jpg`,
     url: baseUrl,
-    telephone: '(914) 629-2946',
+    telephone: '(860) 826-4460',
     email: 'info@drsalesophthalmology.com',
     description:
-      'Board-certified ophthalmologist specializing in DMEK corneal transplantation, LASIK vision correction, and innovative eye care in Connecticut.',
+      'Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplantation, EVO ICL vision correction, and dry eye treatment in Connecticut.',
     medicalSpecialty: [
       'Ophthalmology',
       'Cornea and External Disease',
@@ -92,18 +92,22 @@ export function PhysicianSchema() {
     availableService: [
       {
         '@type': 'MedicalProcedure',
+        name: 'Cataract Surgery',
+        procedureType: 'Surgical',
+      },
+      {
+        '@type': 'MedicalProcedure',
         name: 'DMEK Surgery',
         procedureType: 'Surgical',
       },
       {
         '@type': 'MedicalProcedure',
-        name: 'LASIK',
+        name: 'EVO ICL',
         procedureType: 'Surgical',
       },
       {
-        '@type': 'MedicalProcedure',
-        name: 'Cataract Surgery',
-        procedureType: 'Surgical',
+        '@type': 'MedicalTherapy',
+        name: 'Dry Eye Treatment',
       },
     ],
   };
@@ -126,10 +130,10 @@ export function LocalBusinessSchema() {
     name: 'Dr. Christopher S. Sales, MD - Ophthalmology',
     image: `${baseUrl}/images/office.jpg`,
     url: baseUrl,
-    telephone: '(914) 629-2946',
+    telephone: '(860) 826-4460',
     priceRange: '$$$',
     description:
-      'Expert ophthalmology services including DMEK corneal transplants, LASIK vision correction, and cataract surgery in Connecticut. Led by fellowship-trained cornea specialist Dr. Christopher S. Sales.',
+      'Expert ophthalmology services including cataract surgery, DMEK corneal transplants, EVO ICL vision correction, and dry eye treatment in Connecticut. Led by Dr. Christopher S. Sales.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Starling Physicians',
@@ -155,6 +159,10 @@ export function LocalBusinessSchema() {
       },
       {
         '@type': 'City',
+        name: 'New Britain',
+      },
+      {
+        '@type': 'City',
         name: 'West Hartford',
       },
       {
@@ -171,7 +179,7 @@ export function LocalBusinessSchema() {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         opens: '08:00',
-        closes: '17:00',
+        closes: '16:00',
       },
     ],
     medicalSpecialty: 'Ophthalmology',

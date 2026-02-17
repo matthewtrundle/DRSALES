@@ -45,10 +45,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Service pages - high priority for SEO
   const servicePages = [
     'corneal-transplant',
-    'vision-correction',
     'cataract',
-    'ocular-surface',
-    'iris-reconstruction',
+    'vision-correction',
+    'dry-eye',
   ].map((service) => ({
     url: `${baseUrl}/services/${service}`,
     lastModified: new Date(),

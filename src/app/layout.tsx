@@ -1,13 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { OrchestratorProvider } from '@/context/OrchestratorContext';
-import AnnouncementBar from '@/components/layout/AnnouncementBar';
-import TopBar from '@/components/layout/TopBar';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import ScrollProgress from '@/components/ui/ScrollProgress';
-import NoiseOverlay from '@/components/ui/NoiseOverlay';
-import SmoothScroll from '@/components/ui/SmoothScroll';
+import SmoothScroll from '@/components/providers/SmoothScroll';
 import { MainSchemas, GoogleAnalytics } from '@/components/seo';
 import { siteConfig } from '@/data/siteData';
 
@@ -16,7 +12,7 @@ const baseUrl = 'https://www.drsalesophthalmology.com';
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#1e3a5f',
+  themeColor: '#FAF8F5',
 };
 
 export const metadata: Metadata = {
@@ -105,11 +101,7 @@ export default function RootLayout({
       <body className="font-body antialiased">
         <OrchestratorProvider>
           <SmoothScroll>
-            <ScrollProgress />
-            <NoiseOverlay />
             <div className="flex flex-col min-h-screen">
-              <AnnouncementBar />
-              <TopBar />
               <Header />
               <main className="flex-grow">{children}</main>
               <Footer />

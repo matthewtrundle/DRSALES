@@ -30,7 +30,7 @@ const videos = [
     title: 'Living with Fuchs\' Dystrophy',
     description: 'Management strategies and treatment options for Fuchs\' patients.',
     duration: '8:20',
-    category: 'Ocular Surface',
+    category: 'Corneal Disease',
   },
   {
     title: 'Premium IOL Options Explained',
@@ -39,10 +39,10 @@ const videos = [
     category: 'Cataract',
   },
   {
-    title: 'Iris Reconstruction: Restoring Function and Appearance',
-    description: 'How prosthetic iris implants can improve quality of life.',
+    title: 'Understanding Dry Eye Disease',
+    description: 'Causes, symptoms, and modern treatment options for chronic dry eye.',
     duration: '4:45',
-    category: 'Iris Reconstruction',
+    category: 'Dry Eye',
   },
 ];
 
@@ -108,10 +108,10 @@ export default function EducationPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-neutral-900 to-primary-900 text-white py-20">
+      <section className="bg-cream text-charcoal py-20">
         <div className="container-custom">
-          <h1 className="heading-xl text-white mb-6">Patient Education</h1>
-          <p className="text-xl text-neutral-300 max-w-3xl">
+          <h1 className="heading-xl text-charcoal mb-6">Patient Education</h1>
+          <p className="text-xl text-neutral-600 max-w-3xl">
             Knowledge is the first step toward better vision. Explore our educational resources
             to learn about eye conditions and treatment options.
           </p>
@@ -129,9 +129,9 @@ export default function EducationPage() {
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden group">
               {/* Video Placeholder */}
               <div className="aspect-video bg-gradient-to-br from-neutral-200 to-neutral-300 relative flex items-center justify-center">
-                <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/20 transition-colors" />
+                <div className="absolute inset-0 bg-charcoal/10 group-hover:bg-charcoal/20 transition-colors" />
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-8 h-8 text-charcoal ml-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -140,7 +140,7 @@ export default function EducationPage() {
                 </span>
               </div>
               <div className="p-4">
-                <span className="text-xs text-gold font-medium uppercase tracking-wide">
+                <span className="text-xs text-gold font-medium">
                   {video.category}
                 </span>
                 <h3 className="font-semibold text-neutral-900 mt-1 mb-2">{video.title}</h3>
@@ -151,7 +151,7 @@ export default function EducationPage() {
         </div>
         <p className="mt-8 text-center text-neutral-600">
           Additional educational videos are available on our{' '}
-          <a href="https://vimeo.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+          <a href="https://vimeo.com" className="text-charcoal hover:underline" target="_blank" rel="noopener noreferrer">
             Vimeo channel
           </a>
           .
@@ -203,8 +203,8 @@ export default function EducationPage() {
               key={index}
               className="bg-neutral-50 p-6 rounded-lg flex items-start gap-4 hover:bg-neutral-100 transition-colors cursor-pointer"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-charcoal/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
@@ -247,9 +247,9 @@ export default function EducationPage() {
       </Section>
 
       {/* CTA */}
-      <Section background="primary" className="text-center">
+      <Section background="dark" className="text-center">
         <h2 className="heading-lg text-white mb-4">Have Questions?</h2>
-        <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
           Our team is here to help answer your questions and guide you through your treatment options.
         </p>
         <Button href="/contact" variant="secondary" size="lg">

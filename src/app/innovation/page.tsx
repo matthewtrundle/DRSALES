@@ -106,20 +106,20 @@ export default function InnovationPage() {
   return (
     <div className="bg-white">
       {/* Cinematic Hero */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-neutral-900">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-cream">
         {/* Animated Background Grid */}
         <div className="absolute inset-0 opacity-20">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `linear-gradient(rgba(12,140,233,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(12,140,233,0.3) 1px, transparent 1px)`,
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)`,
               backgroundSize: '50px 50px',
             }}
           />
         </div>
 
         {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-charcoal/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
 
         {/* Content */}
@@ -129,7 +129,7 @@ export default function InnovationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-6"
+              className="text-gold font-medium tracking-[0.3em] text-sm mb-6"
             >
               Research & Innovation
             </motion.p>
@@ -137,11 +137,11 @@ export default function InnovationPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-display text-white mb-8 leading-tight"
+              className="text-5xl md:text-6xl lg:text-7xl font-display text-charcoal mb-8 leading-tight"
             >
               Pioneering the
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-400 to-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold to-charcoal">
                 Future of Vision
               </span>
             </motion.h1>
@@ -149,7 +149,7 @@ export default function InnovationPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-neutral-400 max-w-2xl mb-12"
+              className="text-xl text-neutral-600 max-w-2xl mb-12"
             >
               From laboratory breakthroughs to commercial medical devices, Dr. Sales has spent
               his career advancing the science of ophthalmology through research, device development,
@@ -165,10 +165,10 @@ export default function InnovationPage() {
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center md:text-left">
-                  <p className="text-4xl md:text-5xl font-display font-bold text-white mb-1">
+                  <p className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-1">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-neutral-500 uppercase tracking-wide">{stat.label}</p>
+                  <p className="text-sm text-neutral-500">{stat.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -177,7 +177,7 @@ export default function InnovationPage() {
 
         {/* Floating Device Mockup */}
         <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-1/3">
-          <div className="relative aspect-square rounded-3xl overflow-hidden border border-white/10">
+          <div className="relative aspect-square rounded-3xl overflow-hidden border border-charcoal/10">
             <Image
               src="/images/innovation/futuristic-eye-device.jpg"
               alt="Futuristic eye scanning device"
@@ -219,7 +219,7 @@ export default function InnovationPage() {
                   { value: 'IP', label: 'Multiple Patents' },
                 ].map((item, index) => (
                   <div key={index} className="bg-neutral-50 p-4 rounded-lg">
-                    <p className="text-2xl font-display font-bold text-primary">{item.value}</p>
+                    <p className="text-2xl font-display font-bold text-charcoal">{item.value}</p>
                     <p className="text-sm text-neutral-600">{item.label}</p>
                   </div>
                 ))}
@@ -239,7 +239,7 @@ export default function InnovationPage() {
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -right-6 bg-gold text-white px-6 py-4 rounded-xl shadow-xl">
                 <p className="text-3xl font-display font-bold">2024</p>
-                <p className="text-sm text-gold-100">Oko-Tek Inc. Founded</p>
+                <p className="text-sm text-white/80">Oko-Tek Inc. Founded</p>
               </div>
             </div>
           </div>
@@ -261,15 +261,15 @@ export default function InnovationPage() {
                 />
               </div>
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-primary text-white px-6 py-4 rounded-xl shadow-xl">
+              <div className="absolute -bottom-6 -left-6 bg-charcoal text-white px-6 py-4 rounded-xl shadow-xl">
                 <p className="text-3xl font-display font-bold">2018-2026</p>
-                <p className="text-sm text-primary-100">Iowa Eye Device Lab</p>
+                <p className="text-sm text-neutral-300">Iowa Eye Device Lab</p>
               </div>
             </div>
 
             {/* Content Side */}
             <div className="order-1 lg:order-2">
-              <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 Academic Innovation Legacy
               </p>
               <h2 className="text-4xl md:text-5xl font-display text-neutral-900 mb-6">
@@ -296,7 +296,7 @@ export default function InnovationPage() {
                   { value: '$500K+', label: 'Research Funding Secured' },
                 ].map((item, index) => (
                   <div key={index} className="bg-white p-4 rounded-lg border border-neutral-100">
-                    <p className="text-2xl font-display font-bold text-primary">{item.value}</p>
+                    <p className="text-2xl font-display font-bold text-charcoal">{item.value}</p>
                     <p className="text-sm text-neutral-600">{item.label}</p>
                   </div>
                 ))}
@@ -308,19 +308,9 @@ export default function InnovationPage() {
 
       {/* Research Focus Areas - Card Grid */}
       <section className="py-24 bg-neutral-900 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <Image
-            src="/images/backgrounds/education-nodes.jpg"
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Research Domains
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
@@ -342,8 +332,8 @@ export default function InnovationPage() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="h-full bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-primary/30 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="h-full bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-charcoal to-charcoal/80 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                     {area.icon}
                   </div>
                   <h3 className="text-xl font-display font-semibold text-white mb-3">
@@ -386,7 +376,7 @@ export default function InnovationPage() {
               >
                 <div className="bg-white rounded-2xl shadow-xl border border-neutral-100 overflow-hidden">
                   {/* Patent Header */}
-                  <div className="bg-gradient-to-r from-primary to-primary-600 p-6 text-white">
+                  <div className="bg-gradient-to-r from-charcoal to-charcoal/80 p-6 text-white">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
                         {patent.icon}
@@ -417,7 +407,7 @@ export default function InnovationPage() {
           <div className="grid lg:grid-cols-3 gap-16">
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 Publications
               </p>
               <h2 className="text-4xl font-display text-neutral-900 mb-6">
@@ -452,13 +442,13 @@ export default function InnovationPage() {
                     className="group"
                   >
                     <div className="flex items-start gap-6 p-6 rounded-xl hover:bg-neutral-50 transition-colors">
-                      <div className="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl font-display font-bold text-primary">{pub.year}</span>
+                      <div className="flex-shrink-0 w-16 h-16 bg-charcoal/10 rounded-lg flex items-center justify-center">
+                        <span className="text-2xl font-display font-bold text-charcoal">{pub.year}</span>
                       </div>
                       <div className="flex-grow">
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <h3 className="font-semibold text-neutral-900 group-hover:text-primary transition-colors">
+                            <h3 className="font-semibold text-neutral-900 group-hover:text-gold transition-colors">
                               {pub.title}
                             </h3>
                             <p className="text-neutral-600 text-sm mt-1">{pub.journal}</p>
@@ -484,7 +474,7 @@ export default function InnovationPage() {
       </section>
 
       {/* Awards Banner */}
-      <section className="py-16 bg-gradient-to-r from-primary-900 via-primary to-primary-900">
+      <section className="py-16 bg-charcoal">
         <div className="container-custom">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
             {[
@@ -495,7 +485,7 @@ export default function InnovationPage() {
             ].map((item, index) => (
               <div key={index} className="text-center text-white">
                 <p className="text-2xl font-display font-bold">{item.award}</p>
-                <p className="text-sm text-primary-200">{item.year}</p>
+                <p className="text-sm text-neutral-300">{item.year}</p>
               </div>
             ))}
           </div>
@@ -504,15 +494,6 @@ export default function InnovationPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <Image
-            src="/images/backgrounds/cta-glow.jpg"
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-
         <div className="container-custom relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
             Interested in Collaboration?

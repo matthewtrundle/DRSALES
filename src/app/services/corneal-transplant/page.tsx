@@ -82,7 +82,7 @@ export default function CornealTransplantPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-br from-neutral-600 via-neutral-500 to-neutral-600">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/corneal-transplant-hero.jpg"
@@ -101,14 +101,14 @@ export default function CornealTransplantPage() {
             className="max-w-3xl"
           >
             <nav className="text-sm mb-6">
-              <span className="text-neutral-300">Services</span>
+              <span className="text-neutral-600">Services</span>
               <span className="mx-2 text-neutral-400">/</span>
               <span className="text-gold">Corneal Transplantation</span>
             </nav>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
               Corneal Transplantation
             </h1>
-            <p className="text-xl text-neutral-200 max-w-2xl">
+            <p className="text-xl text-neutral-600 max-w-2xl">
               Dr. Sales is internationally recognized for his expertise in DMEK surgery and other
               advanced corneal transplant techniques. He has performed thousands of these procedures
               and trained surgeons worldwide.
@@ -130,7 +130,7 @@ export default function CornealTransplantPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <p className="text-3xl md:text-4xl font-display font-bold text-primary mb-1">{item.stat}</p>
+                <p className="text-3xl md:text-4xl font-display font-bold text-charcoal mb-1">{item.stat}</p>
                 <p className="text-neutral-600 text-sm">{item.label}</p>
               </motion.div>
             ))}
@@ -190,7 +190,7 @@ export default function CornealTransplantPage() {
       <section className="py-24 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Treatment Options
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
@@ -224,7 +224,7 @@ export default function CornealTransplantPage() {
 
                     {/* Content */}
                     <div className="lg:col-span-2 p-8">
-                      <h3 className="text-2xl font-display font-semibold text-primary mb-1">
+                      <h3 className="text-2xl font-display font-semibold text-charcoal mb-1">
                         {procedure.name}
                       </h3>
                       <p className="text-neutral-500 mb-4">{procedure.fullName}</p>
@@ -244,12 +244,12 @@ export default function CornealTransplantPage() {
                     </div>
 
                     {/* Conditions Sidebar */}
-                    <div className="bg-primary/5 p-8">
+                    <div className="bg-charcoal/5 p-8">
                       <h4 className="font-semibold text-neutral-800 mb-4">Conditions Treated:</h4>
                       <ul className="space-y-3">
                         {procedure.conditions.map((condition, idx) => (
                           <li key={idx} className="flex items-center gap-2 text-neutral-700">
-                            <div className="w-2 h-2 bg-primary rounded-full" />
+                            <div className="w-2 h-2 bg-charcoal rounded-full" />
                             {condition}
                           </li>
                         ))}
@@ -323,7 +323,7 @@ export default function CornealTransplantPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Take the Next Step
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-4">

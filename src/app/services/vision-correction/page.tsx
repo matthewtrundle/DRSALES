@@ -92,7 +92,7 @@ export default function VisionCorrectionPage() {
   return (
     <div className="bg-white">
       {/* Hero Section - Soft Grey */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-neutral-600 via-neutral-500 to-neutral-600">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-cream">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -115,11 +115,11 @@ export default function VisionCorrectionPage() {
               <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
                 Refractive Surgery
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 leading-tight">
                 Freedom From <br />
-                <span className="text-neutral-200">Glasses & Contacts</span>
+                <span className="text-neutral-600">Glasses & Contacts</span>
               </h1>
-              <p className="text-lg text-neutral-200 mb-8 max-w-lg leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-8 max-w-lg leading-relaxed">
                 Advanced laser vision correction tailored to your unique eyes.
                 Dr. Sales offers LASIK, PRK, and ICL to help you see your best.
               </p>
@@ -129,7 +129,7 @@ export default function VisionCorrectionPage() {
                 </Button>
                 <a
                   href="#procedures"
-                  className="inline-flex items-center justify-center px-6 py-3 font-medium rounded-md border border-white/30 text-white hover:bg-white/10 transition-colors duration-200"
+                  className="inline-flex items-center justify-center px-6 py-3 font-medium rounded-[40px] border border-charcoal/30 text-charcoal hover:bg-charcoal/10 transition-colors duration-200"
                 >
                   Explore Options
                 </a>
@@ -162,7 +162,7 @@ export default function VisionCorrectionPage() {
       <section id="procedures" className="py-24 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Your Options
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
@@ -224,7 +224,7 @@ export default function VisionCorrectionPage() {
                     <ul className="space-y-2 mb-6">
                       {procedure.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm">
-                          <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-5 h-5 text-charcoal flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           <span className="text-neutral-700">{benefit}</span>
@@ -233,7 +233,7 @@ export default function VisionCorrectionPage() {
                     </ul>
 
                     <div className="bg-neutral-50 rounded-lg p-4">
-                      <p className="text-xs text-neutral-500 uppercase tracking-wide mb-1">Ideal For</p>
+                      <p className="text-xs text-neutral-500 mb-1">Ideal For</p>
                       <p className="text-sm text-neutral-700">{procedure.idealFor}</p>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function VisionCorrectionPage() {
       <section className="py-24 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Qualification
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
@@ -325,8 +325,8 @@ export default function VisionCorrectionPage() {
             >
               <div className="bg-white rounded-lg p-8 shadow-soft border border-neutral-100">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-charcoal/10 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -337,7 +337,7 @@ export default function VisionCorrectionPage() {
                 <ul className="space-y-4">
                   {candidacyFactors.good.map((factor, idx) => (
                     <li key={idx} className="flex items-center gap-3">
-                      <svg className="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-charcoal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span className="text-neutral-700">{factor}</span>
@@ -466,7 +466,7 @@ export default function VisionCorrectionPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Take the Next Step
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
@@ -480,8 +480,8 @@ export default function VisionCorrectionPage() {
               <Button href="/contact" variant="primary" size="lg">
                 Request Consultation
               </Button>
-              <Button href="tel:9146292946" variant="outline" size="lg">
-                Call (914) 629-2946
+              <Button href="tel:8608264460" variant="outline" size="lg">
+                Call (860) 826-4460
               </Button>
             </div>
           </motion.div>

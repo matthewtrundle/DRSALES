@@ -31,8 +31,8 @@ export default function Tabs({ tabs, defaultTab, onChange, className = '' }: Tab
           onClick={() => handleTabChange(tab.id)}
           className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
             activeTab === tab.id
-              ? 'bg-primary text-white shadow-lg shadow-primary/25'
-              : 'bg-white text-neutral-600 hover:bg-neutral-50 hover:text-primary border border-neutral-200'
+              ? 'bg-charcoal text-white shadow-lg'
+              : 'bg-white text-neutral-600 hover:bg-neutral-50 hover:text-charcoal border border-neutral-200'
           }`}
           aria-selected={activeTab === tab.id}
           role="tab"

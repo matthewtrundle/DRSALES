@@ -13,10 +13,10 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-primary text-white hover:bg-primary-600',
-  secondary: 'bg-gold text-white hover:bg-gold-600',
-  outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-  ghost: 'text-primary hover:bg-primary-50',
+  primary: 'bg-gold text-white hover:bg-gold-600',
+  secondary: 'bg-charcoal text-white hover:bg-charcoal-600',
+  outline: 'border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white',
+  ghost: 'text-charcoal hover:bg-charcoal/5',
 };
 
 const sizes = {
@@ -35,7 +35,7 @@ export default function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
-  const baseClasses = `inline-flex items-center justify-center font-medium rounded-md transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`;
+  const baseClasses = `inline-flex items-center justify-center font-display font-medium rounded-[40px] transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
     return (

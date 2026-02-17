@@ -5,9 +5,25 @@ import Image from 'next/image';
 import ContactForm from '@/components/forms/ContactForm';
 
 const contactInfo = {
-  phone: '(914) 629-2946',
+  phone: '(860) 826-4460',
   email: 'info@drsalesophthalmology.com',
   practice: 'Starling Physicians',
+  locations: [
+    {
+      name: 'Wethersfield',
+      street: 'Wethersfield',
+      city: 'Wethersfield',
+      state: 'CT',
+      zip: '06109',
+    },
+    {
+      name: 'New Britain',
+      street: '1 Lake St Building C',
+      city: 'New Britain',
+      state: 'CT',
+      zip: '06052',
+    },
+  ],
   address: {
     street: 'Wethersfield',
     city: 'Wethersfield',
@@ -15,10 +31,10 @@ const contactInfo = {
     zip: '06109',
   },
   hours: [
-    { day: 'Monday', hours: '8:00 AM - 5:00 PM' },
-    { day: 'Tuesday', hours: '8:00 AM - 5:00 PM' },
-    { day: 'Wednesday', hours: '8:00 AM - 5:00 PM' },
-    { day: 'Thursday', hours: '8:00 AM - 5:00 PM' },
+    { day: 'Monday', hours: '8:00 AM - 4:00 PM' },
+    { day: 'Tuesday', hours: '8:00 AM - 4:00 PM' },
+    { day: 'Wednesday', hours: '8:00 AM - 4:00 PM' },
+    { day: 'Thursday', hours: '8:00 AM - 4:00 PM' },
     { day: 'Friday', hours: '8:00 AM - 4:00 PM' },
     { day: 'Saturday', hours: 'Closed' },
     { day: 'Sunday', hours: 'Closed' },
@@ -29,13 +45,13 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* Hero Section - Muted, Elegant */}
-      <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-cream py-20 md:py-28 overflow-hidden">
         {/* Subtle Background Pattern */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
         />
@@ -48,14 +64,14 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              <p className="text-gold font-medium tracking-[0.2em] text-sm mb-4">
                 Get in Touch
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 leading-tight">
                 Start Your Journey <br />
-                <span className="text-neutral-300">to Better Vision</span>
+                <span className="text-neutral-600">to Better Vision</span>
               </h1>
-              <p className="text-lg text-neutral-400 max-w-lg">
+              <p className="text-lg text-neutral-600 max-w-lg">
                 Schedule a consultation with Dr. Sales to discuss your vision goals.
                 Every great outcome begins with a conversation.
               </p>
@@ -73,39 +89,41 @@ export default function ContactPage() {
                 href={`tel:${contactInfo.phone.replace(/[^0-9]/g, '')}`}
                 className="block group"
               >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="bg-charcoal/5 backdrop-blur-sm border border-charcoal/10 rounded-lg p-6 hover:bg-charcoal/10 transition-all duration-300">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                    <div className="w-12 h-12 bg-charcoal/10 rounded-lg flex items-center justify-center group-hover:bg-charcoal/20 transition-colors">
                       <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
                     <div>
                       <p className="text-sm text-neutral-500 mb-1">Call Us Directly</p>
-                      <p className="text-xl font-display text-white group-hover:text-gold transition-colors">{contactInfo.phone}</p>
+                      <p className="text-xl font-display text-charcoal group-hover:text-gold transition-colors">{contactInfo.phone}</p>
                     </div>
                   </div>
                 </div>
               </a>
 
-              {/* Location Card */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-neutral-500 mb-1">{contactInfo.practice}</p>
-                    <p className="text-white">{contactInfo.address.street}</p>
-                    <p className="text-neutral-400">
-                      {contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}
-                    </p>
+              {/* Location Cards */}
+              {contactInfo.locations.map((loc) => (
+                <div key={loc.name} className="bg-charcoal/5 backdrop-blur-sm border border-charcoal/10 rounded-lg p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-charcoal/10 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm text-neutral-500 mb-1">{contactInfo.practice} — {loc.name}</p>
+                      <p className="text-charcoal">{loc.street}</p>
+                      <p className="text-neutral-600">
+                        {loc.city}, {loc.state} {loc.zip}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -125,8 +143,8 @@ export default function ContactPage() {
             >
               <div className="bg-white rounded-lg shadow-soft p-8 md:p-10 border border-neutral-100">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-charcoal/10 rounded-lg flex items-center justify-center">
+                    <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
@@ -172,7 +190,7 @@ export default function ContactPage() {
               {/* Office Hours Card */}
               <div className="bg-white rounded-lg p-8 shadow-soft border border-neutral-100">
                 <h3 className="font-display text-xl text-neutral-900 mb-6 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Office Hours
@@ -195,8 +213,8 @@ export default function ContactPage() {
               {/* Quick Info Cards */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white border border-neutral-100 rounded-lg p-6 text-center shadow-soft">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-charcoal/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
@@ -250,13 +268,13 @@ export default function ContactPage() {
               viewport={{ once: true }}
             >
               <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-3">
-                Our Location
+                Our Locations
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-2">
-                Visit Our Office
+                Visit Our Offices
               </h2>
               <p className="text-neutral-600">
-                Conveniently located in Wethersfield, Connecticut
+                Two convenient locations in Wethersfield and New Britain, Connecticut
               </p>
             </motion.div>
           </div>
@@ -303,7 +321,7 @@ export default function ContactPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-neutral-900 text-white px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-neutral-800 transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 bg-neutral-900 text-white px-4 py-2.5 rounded-[40px] font-medium text-sm hover:bg-neutral-800 transition-colors"
               >
                 Get Directions
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -324,7 +342,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Ready to Begin?
             </p>
             <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
@@ -335,7 +353,7 @@ export default function ContactPage() {
             </p>
             <a
               href={`tel:${contactInfo.phone.replace(/[^0-9]/g, '')}`}
-              className="inline-flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-[40px] font-medium hover:bg-neutral-800 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

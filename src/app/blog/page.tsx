@@ -44,10 +44,10 @@ export default function BlogPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary-50 to-white py-16 md:py-20">
+      <section className="bg-gradient-to-b from-charcoal/5 to-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-primary-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
               Eye Care Insights
             </h1>
             <p className="text-xl text-gray-600 mb-8">
@@ -58,7 +58,7 @@ export default function BlogPage() {
             {/* Category filters */}
             {categories.length > 0 && (
               <div className="flex flex-wrap justify-center gap-2">
-                <span className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-charcoal/10 text-charcoal rounded-full text-sm font-medium">
                   All Articles
                 </span>
                 {categories.map((category) => (
@@ -80,9 +80,9 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           {allPosts.length === 0 ? (
             <div className="text-center py-16">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-charcoal/10 rounded-full mb-4">
                 <svg
-                  className="w-8 h-8 text-primary-600"
+                  className="w-8 h-8 text-charcoal"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -95,7 +95,7 @@ export default function BlogPage() {
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-display font-semibold text-primary-900 mb-2">
+              <h2 className="text-2xl font-display font-semibold text-charcoal mb-2">
                 Coming Soon
               </h2>
               <p className="text-gray-600 max-w-md mx-auto">
@@ -108,7 +108,7 @@ export default function BlogPage() {
               {/* Featured Post */}
               {featuredPosts.length > 0 && (
                 <div className="mb-12">
-                  <h2 className="text-sm font-semibold text-accent-600 uppercase tracking-wide mb-4">
+                  <h2 className="text-sm font-semibold text-accent-600 mb-4">
                     Featured Article
                   </h2>
                   <BlogCard post={featuredPosts[0]} featured />
@@ -118,7 +118,7 @@ export default function BlogPage() {
               {/* All Posts Grid */}
               {regularPosts.length > 0 && (
                 <div>
-                  <h2 className="text-sm font-semibold text-primary-700 uppercase tracking-wide mb-6">
+                  <h2 className="text-sm font-semibold text-charcoal mb-6">
                     Latest Articles
                   </h2>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -134,10 +134,10 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-primary-50">
+      <section className="py-16 bg-charcoal/5">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-display font-bold text-primary-900 mb-4">
+            <h2 className="text-3xl font-display font-bold text-charcoal mb-4">
               Stay Informed About Your Eye Health
             </h2>
             <p className="text-gray-600 mb-8">
@@ -147,13 +147,13 @@ export default function BlogPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary-700 hover:bg-primary-800 text-white font-medium rounded-lg transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 bg-charcoal hover:bg-charcoal/90 text-white font-medium rounded-[40px] transition-colors"
               >
                 Schedule a Consultation
               </a>
               <a
                 href="/services"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-700 font-medium rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-charcoal font-medium rounded-[40px] border border-charcoal/20 hover:bg-charcoal/5 transition-colors"
               >
                 Explore Services
               </a>

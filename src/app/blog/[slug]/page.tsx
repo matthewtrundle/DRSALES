@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-primary-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-6 leading-tight">
               {frontmatter.title}
             </h1>
 
@@ -175,7 +175,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 )}
 
                 {/* Article content */}
-                <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-primary-900 prose-a:text-accent-600 prose-a:no-underline hover:prose-a:underline">
+                <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-charcoal prose-a:text-accent-600 prose-a:no-underline hover:prose-a:underline">
                   {MDXContent ? <MDXContent /> : (
                     <div className="text-gray-600">
                       <p>Content is being loaded...</p>

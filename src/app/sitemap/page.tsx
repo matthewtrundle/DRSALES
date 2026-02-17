@@ -23,11 +23,10 @@ const sitemapSections = [
     title: 'Services',
     links: [
       { label: 'All Services', href: '/services' },
-      { label: 'Corneal Transplantation', href: '/services/corneal-transplant' },
-      { label: 'Vision Correction (LASIK/PRK)', href: '/services/vision-correction' },
+      { label: 'Corneal Transplantation (DMEK)', href: '/services/corneal-transplant' },
       { label: 'Cataract Surgery', href: '/services/cataract' },
-      { label: 'Ocular Surface Disease', href: '/services/ocular-surface' },
-      { label: 'Iris Reconstruction', href: '/services/iris-reconstruction' },
+      { label: 'Vision Correction (ICL)', href: '/services/vision-correction' },
+      { label: 'Dry Eye Treatment', href: '/services/dry-eye' },
     ],
   },
   {
@@ -79,7 +78,7 @@ export default function SitemapPage() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-neutral-600 hover:text-primary transition-colors inline-flex items-center gap-2"
+                        className="text-neutral-600 hover:text-gold transition-colors inline-flex items-center gap-2"
                       >
                         <svg className="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

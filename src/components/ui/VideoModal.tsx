@@ -52,7 +52,7 @@ export default function VideoModal({
       />
 
       {/* Modal Content */}
-      <div className="relative z-10 w-full max-w-4xl mx-4 animate-slide-up">
+      <div className="relative z-10 w-full max-w-4xl mx-4 animate-fade-in-up">
         {/* Close Button */}
         <button
           onClick={onClose}

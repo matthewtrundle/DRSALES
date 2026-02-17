@@ -1,18 +1,41 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import Section from '@/components/ui/Section';
-import GradientBorder from '@/components/ui/GradientBorder';
-import { services } from '@/data/siteData';
+
+const situations = [
+  {
+    headline: "My vision is cloudy or getting worse",
+    description: "Cataracts, corneal conditions, and Fuchs' Dystrophy. Dr. Sales will figure out what's going on and walk you through your options.",
+    href: "/services/cataract",
+    image: "/images/eyes-cloudy.png",
+    imageAlt: "Doctor walking with patient in hallway",
+  },
+  {
+    headline: "I want to stop wearing glasses",
+    description: "From EVO ICL implantable lenses to LASIK — there are good options, even if you've been told LASIK isn't for you.",
+    href: "/services/vision-correction",
+    image: "/images/stop-wearing-glasses.png",
+    imageAlt: "Patient discussing glasses with doctor",
+  },
+  {
+    headline: "My eyes are always dry or irritated",
+    description: "Dry eye is real and treatable. We'll find the actual cause and build a plan that works for you — not just eye drops forever.",
+    href: "/services/dry-eye",
+    image: "/images/dryeyes.png",
+    imageAlt: "Before and after dry eye treatment",
+  },
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
       delayChildren: 0.2,
     },
   },
@@ -24,7 +47,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.7,
       ease: [0.16, 1, 0.3, 1] as const,
     },
   },
@@ -35,17 +58,8 @@ export default function ServiceHighlights() {
   const isInView = useInView(sectionRef, { once: true, margin: '-50px' });
 
   return (
-    <Section background="white" className="relative overflow-hidden">
-      {/* AI-generated background */}
-      <div
-        className="absolute inset-0 opacity-25"
-        style={{
-          backgroundImage: 'url(/images/backgrounds/services-waves.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div ref={sectionRef} className="relative">
+    <Section background="white">
+      <div ref={sectionRef}>
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -53,121 +67,57 @@ export default function ServiceHighlights() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-primary font-medium mb-3 tracking-[0.2em] uppercase text-sm">
-            Our Services
+          <p className="text-warm-gray font-body text-sm tracking-wide mb-3">
+            How can we help
           </p>
-          <h2 className="font-display text-3xl md:text-4xl text-neutral-900 mb-4">
-            Specialized Eye Care
+          <h2 className="heading-lg text-charcoal">
+            What brings you in?
           </h2>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
-            Combining surgical expertise with personalized care to help each patient achieve their
-            best possible vision.
-          </p>
-          {/* Decorative line */}
-          <div className="mt-8 flex justify-center">
-            <motion.div
-              className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"
-              initial={{ width: 0 }}
-              animate={isInView ? { width: 128 } : { width: 0 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            />
-          </div>
         </motion.div>
 
-        {/* Service Cards Grid with Stagger */}
+        {/* Situation Cards */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
         >
-          {services.map((service, index) => (
-            <motion.div key={service.id} variants={cardVariants}>
-              <GradientBorder hoverOnly animated className="h-full">
+          {situations.map((situation) => (
+            <motion.div key={situation.headline} variants={cardVariants}>
               <Link
-                href={service.href}
-                className="group relative bg-white p-8 transition-all duration-500 ease-smooth hover:shadow-card-hover block h-full"
+                href={situation.href}
+                className="group block h-full bg-white border border-gold/10 rounded-xl overflow-hidden hover:shadow-card-hover transition-all duration-500 hover:-translate-y-1 hover:border-gold/30"
               >
-                {/* Subtle gradient background on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                {/* Spotlight effect on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-gradient-radial from-primary/5 to-transparent" />
+                {/* Card image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={situation.image}
+                    alt={situation.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
 
-                {/* Content */}
-                <div className="relative">
-                  {/* Service number */}
-                  <span className="text-xs font-mono text-neutral-300 mb-4 block">
-                    0{index + 1}
-                  </span>
-
-                  <h3 className="font-display text-xl text-neutral-900 mb-3 group-hover:text-primary transition-colors duration-300">
-                    {service.title}
+                <div className="p-8 text-center">
+                  <h3 className="font-display font-medium text-xl text-charcoal mb-4 leading-snug group-hover:text-gold-700 transition-colors duration-300">
+                    {situation.headline}
                   </h3>
 
-                  <p className="text-neutral-600 text-sm leading-relaxed mb-6">
-                    {service.shortDescription}
+                  <p className="text-body text-[15px] leading-relaxed mb-6 font-body">
+                    {situation.description}
                   </p>
 
-                  {/* Arrow link with motion */}
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+                  <span className="text-gold-700 text-sm font-body font-medium inline-flex items-center gap-1.5 group-hover:gap-3 transition-all duration-300">
                     Learn more
-                    <motion.svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      whileHover={{ x: 4 }}
-                      transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </motion.svg>
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </span>
                 </div>
-
-                {/* Corner decoration */}
-                <div className="absolute bottom-0 right-0 w-12 h-12 overflow-hidden">
-                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-neutral-50 to-transparent transform rotate-45 translate-x-12 translate-y-12 group-hover:from-primary/5 transition-colors duration-500" />
-                </div>
               </Link>
-              </GradientBorder>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-neutral-600 hover:text-primary transition-colors duration-300 group"
-          >
-            <span className="text-sm">View all services</span>
-            <svg
-              className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
         </motion.div>
       </div>
     </Section>

@@ -17,7 +17,7 @@ export default function RelatedPosts({
 
   return (
     <section className="mt-12 pt-12 border-t border-gray-200">
-      <h2 className="text-2xl font-display font-semibold text-primary-900 mb-6">
+      <h2 className="text-2xl font-display font-semibold text-charcoal mb-6">
         {title}
       </h2>
       <div className="grid md:grid-cols-3 gap-6">
@@ -37,7 +37,7 @@ export default function RelatedPosts({
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200" />
+                <div className="absolute inset-0 bg-gradient-to-br from-charcoal/10 to-charcoal/20" />
               )}
             </div>
 
@@ -49,7 +49,7 @@ export default function RelatedPosts({
               >
                 {formatDate(post.frontmatter.date)}
               </time>
-              <h3 className="font-semibold text-primary-900 mt-1 mb-2 line-clamp-2 group-hover:text-accent-600 transition-colors">
+              <h3 className="font-semibold text-charcoal mt-1 mb-2 line-clamp-2 group-hover:text-gold transition-colors">
                 <Link href={`/blog/${post.slug}`}>{post.frontmatter.title}</Link>
               </h3>
               <p className="text-sm text-gray-600 line-clamp-2">

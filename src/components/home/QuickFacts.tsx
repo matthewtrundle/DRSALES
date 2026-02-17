@@ -1,78 +1,109 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { stats } from '@/data/siteData';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import ImagePlaceholder from '@/components/ui/ImagePlaceholder';
+import { useParallax } from '@/hooks/useParallax';
+
+const values = [
+  {
+    label: "No rush.",
+    description:
+      "Every visit starts with a conversation. Dr. Sales takes the time to understand what's bothering you and what matters to you — before talking about procedures.",
+  },
+  {
+    label: "No pressure.",
+    description:
+      "Everything here is elective. That means you're always in the driver's seat. No fear tactics, no \"you need this done yesterday.\" Just honest information so you can decide.",
+  },
+  {
+    label: "No ego.",
+    description:
+      "You won't find a wall of awards in the waiting room. Dr. Sales trained at top programs and publishes research because he cares about doing good work — not because he wants you to be impressed.",
+  },
+];
+
+const itemVariants = {
+  hidden: { opacity: 0, x: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.2 + i * 0.15,
+      duration: 0.7,
+      ease: [0.16, 1, 0.3, 1] as const,
+    },
+  }),
+};
 
 export default function QuickFacts() {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
+  const [parallaxRef, offset] = useParallax(0.1);
 
   return (
     <section
       ref={sectionRef}
-      className="relative bg-neutral-900 py-20 overflow-hidden"
+      className="py-20 md:py-28 bg-warm-cream relative overflow-hidden"
     >
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-gold/5" />
+      {/* Organic background element */}
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-lavender/[0.03] blur-3xl pointer-events-none" />
 
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                          linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-        backgroundSize: '50px 50px'
-      }} />
-
-      <div className="container-custom relative">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat, index) => (
+      <div className="container-custom relative z-10">
+        <div ref={parallaxRef} className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          {/* Left — image column with parallax + B&W */}
+          <motion.div
+            className="lg:col-span-2"
+            initial={{ opacity: 0, x: -40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div
-              key={index}
-              className={`text-center transition-all duration-700 ease-smooth ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              className="relative rounded-xl overflow-hidden aspect-[3/4] max-w-sm mx-auto lg:mx-0 shadow-soft"
+              style={{ transform: `translateY(${offset * -0.4}px)` }}
             >
-              {/* Value with gradient accent */}
-              <div className="relative inline-block">
-                <p className="text-5xl md:text-6xl font-display font-light text-white mb-2">
-                  {stat.value}
-                  <span className="text-primary">{stat.suffix}</span>
-                </p>
-                {/* Underline accent */}
-                <div
-                  className={`h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-all duration-1000 ${isVisible ? 'w-full opacity-100' : 'w-0 opacity-0'}`}
-                  style={{ transitionDelay: `${0.3 + index * 0.1}s` }}
-                />
-              </div>
-              <p className="text-neutral-400 text-sm tracking-wide mt-3 uppercase">
-                {stat.label}
-              </p>
+              <ImagePlaceholder
+                src="/images/hallway.png"
+                alt="Doctor greeting patient in office hallway"
+                fill
+                className="rounded-xl"
+                sizes="(max-width: 1024px) 400px, 350px"
+              />
+              {/* Subtle overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/10 to-transparent" />
             </div>
-          ))}
-        </div>
+          </motion.div>
 
-        {/* Decorative divider */}
-        <div className="mt-16 flex justify-center">
-          <div className={`flex items-center gap-4 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '0.6s' }}>
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-neutral-700" />
-            <div className="w-2 h-2 rounded-full bg-primary/50" />
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-neutral-700" />
+          {/* Right — values */}
+          <div className="lg:col-span-3">
+            <motion.h2
+              className="heading-lg text-charcoal mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            >
+              A different kind of eye doctor
+            </motion.h2>
+
+            <div className="space-y-10">
+              {values.map((value, index) => (
+                <motion.div
+                  key={value.label}
+                  className="border-l-2 border-gold-200 pl-8 hover:border-gold transition-colors duration-500"
+                  custom={index}
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate={isInView ? 'visible' : 'hidden'}
+                >
+                  <h3 className="font-display font-medium text-xl text-charcoal mb-2">
+                    {value.label}
+                  </h3>
+                  <p className="text-body leading-relaxed font-body">
+                    {value.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

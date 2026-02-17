@@ -8,10 +8,9 @@ import { services } from '@/data/siteData';
 const tabs = [
   { id: 'all', label: 'All' },
   { id: 'corneal-transplant', label: 'Corneal' },
-  { id: 'vision-correction', label: 'Vision Correction' },
   { id: 'cataract', label: 'Cataract' },
-  { id: 'iris-reconstruction', label: 'Iris' },
-  { id: 'ocular-surface', label: 'Ocular Surface' },
+  { id: 'vision-correction', label: 'Vision Correction' },
+  { id: 'dry-eye', label: 'Dry Eye' },
 ];
 
 export default function ServicesPage() {
@@ -24,16 +23,16 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-neutral-900 text-white py-24">
+      <section className="bg-cream text-charcoal py-24">
         <div className="container-custom text-center">
-          <p className="text-primary font-medium mb-4 tracking-[0.2em] uppercase text-sm">
+          <p className="text-gold font-medium mb-4 tracking-[0.2em] text-sm">
             Services
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
             Eye Care Services
           </h1>
-          <p className="text-neutral-400 max-w-2xl mx-auto">
-            Comprehensive ophthalmology services from corneal transplantation to laser vision correction.
+          <p className="text-neutral-600 max-w-2xl mx-auto">
+            Specialized eye care from cataract surgery and DMEK corneal transplants to EVO ICL vision correction and dry eye treatment.
           </p>
         </div>
       </section>
@@ -48,7 +47,7 @@ export default function ServicesPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 text-sm transition-colors ${
                   activeTab === tab.id
-                    ? 'text-primary border-b-2 border-primary'
+                    ? 'text-charcoal border-b-2 border-charcoal'
                     : 'text-neutral-500 hover:text-neutral-900'
                 }`}
               >
@@ -71,7 +70,7 @@ export default function ServicesPage() {
                   </h2>
                   <Link
                     href={service.href}
-                    className="text-primary text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
+                    className="text-charcoal text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
                   >
                     Learn more
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +83,7 @@ export default function ServicesPage() {
                   <div className="grid sm:grid-cols-2 gap-3">
                     {service.procedures.map((procedure, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <span className="text-primary mt-1">•</span>
+                        <span className="text-charcoal mt-1">•</span>
                         <div>
                           <span className="font-medium text-neutral-900">{procedure.name}</span>
                           <span className="text-neutral-500 text-sm"> — {procedure.description}</span>
@@ -110,7 +109,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="bg-primary text-white px-8 py-4 font-medium hover:bg-primary-600 transition-colors inline-block"
+            className="bg-charcoal text-white px-8 py-4 font-medium hover:bg-charcoal/90 transition-colors inline-block rounded-[40px]"
           >
             Request Consultation
           </Link>

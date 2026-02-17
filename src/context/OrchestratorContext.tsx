@@ -39,9 +39,8 @@ const initialState: OrchestratorState = {
 const interestMapping: Record<string, string[]> = {
   '/services/corneal-transplant': ['DMEK', 'Corneal Transplant', 'Fuchs Dystrophy'],
   '/services/vision-correction': ['LASIK', 'PRK', 'Vision Correction'],
-  '/services/iris-reconstruction': ['Iris Prosthesis', 'Trauma Repair'],
-  '/services/ocular-surface': ['Dry Eye', 'Keratoconus', 'Ocular Surface'],
   '/services/cataract': ['Cataract Surgery', 'IOL', 'Premium Lenses'],
+  '/services/dry-eye': ['Dry Eye', 'Meibomian Gland', 'Tear Film'],
   '/innovation': ['Research', 'Innovation', 'Device Development'],
   '/about': ['Background', 'Education', 'Experience'],
 };

@@ -79,10 +79,10 @@ const locationData: Record<
         link: '/services/cataract',
       },
       {
-        name: 'Fuchs\' Dystrophy Treatment',
+        name: 'Dry Eye Treatment',
         description:
-          'Comprehensive care for Fuchs\' dystrophy, from monitoring to surgical intervention.',
-        link: '/services/ocular-surface',
+          'Comprehensive evaluation and personalized treatment for dry eye disease.',
+        link: '/services/dry-eye',
       },
     ],
     faqs: [
@@ -144,10 +144,10 @@ const locationData: Record<
         link: '/services/vision-correction',
       },
       {
-        name: 'Keratoconus Treatment',
+        name: 'Dry Eye Treatment',
         description:
-          'Corneal crosslinking and comprehensive management of keratoconus.',
-        link: '/services/ocular-surface',
+          'Comprehensive evaluation and personalized treatment for dry eye disease.',
+        link: '/services/dry-eye',
       },
       {
         name: 'Complex Eye Surgery',
@@ -226,26 +226,26 @@ export default async function LocationPage({ params }: LocationPageProps) {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary-800 to-primary-900 text-white py-16 md:py-20">
+      <section className="bg-cream text-charcoal py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-primary-200 text-sm mb-6">
-              <Link href="/" className="hover:text-white transition-colors">
+            <nav className="flex items-center gap-2 text-neutral-500 text-sm mb-6">
+              <Link href="/" className="hover:text-charcoal transition-colors">
                 Home
               </Link>
               <span>/</span>
-              <Link href="/locations" className="hover:text-white transition-colors">
+              <Link href="/locations" className="hover:text-charcoal transition-colors">
                 Locations
               </Link>
               <span>/</span>
-              <span className="text-white">{location.city}</span>
+              <span className="text-charcoal">{location.city}</span>
             </nav>
 
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
               {location.title}
             </h1>
-            <p className="text-xl text-primary-100">{location.description}</p>
+            <p className="text-xl text-neutral-600">{location.description}</p>
           </div>
         </div>
       </section>
@@ -259,7 +259,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <div className="lg:col-span-2">
                 {/* Services */}
                 <div className="mb-12">
-                  <h2 className="text-2xl font-display font-semibold text-primary-900 mb-6">
+                  <h2 className="text-2xl font-display font-semibold text-charcoal mb-6">
                     Services Available
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-6">
@@ -269,7 +269,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                         href={service.link}
                         className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-accent-300 hover:shadow-lg transition-all"
                       >
-                        <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
+                        <h3 className="font-semibold text-charcoal mb-2 group-hover:text-accent-600 transition-colors">
                           {service.name}
                         </h3>
                         <p className="text-gray-600 text-sm">
@@ -282,10 +282,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
                 {/* Why Choose Dr. Sales */}
                 <div className="mb-12">
-                  <h2 className="text-2xl font-display font-semibold text-primary-900 mb-6">
+                  <h2 className="text-2xl font-display font-semibold text-charcoal mb-6">
                     Why Patients Choose Dr. Sales
                   </h2>
-                  <div className="bg-primary-50 rounded-xl p-6">
+                  <div className="bg-charcoal/5 rounded-xl p-6">
                     <ul className="space-y-4">
                       <li className="flex items-start gap-3">
                         <svg
@@ -302,7 +302,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                           />
                         </svg>
                         <div>
-                          <p className="font-medium text-primary-900">
+                          <p className="font-medium text-charcoal">
                             Fellowship-Trained Cornea Specialist
                           </p>
                           <p className="text-gray-600 text-sm">
@@ -326,7 +326,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                           />
                         </svg>
                         <div>
-                          <p className="font-medium text-primary-900">
+                          <p className="font-medium text-charcoal">
                             Internationally Recognized DMEK Expert
                           </p>
                           <p className="text-gray-600 text-sm">
@@ -349,7 +349,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                           />
                         </svg>
                         <div>
-                          <p className="font-medium text-primary-900">
+                          <p className="font-medium text-charcoal">
                             Surgical Innovator
                           </p>
                           <p className="text-gray-600 text-sm">
@@ -372,7 +372,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                           />
                         </svg>
                         <div>
-                          <p className="font-medium text-primary-900">
+                          <p className="font-medium text-charcoal">
                             Personalized Care
                           </p>
                           <p className="text-gray-600 text-sm">
@@ -386,7 +386,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
                 {/* FAQs */}
                 <div>
-                  <h2 className="text-2xl font-display font-semibold text-primary-900 mb-6">
+                  <h2 className="text-2xl font-display font-semibold text-charcoal mb-6">
                     Frequently Asked Questions
                   </h2>
                   <div className="space-y-4">
@@ -395,7 +395,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                         key={index}
                         className="bg-white rounded-xl border border-gray-200 p-6"
                       >
-                        <h3 className="font-semibold text-primary-900 mb-2">
+                        <h3 className="font-semibold text-charcoal mb-2">
                           {faq.question}
                         </h3>
                         <p className="text-gray-600">{faq.answer}</p>
@@ -409,13 +409,13 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <div className="lg:col-span-1">
                 {/* Contact Card */}
                 <div className="bg-white rounded-xl border border-gray-200 p-6 sticky top-24">
-                  <h3 className="font-display font-semibold text-primary-900 mb-4">
+                  <h3 className="font-display font-semibold text-charcoal mb-4">
                     Schedule a Consultation
                   </h3>
                   <div className="space-y-4 mb-6">
                     <div>
                       <p className="text-sm text-gray-500">Location</p>
-                      <p className="font-medium text-primary-900">
+                      <p className="font-medium text-charcoal">
                         Starling Physicians
                       </p>
                       <p className="text-gray-600">Wethersfield, CT</p>
@@ -423,16 +423,16 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     <div>
                       <p className="text-sm text-gray-500">Phone</p>
                       <a
-                        href="tel:+19146292946"
+                        href="tel:+18608264460"
                         className="font-medium text-accent-600 hover:text-accent-700"
                       >
-                        (914) 629-2946
+                        (860) 826-4460
                       </a>
                     </div>
                   </div>
                   <Link
                     href="/contact"
-                    className="block w-full text-center py-3 bg-primary-700 hover:bg-primary-800 text-white font-medium rounded-lg transition-colors"
+                    className="block w-full text-center py-3 bg-charcoal hover:bg-charcoal/90 text-white font-medium rounded-[40px] transition-colors"
                   >
                     Contact Us
                   </Link>
@@ -440,7 +440,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
                 {/* Nearby Areas */}
                 <div className="mt-6 bg-gray-50 rounded-xl p-6">
-                  <h3 className="font-display font-semibold text-primary-900 mb-4">
+                  <h3 className="font-display font-semibold text-charcoal mb-4">
                     Also Serving
                   </h3>
                   <div className="flex flex-wrap gap-2">
@@ -461,28 +461,28 @@ export default async function LocationPage({ params }: LocationPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary-900 text-white">
+      <section className="py-16 bg-charcoal text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-display font-bold mb-4">
               Expert Eye Care for {location.city} and Beyond
             </h2>
-            <p className="text-primary-100 mb-8">
+            <p className="text-white/70 mb-8">
               Whether you need a consultation for DMEK surgery, LASIK, or another
               condition, Dr. Sales is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-lg transition-colors shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold/90 text-charcoal font-medium rounded-[40px] transition-colors"
               >
                 Schedule Consultation
               </Link>
               <a
-                href="tel:+19146292946"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-colors border border-white/20"
+                href="tel:+18608264460"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-[40px] transition-colors border border-white/20"
               >
-                Call (914) 629-2946
+                Call (860) 826-4460
               </a>
             </div>
           </div>

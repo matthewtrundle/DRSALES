@@ -11,7 +11,7 @@ interface AuthorCardProps {
 export default function AuthorCard({
   name = 'Dr. Christopher S. Sales, MD, MPH',
   image = '/images/dr-sales-headshot.jpg',
-  bio = 'Board-certified ophthalmologist specializing in DMEK corneal transplantation, LASIK vision correction, and innovative eye care. Fellowship-trained at Stanford and Harvard with 49+ publications.',
+  bio = 'Ophthalmologist specializing in cataract surgery, DMEK corneal transplantation, and EVO ICL vision correction. Trained at Stanford, Harvard, Weill Cornell, and the University of Iowa with 50+ publications.',
   compact = false,
 }: AuthorCardProps) {
   if (compact) {
@@ -27,14 +27,14 @@ export default function AuthorCard({
           />
         </div>
         <div>
-          <p className="font-medium text-primary-900">{name}</p>
+          <p className="font-medium text-charcoal">{name}</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-6 border border-primary-100">
+    <div className="bg-gradient-to-br from-charcoal/5 to-white rounded-xl p-6 border border-charcoal/10">
       <div className="flex items-start gap-4">
         {/* Author image */}
         <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-white shadow-lg">
@@ -49,14 +49,14 @@ export default function AuthorCard({
 
         {/* Author info */}
         <div className="flex-1">
-          <p className="text-sm text-accent-600 font-medium mb-1">Written by</p>
-          <h4 className="text-xl font-display font-semibold text-primary-900 mb-2">
+          <p className="text-sm text-gold font-medium mb-1">Written by</p>
+          <h4 className="text-xl font-display font-semibold text-charcoal mb-2">
             {name}
           </h4>
           <p className="text-gray-600 text-sm leading-relaxed mb-3">{bio}</p>
           <Link
             href="/about"
-            className="inline-flex items-center text-sm text-accent-600 hover:text-accent-700 font-medium transition-colors"
+            className="inline-flex items-center text-sm text-gold hover:text-gold/80 font-medium transition-colors"
           >
             Learn more about Dr. Sales
             <svg

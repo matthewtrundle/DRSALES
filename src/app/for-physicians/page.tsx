@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const referralConditions = [
   {
     category: 'Corneal Disease',
-    accent: 'border-primary',
-    accentBg: 'bg-primary/5',
-    accentText: 'text-primary',
+    accent: 'border-charcoal',
+    accentBg: 'bg-charcoal/5',
+    accentText: 'text-charcoal',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -35,7 +35,7 @@ const referralConditions = [
     category: 'Refractive Surgery',
     accent: 'border-gold',
     accentBg: 'bg-gold/5',
-    accentText: 'text-gold-700',
+    accentText: 'text-gold',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -90,7 +90,7 @@ const specializations = [
   {
     title: 'DMEK Surgery',
     highlight: 'International Expert',
-    description: 'Internationally recognized expert in Descemet Membrane Endothelial Keratoplasty. Trained 13+ cornea fellows and surgeons worldwide.',
+    description: 'Internationally recognized expert in Descemet Membrane Endothelial Keratoplasty. Trained 15+ cornea fellows and surgeons worldwide.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -154,12 +154,12 @@ export default function ForPhysiciansPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-cream text-charcoal py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
         />
@@ -167,13 +167,13 @@ export default function ForPhysiciansPage() {
         <div className="container-custom relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="flex-1 max-w-2xl">
-              <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              <p className="text-gold font-medium tracking-[0.2em] text-sm mb-4">
                 For Referring Physicians
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 leading-tight">
                 Refer with <br className="hidden md:block" />Confidence
               </h1>
-              <p className="text-lg text-neutral-300 max-w-2xl mb-8">
+              <p className="text-lg text-neutral-600 max-w-2xl mb-8">
                 Dr. Sales welcomes referrals from optometrists, ophthalmologists, and primary care
                 physicians. With training from Harvard, Stanford, Weill Cornell, and the University of Iowa,
                 your patients receive world-class surgical care close to home.
@@ -181,7 +181,7 @@ export default function ForPhysiciansPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-                  className="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2"
+                  className="bg-gold hover:bg-gold/90 text-charcoal px-8 py-4 rounded-[40px] font-medium transition-colors inline-flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -190,7 +190,7 @@ export default function ForPhysiciansPage() {
                 </a>
                 <Link
                   href="/refer"
-                  className="border border-neutral-600 hover:border-neutral-400 text-white px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2"
+                  className="border border-charcoal/30 hover:border-charcoal/60 text-charcoal px-8 py-4 rounded-[40px] font-medium transition-colors inline-flex items-center justify-center gap-2"
                 >
                   Send a Referral
                 </Link>
@@ -201,14 +201,14 @@ export default function ForPhysiciansPage() {
             <div className="flex-shrink-0 w-full lg:w-auto">
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-3">
                 {[
-                  { value: '49+', label: 'Peer-Reviewed Publications' },
-                  { value: '13+', label: 'Cornea Fellows Trained' },
-                  { value: '20+', label: 'Years of Experience' },
+                  { value: '50+', label: 'Peer-Reviewed Publications' },
+                  { value: '15+', label: 'Cornea Fellows Trained' },
+                  { value: '10+', label: 'Years of Experience' },
                   { value: '2023', label: 'NAI Inductee' },
                 ].map((stat, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-6 py-4 text-center lg:text-left">
+                  <div key={index} className="bg-charcoal/5 backdrop-blur-sm border border-charcoal/10 rounded-lg px-6 py-4 text-center lg:text-left">
                     <p className="text-2xl lg:text-3xl font-display font-bold text-gold mb-0.5">{stat.value}</p>
-                    <p className="text-xs text-neutral-400 uppercase tracking-wider">{stat.label}</p>
+                    <p className="text-xs text-neutral-500">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -227,18 +227,18 @@ export default function ForPhysiciansPage() {
           {specializations.map((spec, index) => (
             <div
               key={index}
-              className="group bg-white border border-neutral-100 rounded-xl p-6 hover:border-primary/30 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+              className="group bg-white border border-neutral-100 rounded-xl p-6 hover:border-charcoal/30 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-charcoal/5 text-charcoal flex items-center justify-center group-hover:bg-charcoal group-hover:text-white transition-colors duration-300">
                   {spec.icon}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="font-display text-lg text-neutral-900">{spec.title}</h3>
                   </div>
-                  <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-primary/70 bg-primary/5 px-2 py-0.5 rounded-full mb-2">
+                  <span className="inline-block text-[11px] font-semibold text-charcoal/70 bg-charcoal/5 px-2 py-0.5 rounded-full mb-2">
                     {spec.highlight}
                   </span>
                   <p className="text-sm text-neutral-600 leading-relaxed">{spec.description}</p>
@@ -316,15 +316,15 @@ export default function ForPhysiciansPage() {
                   <div key={index} className="flex gap-6 group">
                     {/* Timeline line */}
                     <div className="flex flex-col items-center flex-shrink-0">
-                      <div className={`w-3 h-3 rounded-full mt-1.5 flex-shrink-0 ${item.current ? 'bg-primary ring-4 ring-primary/20' : 'bg-neutral-300 group-hover:bg-primary transition-colors'}`} />
+                      <div className={`w-3 h-3 rounded-full mt-1.5 flex-shrink-0 ${item.current ? 'bg-charcoal ring-4 ring-charcoal/20' : 'bg-neutral-300 group-hover:bg-charcoal transition-colors'}`} />
                       {index < arr.length - 1 && (
                         <div className="w-px flex-1 bg-neutral-200 my-1" />
                       )}
                     </div>
                     {/* Content */}
                     <div className={`pb-6 ${index === arr.length - 1 ? 'pb-0' : ''}`}>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-0.5">{item.stage}</p>
-                      <p className={`font-medium ${item.current ? 'text-primary' : 'text-neutral-900'}`}>{item.institution}</p>
+                      <p className="text-xs font-semibold text-neutral-400 mb-0.5">{item.stage}</p>
+                      <p className={`font-medium ${item.current ? 'text-charcoal' : 'text-neutral-900'}`}>{item.institution}</p>
                       <p className="text-sm text-neutral-500">{item.location} &middot; {item.year}</p>
                     </div>
                   </div>
@@ -337,7 +337,7 @@ export default function ForPhysiciansPage() {
           <div className="mt-6 grid md:grid-cols-2 gap-6">
             <div className="bg-white border border-neutral-100 rounded-xl p-6 shadow-sm">
               <h4 className="font-display text-base text-neutral-900 mb-3 flex items-center gap-2">
-                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
                 Previous Academic Appointments
@@ -381,7 +381,7 @@ export default function ForPhysiciansPage() {
                   </div>
                 ))}
               </div>
-              <Link href="/about" className="inline-flex items-center gap-1 text-xs text-primary font-medium mt-3 hover:underline">
+              <Link href="/about" className="inline-flex items-center gap-1 text-xs text-charcoal font-medium mt-3 hover:underline">
                 View full credentials
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -412,7 +412,7 @@ export default function ForPhysiciansPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-              className="bg-gold hover:bg-gold-600 text-white px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-gold hover:bg-gold/90 text-charcoal px-8 py-4 rounded-[40px] font-medium transition-colors inline-flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

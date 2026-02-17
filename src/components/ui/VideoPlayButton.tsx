@@ -35,7 +35,7 @@ export default function VideoPlayButton({
         className={`${sizeClasses[size]} rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:bg-white group-hover:scale-110 transition-all duration-300`}
       >
         <svg
-          className={`${iconSizes[size]} text-primary`}
+          className={`${iconSizes[size]} text-charcoal`}
           fill="currentColor"
           viewBox="0 0 24 24"
         >

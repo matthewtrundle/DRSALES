@@ -43,9 +43,9 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="bg-gold/5 border border-gold/20 rounded-lg p-8 text-center">
+        <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -59,7 +59,7 @@ export default function ContactForm() {
     );
   }
 
-  const inputClasses = "w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none";
+  const inputClasses = "w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded focus:bg-white focus:ring-2 focus:ring-charcoal/20 focus:border-charcoal transition-all outline-none";
   const labelClasses = "block text-sm font-medium text-neutral-700 mb-2";
 
   return (
@@ -68,7 +68,7 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <label htmlFor="firstName" className={labelClasses}>
-            First Name <span className="text-primary">*</span>
+            First Name <span className="text-charcoal">*</span>
           </label>
           <input
             type="text"
@@ -83,7 +83,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="lastName" className={labelClasses}>
-            Last Name <span className="text-primary">*</span>
+            Last Name <span className="text-charcoal">*</span>
           </label>
           <input
             type="text"
@@ -102,7 +102,7 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <label htmlFor="email" className={labelClasses}>
-            Email Address <span className="text-primary">*</span>
+            Email Address <span className="text-charcoal">*</span>
           </label>
           <input
             type="email"
@@ -162,11 +162,10 @@ export default function ContactForm() {
             className={inputClasses}
           >
             <option value="">Select a service</option>
-            <option value="corneal-transplant">Corneal Transplantation (DMEK/DSAEK)</option>
-            <option value="vision-correction">Vision Correction (LASIK/PRK/ICL)</option>
+            <option value="corneal-transplant">Corneal Transplantation (DMEK)</option>
             <option value="cataract">Cataract Surgery</option>
-            <option value="iris-reconstruction">Iris Reconstruction</option>
-            <option value="ocular-surface">Ocular Surface Disease</option>
+            <option value="vision-correction">Vision Correction (ICL)</option>
+            <option value="dry-eye">Dry Eye Treatment</option>
             <option value="other">Other / General Inquiry</option>
           </select>
         </div>
@@ -175,7 +174,7 @@ export default function ContactForm() {
       {/* Message */}
       <div>
         <label htmlFor="message" className={labelClasses}>
-          How can we help you? <span className="text-primary">*</span>
+          How can we help you? <span className="text-charcoal">*</span>
         </label>
         <textarea
           id="message"
@@ -193,7 +192,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full md:w-auto px-8 py-3.5 bg-primary text-white font-medium rounded hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className="w-full md:w-auto px-8 py-3.5 bg-gold text-charcoal rounded-[40px] font-display font-semibold hover:bg-gold/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
         {isSubmitting ? (
           <>

@@ -1,118 +1,173 @@
 'use client';
 
-import { useRef } from 'react';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useParallax } from '@/hooks/useParallax';
+
+const rotatingPhrases = [
+  'their time.',
+  'a closer look.',
+  'every question.',
+  'getting it right.',
+];
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [parallaxRef, offset] = useParallax<HTMLElement>(0.08);
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setStarted(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+    // Immediately advance past the initial phrase so it doesn't repeat
+    setPhraseIndex(1);
+    const interval = setInterval(() => {
+      setPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [started]);
 
   return (
-    <section className="relative flex items-center overflow-hidden bg-white">
-      {/* Subtle background texture */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-primary-50/30" />
+    <section
+      ref={parallaxRef}
+      className="relative flex items-center overflow-hidden min-h-[92vh]"
+    >
+      {/* Full-bleed background image */}
+      <div
+        className="absolute inset-0"
+        style={{ transform: `translateY(${offset * 0.15}px)` }}
+      >
+        <Image
+          src="/images/hero-background.png"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+      </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-1/3 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-breathe" />
-      <div className="absolute bottom-20 left-10 w-48 h-48 bg-gold/5 rounded-full blur-2xl animate-breathe" />
-      <div className="absolute inset-0 gradient-mesh opacity-30" />
+      <div className="container-custom relative z-10 py-28 md:py-36 lg:py-44">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+          {/* Left: copy in warm frosted container — 7 cols */}
+          <motion.div
+            className="lg:col-span-7 flex flex-col justify-center bg-gradient-to-br from-warm-cream/60 via-white/50 to-gold-50/40 backdrop-blur-md rounded-2xl p-8 md:p-10 lg:p-12 border border-gold/15 shadow-soft"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {/* Gold accent bar at top */}
+            <div className="w-12 h-1 bg-gold rounded-full mb-6" />
 
-      {/* Content */}
-      <div className="container-custom relative z-10 py-14 md:py-20 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Left - Text Content */}
-          <div>
-            {/* Credential badges */}
-            <div className="flex flex-wrap gap-2.5 mb-6">
-              {['Harvard', 'Stanford', 'Weill Cornell', 'Iowa'].map((inst) => (
-                <span
-                  key={inst}
-                  className="px-3 py-1 text-xs font-medium tracking-wider uppercase text-neutral-500 border border-neutral-200 rounded-full bg-white"
-                >
-                  {inst}
-                </span>
-              ))}
-            </div>
+            {/* Descriptor */}
+            <motion.p
+              className="text-gold-700 font-body text-xs font-semibold tracking-widest uppercase mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Ophthalmologist &amp; Eye Surgeon
+            </motion.p>
 
-            {/* Main Headline */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-normal text-neutral-900 mb-5 leading-[1.15]">
-              <span className="text-primary">See Clearly Again.</span>{' '}
-              World-Class Corneal &amp; Vision Surgery,{' '}
-              <span className="text-primary">
-                Now in Connecticut.
+            {/* Headline — static lines + rotating phrase inline */}
+            <motion.h1
+              className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-medium text-charcoal mb-6 leading-[1.2] tracking-[-0.01em]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
+              Your eyes deserve
+              <br />
+              someone who takes{' '}
+              <span className="relative inline-flex items-baseline overflow-hidden" style={{ height: '1.25em' }}>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={started ? phraseIndex : 'init'}
+                    className={started ? 'text-gold-700 italic' : ''}
+                    initial={started ? { opacity: 0, y: 40 } : { opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -40 }}
+                    transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    {rotatingPhrases[started ? phraseIndex : 0]}
+                  </motion.span>
+                </AnimatePresence>
               </span>
-            </h1>
+            </motion.h1>
 
-            {/* Subtitle */}
-            <p className="text-lg text-neutral-600 mb-3 max-w-xl leading-relaxed">
-              Dr. Christopher S. Sales brings two decades of academic medicine, surgical innovation, and international training to serve patients in the greater Hartford area.
-            </p>
+            {/* Location */}
+            <motion.p
+              className="text-warm-gray font-body text-sm tracking-wide mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Wethersfield &amp; New Britain, Connecticut
+            </motion.p>
 
-            {/* Subtitle 2 - Starling */}
-            <p className="text-sm tracking-[0.15em] uppercase text-neutral-400 mb-8">
-              Starling Physicians &bull; Wethersfield, CT
-            </p>
+            {/* Sub-copy */}
+            <motion.p
+              className="font-body text-[17px] text-body/80 mb-10 leading-[1.8] max-w-md"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              Cataract surgery, corneal transplants, and vision correction —
+              with the kind of care that starts by actually listening to you.
+            </motion.p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <motion.div
+              className="flex flex-wrap items-center gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+            >
               <Link
                 href="/contact"
-                className="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2 btn-interactive shine-effect"
+                className="btn-primary inline-flex items-center gap-2"
               >
-                Schedule a Consultation
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                Start with a conversation
               </Link>
               <Link
                 href="/about"
-                className="border border-neutral-300 hover:border-primary text-neutral-700 hover:text-primary px-8 py-4 rounded font-medium transition-colors inline-flex items-center justify-center gap-2"
+                className="text-charcoal/60 font-body font-medium px-5 py-3.5 hover:text-charcoal transition-colors duration-300"
               >
-                Meet Dr. Sales
+                See if I&apos;m the right fit
               </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Right: looping video — matches text box height */}
+          <motion.div
+            className="relative hidden lg:block lg:col-span-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div
+              className="relative rounded-2xl overflow-hidden h-full min-h-[500px]"
+              style={{ transform: `translateY(${offset * -0.2}px)` }}
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              >
+                <source src="/images/hero-video.mp4" type="video/mp4" />
+              </video>
+              {/* Warm overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-warm-cream/20 to-transparent" />
             </div>
-          </div>
-
-          {/* Right - Motion Graphic Video */}
-          <div className="relative hidden lg:flex justify-center">
-            <div className="relative">
-              <div className="relative w-[420px] xl:w-[460px] aspect-[3/4] overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-100 to-neutral-50 shadow-xl ring-1 ring-neutral-100">
-                {/* Video: plays once on load, freezes on last frame */}
-                <video
-                  ref={videoRef}
-                  autoPlay
-                  muted
-                  playsInline
-                  poster="/DrSaleshero-poster.jpg"
-                  className="absolute inset-0 w-full h-full object-cover object-top"
-                >
-                  <source src="/DrSaleshero.mp4" type="video/mp4" />
-                </video>
-                {/* Poster fallback for browsers / reduced-motion */}
-                <noscript>
-                  <Image
-                    src="/DrSaleshero-poster.jpg"
-                    alt="Dr. Christopher S. Sales, MD, MPH in white coat"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                  />
-                </noscript>
-              </div>
-
-              {/* Floating credential card - bottom left */}
-              <div className="absolute bottom-6 -left-6 bg-white border border-neutral-100 shadow-lg rounded-lg px-5 py-3 z-10 animate-float">
-                <p className="text-neutral-900 font-display font-semibold text-sm">49+ Publications</p>
-                <p className="text-neutral-500 text-xs">National Academy of Inventors</p>
-              </div>
-
-              {/* Floating credential card - top right */}
-              <div className="absolute top-6 -right-6 bg-white border border-neutral-100 shadow-lg rounded-lg px-5 py-3 z-10 animate-float" style={{ animationDelay: '2s' }}>
-                <p className="text-neutral-900 font-display font-semibold text-sm">Board Certified</p>
-                <p className="text-neutral-500 text-xs">Fellowship Trained</p>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

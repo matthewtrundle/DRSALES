@@ -47,7 +47,7 @@ export default function CataractPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-br from-neutral-600 via-neutral-500 to-neutral-600">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/cataract-hero.jpg"
@@ -66,14 +66,14 @@ export default function CataractPage() {
               transition={{ duration: 0.6 }}
             >
               <nav className="text-sm mb-6">
-                <span className="text-neutral-300">Services</span>
+                <span className="text-neutral-600">Services</span>
                 <span className="mx-2 text-neutral-400">/</span>
                 <span className="text-gold">Cataract Surgery</span>
               </nav>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Cataract Surgery
               </h1>
-              <p className="text-xl text-neutral-200 max-w-xl">
+              <p className="text-xl text-neutral-600 max-w-xl">
                 State-of-the-art cataract surgery with premium lens options designed to reduce
                 or eliminate your dependence on glasses after surgery.
               </p>
@@ -142,7 +142,7 @@ export default function CataractPage() {
       <section className="py-24 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Personalized Options
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
@@ -163,7 +163,7 @@ export default function CataractPage() {
                 viewport={{ once: true }}
               >
                 <div className="h-full bg-white rounded-lg shadow-soft p-6 border border-neutral-100">
-                  <h3 className="text-xl font-display font-semibold text-primary mb-2">{lens.name}</h3>
+                  <h3 className="text-xl font-display font-semibold text-charcoal mb-2">{lens.name}</h3>
                   <p className="text-neutral-700 mb-4">{lens.description}</p>
                   <div className="mb-4">
                     <span className="text-sm font-medium text-gold">Best for: </span>
@@ -253,8 +253,8 @@ export default function CataractPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="h-full bg-primary/5 p-8 rounded-lg border border-primary/10">
-                <h3 className="text-xl font-display font-semibold text-primary mb-4">
+              <div className="h-full bg-charcoal/5 p-8 rounded-lg border border-charcoal/10">
+                <h3 className="text-xl font-display font-semibold text-charcoal mb-4">
                   Laser-Assisted Cataract Surgery
                 </h3>
                 <p className="text-neutral-700 mb-6">
@@ -291,7 +291,7 @@ export default function CataractPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm mb-4">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
               Take the Next Step
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-4">

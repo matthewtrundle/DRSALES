@@ -3,15 +3,17 @@ import { ReactNode } from 'react';
 interface SectionProps {
   children: ReactNode;
   className?: string;
-  background?: 'white' | 'light' | 'dark' | 'primary';
+  background?: 'white' | 'light' | 'dark' | 'primary' | 'gold' | 'lavender';
   id?: string;
 }
 
 const backgrounds = {
-  white: 'bg-white',
-  light: 'bg-neutral-50',
-  dark: 'bg-neutral-900 text-white',
-  primary: 'bg-primary text-white',
+  white: 'bg-warm-cream',
+  light: 'bg-cream',
+  dark: 'bg-charcoal text-white',
+  primary: 'bg-charcoal text-white',
+  gold: 'bg-gold text-white',
+  lavender: 'bg-gold/10 text-charcoal',
 };
 
 export default function Section({ children, className = '', background = 'white', id }: SectionProps) {
@@ -35,7 +37,7 @@ export function SectionHeader({
 }) {
   return (
     <div className={`mb-12 ${centered ? 'text-center' : ''} ${className}`}>
-      <h2 className="heading-lg text-neutral-900 mb-4">{title}</h2>
+      <h2 className="heading-lg text-charcoal mb-4">{title}</h2>
       {subtitle && (
         <p className="text-lg text-neutral-600 max-w-3xl mx-auto">{subtitle}</p>
       )}

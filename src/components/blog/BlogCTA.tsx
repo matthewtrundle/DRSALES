@@ -18,15 +18,15 @@ export default function BlogCTA({
   secondaryButtonHref = '/services',
 }: BlogCTAProps) {
   return (
-    <div className="my-10 bg-gradient-to-br from-primary-700 to-primary-900 rounded-2xl p-8 md:p-10 text-center">
+    <div className="my-10 bg-gradient-to-br from-charcoal to-charcoal/90 rounded-2xl p-8 md:p-10 text-center">
       <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">
         {title}
       </h3>
-      <p className="text-primary-100 max-w-2xl mx-auto mb-6">{description}</p>
+      <p className="text-white/80 max-w-2xl mx-auto mb-6">{description}</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link
           href={primaryButtonHref}
-          className="inline-flex items-center justify-center px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-accent-500/25"
+          className="inline-flex items-center justify-center px-6 py-3 bg-gold hover:bg-gold/90 text-charcoal rounded-[40px] font-display font-semibold transition-colors shadow-lg shadow-gold/25"
         >
           {primaryButtonText}
           <svg
@@ -45,7 +45,7 @@ export default function BlogCTA({
         </Link>
         <Link
           href={secondaryButtonHref}
-          className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-colors border border-white/20"
+          className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-[40px] font-display font-semibold transition-colors border border-white/20"
         >
           {secondaryButtonText}
         </Link>

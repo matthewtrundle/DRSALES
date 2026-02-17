@@ -20,7 +20,7 @@ export default function AccessibilityPage() {
       {/* Content */}
       <section className="py-16">
         <div className="container-custom max-w-3xl">
-          <div className="prose prose-neutral max-w-none prose-headings:font-display prose-headings:text-neutral-800 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-a:text-primary hover:prose-a:text-primary-600">
+          <div className="prose prose-neutral max-w-none prose-headings:font-display prose-headings:text-neutral-800 prose-p:text-neutral-600 prose-li:text-neutral-600 prose-a:text-charcoal hover:prose-a:text-gold">
 
             <h2>Our Commitment</h2>
             <p>

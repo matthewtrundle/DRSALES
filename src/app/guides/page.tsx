@@ -75,13 +75,13 @@ export default function GuidesPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary-50 to-white py-16 md:py-20">
+      <section className="bg-gradient-to-b from-charcoal/5 to-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-4 py-1 bg-accent-100 text-accent-700 rounded-full text-sm font-medium mb-4">
               Patient Resources
             </span>
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-primary-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">
               Comprehensive Eye Care Guides
             </h1>
             <p className="text-xl text-gray-600">
@@ -106,7 +106,7 @@ export default function GuidesPage() {
                 <span className="text-4xl mb-4 block">{guide.icon}</span>
 
                 {/* Title */}
-                <h2 className="text-2xl font-display font-semibold text-primary-900 mb-3 group-hover:text-accent-600 transition-colors">
+                <h2 className="text-2xl font-display font-semibold text-charcoal mb-3 group-hover:text-accent-600 transition-colors">
                   {guide.title}
                 </h2>
 
@@ -162,19 +162,19 @@ export default function GuidesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary-900 text-white">
+      <section className="py-16 bg-charcoal text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-display font-bold mb-4">
               Have Questions About Your Eye Health?
             </h2>
-            <p className="text-primary-100 mb-8">
+            <p className="text-white/70 mb-8">
               Dr. Sales and his team are here to answer your questions and discuss
               your treatment options.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-lg transition-colors shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold/90 text-charcoal font-medium rounded-[40px] transition-colors"
             >
               Schedule a Consultation
               <svg

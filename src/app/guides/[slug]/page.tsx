@@ -128,32 +128,32 @@ export default async function GuidePage({ params }: GuidePageProps) {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary-800 to-primary-900 text-white py-16 md:py-20">
+      <section className="bg-cream text-charcoal py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-primary-200 text-sm mb-6">
-              <Link href="/" className="hover:text-white transition-colors">
+            <nav className="flex items-center gap-2 text-neutral-500 text-sm mb-6">
+              <Link href="/" className="hover:text-charcoal transition-colors">
                 Home
               </Link>
               <span>/</span>
-              <Link href="/guides" className="hover:text-white transition-colors">
+              <Link href="/guides" className="hover:text-charcoal transition-colors">
                 Guides
               </Link>
               <span>/</span>
-              <span className="text-white">{title}</span>
+              <span className="text-charcoal">{title}</span>
             </nav>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-6 leading-tight">
               {title}
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-primary-100 mb-6">{description}</p>
+            <p className="text-xl text-neutral-600 mb-6">{description}</p>
 
             {/* Meta info */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-primary-200">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-500">
               <div className="flex items-center gap-2">
                 <svg
                   className="w-5 h-5"
@@ -224,7 +224,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
                     {/* Quick CTA */}
                     <div className="mt-6 p-4 bg-accent-50 rounded-lg border border-accent-100">
-                      <p className="text-sm font-medium text-primary-900 mb-2">
+                      <p className="text-sm font-medium text-charcoal mb-2">
                         Have questions?
                       </p>
                       <Link
@@ -245,14 +245,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
                 }`}
               >
                 {/* Article content */}
-                <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-primary-900 prose-a:text-accent-600 prose-a:no-underline hover:prose-a:underline">
+                <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-charcoal prose-a:text-accent-600 prose-a:no-underline hover:prose-a:underline">
                   {MDXContent ? (
                     <MDXContent />
                   ) : (
-                    <div className="bg-primary-50 rounded-xl p-8 text-center">
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+                    <div className="bg-charcoal/5 rounded-xl p-8 text-center">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-charcoal/10 rounded-full mb-4">
                         <svg
-                          className="w-8 h-8 text-primary-600"
+                          className="w-8 h-8 text-charcoal"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -265,7 +265,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-display font-semibold text-primary-900 mb-2">
+                      <h2 className="text-2xl font-display font-semibold text-charcoal mb-2">
                         Full Guide Coming Soon
                       </h2>
                       <p className="text-gray-600 max-w-md mx-auto mb-6">
@@ -274,7 +274,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                       </p>
                       <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center px-6 py-3 bg-primary-700 hover:bg-primary-800 text-white font-medium rounded-lg transition-colors"
+                        className="inline-flex items-center justify-center px-6 py-3 bg-charcoal hover:bg-charcoal/90 text-white font-medium rounded-[40px] transition-colors"
                       >
                         Contact Us
                       </Link>
@@ -302,7 +302,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-display font-semibold text-primary-900 mb-6">
+            <h2 className="text-2xl font-display font-semibold text-charcoal mb-6">
               Explore More Guides
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
@@ -312,7 +312,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                   <Link
                     key={key}
                     href={`/guides/${key}`}
-                    className="px-6 py-3 bg-white rounded-lg border border-gray-200 hover:border-accent-300 hover:shadow-md transition-all text-primary-700 hover:text-accent-600 font-medium"
+                    className="px-6 py-3 bg-white rounded-lg border border-gray-200 hover:border-accent-300 hover:shadow-md transition-all text-charcoal hover:text-accent-600 font-medium"
                   >
                     {value.title}
                   </Link>

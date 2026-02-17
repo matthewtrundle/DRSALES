@@ -31,9 +31,9 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             sizes={featured ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 100vw, 33vw'}
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal/10 to-charcoal/20 flex items-center justify-center">
             <svg
-              className="w-16 h-16 text-primary-300"
+              className="w-16 h-16 text-charcoal/30"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -55,7 +55,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
         )}
         {/* Category badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary-700 text-sm font-medium rounded-full">
+          <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-charcoal text-sm font-medium rounded-full">
             {frontmatter.category}
           </span>
         </div>
@@ -72,7 +72,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
         {/* Title */}
         <h3
-          className={`font-display font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-2 ${
+          className={`font-display font-semibold text-charcoal group-hover:text-gold transition-colors mb-2 ${
             featured ? 'text-2xl md:text-3xl' : 'text-xl'
           }`}
         >
@@ -101,7 +101,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
         {/* Read more link */}
         <Link
           href={`/blog/${slug}`}
-          className="inline-flex items-center text-accent-600 font-medium hover:text-accent-700 transition-colors"
+          className="inline-flex items-center text-gold font-medium hover:text-gold/80 transition-colors"
         >
           Read Article
           <svg
