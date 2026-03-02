@@ -44,10 +44,10 @@ export default function HeroSection() {
           src="/images/hero-background.png"
           alt=""
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-75"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream/80 via-warm-cream/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream/40 via-warm-cream/25 to-transparent" />
       </div>
 
       <div className="container-custom relative z-10 py-28 md:py-36 lg:py-44">
