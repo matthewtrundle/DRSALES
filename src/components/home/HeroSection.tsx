@@ -38,8 +38,17 @@ export default function HeroSection() {
       ref={parallaxRef}
       className="relative flex items-center overflow-hidden min-h-[92vh]"
     >
-      {/* Clean background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream via-warm-cream to-gold-50/30" />
+      {/* Warm ambient background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-background.png"
+          alt=""
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream/80 via-warm-cream/60 to-transparent" />
+      </div>
 
       <div className="container-custom relative z-10 py-28 md:py-36 lg:py-44">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">

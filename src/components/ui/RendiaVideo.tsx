@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-
 interface RendiaVideoProps {
   presentationId: string;
   fallbackUrl: string;
@@ -9,48 +7,31 @@ interface RendiaVideoProps {
 }
 
 export default function RendiaVideo({ presentationId, fallbackUrl, title }: RendiaVideoProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const scriptLoaded = useRef(false);
-
-  useEffect(() => {
-    // Load Rendia script once
-    if (!scriptLoaded.current) {
-      const existingScript = document.querySelector('script[src*="rendia.com/whitelabel/embed.js"]');
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.src = '//share.rendia.com/whitelabel/embed.js';
-        script.async = true;
-        document.body.appendChild(script);
-      }
-      scriptLoaded.current = true;
-    }
-
-    // Re-initialize Rendia embeds when component mounts
-    // Rendia's script looks for var elements with data-presentation
-    const checkRendia = setInterval(() => {
-      if ((window as unknown as { Rendia?: { init?: () => void } }).Rendia?.init) {
-        (window as unknown as { Rendia: { init: () => void } }).Rendia.init();
-        clearInterval(checkRendia);
-      }
-    }, 100);
-
-    // Cleanup
-    return () => clearInterval(checkRendia);
-  }, [presentationId]);
+  // Use iframe embed which is more reliable than the script-based approach
+  const embedUrl = `https://share.rendia.com/theater/${presentationId}`;
 
   return (
-    <div ref={containerRef} className="relative w-full rounded-lg overflow-hidden shadow-lg bg-neutral-100">
+    <div className="relative w-full rounded-lg overflow-hidden shadow-lg bg-neutral-100">
       {title && (
-        <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-charcoal/60 to-transparent p-4 z-10">
+        <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-charcoal/60 to-transparent p-4 z-10 pointer-events-none">
           <p className="text-white text-sm font-medium">{title}</p>
         </div>
       )}
-      <var
-        style={{ width: '100%', paddingBottom: '56.25%', display: 'block' }}
-        data-presentation={presentationId}
-      >
-        <a href={fallbackUrl} style={{ display: 'none' }}>View Video</a>
-      </var>
+      <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+        <iframe
+          src={embedUrl}
+          className="absolute top-0 left-0 w-full h-full border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title={title || 'Rendia Video'}
+        />
+      </div>
+      {/* Fallback link */}
+      <noscript>
+        <a href={fallbackUrl} target="_blank" rel="noopener noreferrer">
+          View Video
+        </a>
+      </noscript>
     </div>
   );
 }
