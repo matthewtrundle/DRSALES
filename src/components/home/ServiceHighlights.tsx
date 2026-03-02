@@ -11,8 +11,8 @@ const situations = [
     headline: "My vision is cloudy or getting worse",
     description: "Cataracts, corneal conditions, and Fuchs' Dystrophy. Dr. Sales will figure out what's going on and walk you through your options.",
     href: "/services/cataract",
-    image: "/images/cloudy-vision.png",
-    imageAlt: "Cloudy vision illustration",
+    image: "/images/ToUse/061_Weill Cornell Ophthalmology.JPG",
+    imageAlt: "Dr. Sales examining patient at slit lamp",
   },
   {
     headline: "I want to stop wearing glasses",
