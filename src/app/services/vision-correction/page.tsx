@@ -22,7 +22,6 @@ const procedures = [
       recovery: '24hrs',
       patients: '10M+',
     },
-    image: '/images/procedures/lasik.jpg',
   },
   {
     name: 'PRK',
@@ -41,7 +40,6 @@ const procedures = [
       recovery: '3-5 days',
       patients: '5M+',
     },
-    image: '/images/procedures/prk.jpg',
   },
   {
     name: 'ICL',
@@ -60,7 +58,6 @@ const procedures = [
       recovery: '1-2 days',
       patients: '2M+',
     },
-    image: '/images/procedures/icl.jpg',
   },
 ];
 
@@ -91,19 +88,8 @@ const candidacyFactors = {
 export default function VisionCorrectionPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section - Soft Grey */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-cream">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/vision-correction-hero.jpg"
-            alt="Vision correction consultation"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-        </div>
-
+      {/* Hero Section */}
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-cream via-warm-cream to-gold-50/30">
         <div className="container-custom relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
@@ -145,8 +131,8 @@ export default function VisionCorrectionPage() {
             >
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/procedures/lasik-technology.jpg"
-                  alt="LASIK laser technology"
+                  src="/images/ToUse/glasses-freedom.png"
+                  alt="Freedom from glasses"
                   fill
                   className="object-cover"
                 />
@@ -185,14 +171,8 @@ export default function VisionCorrectionPage() {
                 className="group"
               >
                 <div className="h-full bg-white rounded-lg shadow-soft hover:shadow-elevated transition-shadow duration-300 overflow-hidden border border-neutral-100">
-                  {/* Image Header */}
-                  <div className="relative h-48 bg-neutral-200">
-                    <Image
-                      src={procedure.image}
-                      alt={procedure.name}
-                      fill
-                      className="object-cover"
-                    />
+                  {/* Header */}
+                  <div className="relative h-32 bg-gradient-to-br from-cream via-warm-cream to-gold-50/40">
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-700/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <h3 className="text-3xl font-display font-bold mb-1">{procedure.name}</h3>
@@ -286,12 +266,12 @@ export default function VisionCorrectionPage() {
       {/* Image Break Section */}
       <section className="relative h-80 md:h-96">
         <Image
-          src="/images/lifestyle/clear-vision-lifestyle.jpg"
-          alt="Life with clear vision"
+          src="/images/dr-sales-surgery-bw.jpg"
+          alt="Dr. Sales performing surgery"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-neutral-600/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-charcoal/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <p className="font-display text-3xl md:text-4xl mb-4">Experience Life in Focus</p>
             <p className="text-neutral-200 text-lg">Join millions who have achieved visual freedom</p>
@@ -403,8 +383,8 @@ export default function VisionCorrectionPage() {
             >
               <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/technology/laser-equipment.jpg"
-                  alt="Advanced laser technology"
+                  src="/images/dr-sales-slit-lamp.jpg"
+                  alt="Dr. Sales at slit lamp"
                   fill
                   className="object-cover"
                 />

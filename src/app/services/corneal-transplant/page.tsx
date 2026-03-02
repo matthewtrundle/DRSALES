@@ -3,6 +3,21 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
+
+// Rendia video embeds for corneal education
+const cornealVideos = [
+  {
+    presentationId: '163cff2e-4957-4d85-4bf0-4bdb401a4b58',
+    fallbackUrl: 'http://fyi.rendia.com/VwXql',
+    title: "Fuchs' Dystrophy",
+  },
+  {
+    presentationId: '58c56749-4a44-4ed3-468a-4fe347f74163',
+    fallbackUrl: 'http://fyi.rendia.com/n7ypo',
+    title: 'DMEK Surgery',
+  },
+];
 
 const procedures = [
   {
@@ -16,7 +31,6 @@ const procedures = [
       'Best final vision potential',
     ],
     conditions: ['Fuchs\' Endothelial Dystrophy', 'Pseudophakic Bullous Keratopathy', 'Endothelial Decompensation'],
-    image: '/images/procedures/dmek.jpg',
   },
   {
     name: 'DSAEK',
@@ -29,7 +43,6 @@ const procedures = [
       'Good visual outcomes',
     ],
     conditions: ['Fuchs\' Dystrophy', 'Previous failed corneal surgery', 'Complex anterior segment anatomy'],
-    image: '/images/procedures/dsaek.jpg',
   },
   {
     name: 'DALK',
@@ -42,7 +55,6 @@ const procedures = [
       'Excellent long-term outcomes',
     ],
     conditions: ['Keratoconus', 'Corneal scarring', 'Stromal dystrophies'],
-    image: '/images/procedures/dalk.jpg',
   },
   {
     name: 'PK',
@@ -54,7 +66,6 @@ const procedures = [
       'Only option for certain conditions',
     ],
     conditions: ['Full-thickness corneal scarring', 'Severe keratoconus', 'Corneal perforations'],
-    image: '/images/procedures/pk.jpg',
   },
   {
     name: 'Corneal Crosslinking',
@@ -67,7 +78,6 @@ const procedures = [
       'May prevent need for transplant',
     ],
     conditions: ['Progressive keratoconus', 'Post-LASIK ectasia'],
-    image: '/images/procedures/crosslinking.jpg',
   },
 ];
 
@@ -85,8 +95,8 @@ export default function CornealTransplantPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero/corneal-transplant-hero.jpg"
-            alt="Corneal transplant surgery"
+            src="/images/dr-sales-surgery-bw.jpg"
+            alt="Dr. Sales performing surgery at microscope"
             fill
             className="object-cover opacity-30"
             priority
@@ -175,8 +185,8 @@ export default function CornealTransplantPage() {
             >
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/procedures/corneal-surgery.jpg"
-                  alt="Dr. Sales performing corneal surgery"
+                  src="/images/dr-sales-slit-lamp.jpg"
+                  alt="Dr. Sales at slit lamp"
                   fill
                   className="object-cover"
                 />
@@ -186,8 +196,15 @@ export default function CornealTransplantPage() {
         </div>
       </section>
 
+      {/* Patient Education Videos */}
+      <RendiaVideoSection
+        videos={cornealVideos}
+        sectionTitle="Understanding Corneal Conditions"
+        sectionSubtitle="Watch these videos to learn about Fuchs' Dystrophy and the DMEK procedure."
+      />
+
       {/* Procedures */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
@@ -212,14 +229,11 @@ export default function CornealTransplantPage() {
               >
                 <div className="bg-white rounded-lg shadow-soft overflow-hidden border border-neutral-100">
                   <div className="grid lg:grid-cols-4 gap-0">
-                    {/* Image */}
-                    <div className="relative h-64 lg:h-auto bg-neutral-200">
-                      <Image
-                        src={procedure.image}
-                        alt={procedure.name}
-                        fill
-                        className="object-cover"
-                      />
+                    {/* Gradient Header */}
+                    <div className="relative h-64 lg:h-auto bg-gradient-to-br from-cream via-warm-cream to-gold-50/40 flex items-center justify-center">
+                      <div className="text-center p-6">
+                        <span className="font-display text-4xl text-charcoal/20">{procedure.name}</span>
+                      </div>
                     </div>
 
                     {/* Content */}
@@ -266,12 +280,12 @@ export default function CornealTransplantPage() {
       {/* Image Break */}
       <section className="relative h-80 md:h-96">
         <Image
-          src="/images/lifestyle/clear-cornea.jpg"
-          alt="Crystal clear vision"
+          src="/images/dr-sales-surgery-bw.jpg"
+          alt="Dr. Sales performing surgery"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-neutral-600/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-charcoal/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <p className="font-display text-3xl md:text-4xl mb-4">Restoring Clarity</p>
             <p className="text-neutral-200 text-lg">Advanced techniques for optimal visual outcomes</p>

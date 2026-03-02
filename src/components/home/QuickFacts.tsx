@@ -63,10 +63,10 @@ export default function QuickFacts() {
               style={{ transform: `translateY(${offset * -0.4}px)` }}
             >
               <ImagePlaceholder
-                src="/images/hallway.png"
-                alt="Doctor greeting patient in office hallway"
+                src="/images/headshots/dr-sales-white-coat.jpg"
+                alt="Dr. Sales in white coat"
                 fill
-                className="rounded-xl"
+                className="rounded-xl object-cover"
                 sizes="(max-width: 1024px) 400px, 350px"
               />
               {/* Subtle overlay for depth */}

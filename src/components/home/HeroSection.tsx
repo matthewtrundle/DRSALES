@@ -38,20 +38,8 @@ export default function HeroSection() {
       ref={parallaxRef}
       className="relative flex items-center overflow-hidden min-h-[92vh]"
     >
-      {/* Full-bleed background image */}
-      <div
-        className="absolute inset-0"
-        style={{ transform: `translateY(${offset * 0.15}px)` }}
-      >
-        <Image
-          src="/images/hero-background.png"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-      </div>
+      {/* Clean background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cream via-warm-cream to-gold-50/30" />
 
       <div className="container-custom relative z-10 py-28 md:py-36 lg:py-44">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
@@ -144,7 +132,7 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right: looping video — matches text box height */}
+          {/* Right: Dr. Sales photo */}
           <motion.div
             className="relative hidden lg:block lg:col-span-5"
             initial={{ opacity: 0 }}
@@ -152,20 +140,17 @@ export default function HeroSection() {
             transition={{ delay: 0.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div
-              className="relative rounded-2xl overflow-hidden h-full min-h-[500px]"
+              className="relative rounded-2xl overflow-hidden h-full min-h-[500px] shadow-2xl"
               style={{ transform: `translateY(${offset * -0.2}px)` }}
             >
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover object-top"
-              >
-                <source src="/images/hero-video.mp4" type="video/mp4" />
-              </video>
-              {/* Warm overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-warm-cream/20 to-transparent" />
+              <Image
+                src="/images/headshots/dr-sales-primary.jpg"
+                alt="Dr. Christopher Sales"
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
           </motion.div>
         </div>

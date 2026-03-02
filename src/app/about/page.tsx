@@ -37,8 +37,8 @@ export default function AboutPage() {
             <div className="relative hidden lg:block">
               <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden shadow-2xl image-zoom">
                 <Image
-                  src="/images/headshots/dr-sales-primary.jpg"
-                  alt="Dr. Christopher S. Sales"
+                  src="/images/headshots/dr-sales-white-coat.jpg"
+                  alt="Dr. Christopher S. Sales in white coat"
                   fill
                   className="object-cover object-top"
                   priority

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
 
 interface Testimonial {
   id: number;
@@ -103,17 +102,8 @@ export default function TestimonialsCarousel() {
 
   return (
     <section className="relative overflow-hidden py-16 md:py-24">
-      {/* Full-bleed background image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/secondary-background.png"
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-warm-cream/85" />
-      </div>
+      {/* Warm gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-warm-cream via-cream to-gold-50/30" />
 
       <div ref={sectionRef} className="container-custom max-w-3xl mx-auto relative z-10">
         {/* Header */}

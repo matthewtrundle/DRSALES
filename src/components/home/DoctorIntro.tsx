@@ -13,18 +13,8 @@ export default function DoctorIntro() {
 
   return (
     <section className="relative overflow-hidden py-16 md:py-24">
-      {/* Full-bleed background image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/secondary-background.png"
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Warm overlay to soften background and ensure text readability */}
-        <div className="absolute inset-0 bg-warm-cream/80" />
-      </div>
+      {/* Warm background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-warm-cream via-cream to-gold-50/20" />
 
       <div ref={sectionRef} className="container-custom relative z-10">
         <div ref={parallaxRef} className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -41,8 +31,8 @@ export default function DoctorIntro() {
                 style={{ transform: `translateY(${offset * -0.3}px)` }}
               >
                 <Image
-                  src="/images/dr-sales-patient.png"
-                  alt="Dr. Sales consulting with a patient"
+                  src="/images/dr-sales-slit-lamp.jpg"
+                  alt="Dr. Sales in exam room with slit lamp equipment"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 500px"

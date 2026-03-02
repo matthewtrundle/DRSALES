@@ -11,22 +11,22 @@ const situations = [
     headline: "My vision is cloudy or getting worse",
     description: "Cataracts, corneal conditions, and Fuchs' Dystrophy. Dr. Sales will figure out what's going on and walk you through your options.",
     href: "/services/cataract",
-    image: "/images/eyes-cloudy.png",
-    imageAlt: "Doctor walking with patient in hallway",
+    image: "/images/cloudy-vision.png",
+    imageAlt: "Cloudy vision illustration",
   },
   {
     headline: "I want to stop wearing glasses",
     description: "From EVO ICL implantable lenses to LASIK — there are good options, even if you've been told LASIK isn't for you.",
     href: "/services/vision-correction",
-    image: "/images/stop-wearing-glasses.png",
-    imageAlt: "Patient discussing glasses with doctor",
+    image: "/images/ToUse/glasses-freedom.png",
+    imageAlt: "Freedom from glasses",
   },
   {
     headline: "My eyes are always dry or irritated",
     description: "Dry eye is real and treatable. We'll find the actual cause and build a plan that works for you — not just eye drops forever.",
     href: "/services/dry-eye",
-    image: "/images/dryeyes.png",
-    imageAlt: "Before and after dry eye treatment",
+    image: "/images/ToUse/dryeyes.png",
+    imageAlt: "Dry eye relief",
   },
 ];
 

@@ -3,6 +3,16 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
+
+// Rendia video embeds for cataract education
+const cataractVideos = [
+  {
+    presentationId: '3c927839-403f-4bb8-4da5-436542f04d0d',
+    fallbackUrl: 'http://fyi.rendia.com/hMaZ8',
+    title: 'Lens Options',
+  },
+];
 
 const lensOptions = [
   {
@@ -47,19 +57,9 @@ export default function CataractPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/cataract-hero.jpg"
-            alt="Cataract surgery consultation"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-        </div>
-
-        <div className="container-custom relative z-10 py-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-warm-cream via-cream to-gold-50/30">
+        <div className="container-custom">
+          <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -73,26 +73,10 @@ export default function CataractPage() {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Cataract Surgery
               </h1>
-              <p className="text-xl text-neutral-600 max-w-xl">
+              <p className="text-xl text-neutral-600 max-w-xl leading-relaxed">
                 State-of-the-art cataract surgery with premium lens options designed to reduce
                 or eliminate your dependence on glasses after surgery.
               </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/procedures/cataract-lens.jpg"
-                  alt="Premium IOL technology"
-                  fill
-                  className="object-cover"
-                />
-              </div>
             </motion.div>
           </div>
         </div>
@@ -127,8 +111,8 @@ export default function CataractPage() {
               </div>
               <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/technology/cataract-equipment.jpg"
-                  alt="Advanced cataract surgery equipment"
+                  src="/images/dr-sales-slit-lamp.jpg"
+                  alt="Dr. Sales at slit lamp equipment"
                   fill
                   className="object-cover"
                 />
@@ -138,8 +122,15 @@ export default function CataractPage() {
         </div>
       </section>
 
+      {/* Patient Education Videos */}
+      <RendiaVideoSection
+        videos={cataractVideos}
+        sectionTitle="Understanding Your Lens Options"
+        sectionSubtitle="Watch this video to learn about the different intraocular lens options available after cataract surgery."
+      />
+
       {/* Lens Options */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
@@ -189,12 +180,12 @@ export default function CataractPage() {
       {/* Image Break */}
       <section className="relative h-80 md:h-96">
         <Image
-          src="/images/lifestyle/active-lifestyle.jpg"
-          alt="Active lifestyle with clear vision"
+          src="/images/dr-sales-surgery-bw.jpg"
+          alt="Dr. Sales performing surgery"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-neutral-600/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-charcoal/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <p className="font-display text-3xl md:text-4xl mb-4">See Life Clearly Again</p>
             <p className="text-neutral-200 text-lg">Premium lens options for every lifestyle</p>

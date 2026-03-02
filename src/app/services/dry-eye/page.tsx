@@ -62,37 +62,44 @@ export default function DryEyePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/lifestyle/clear-vision-lifestyle.jpg"
-            alt="Dry eye treatment consultation"
-            fill
-            className="object-cover opacity-30"
-            priority
-          />
-        </div>
-
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-br from-cream via-warm-cream to-gold-50/30">
         <div className="container-custom relative z-10 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl"
-          >
-            <nav className="text-sm mb-6">
-              <span className="text-neutral-600">Services</span>
-              <span className="mx-2 text-neutral-400">/</span>
-              <span className="text-gold">Dry Eye Treatment</span>
-            </nav>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
-              Dry Eye Treatment
-            </h1>
-            <p className="text-xl text-neutral-600 max-w-xl">
-              Comprehensive evaluation and personalized treatment for dry eye disease
-              and meibomian gland dysfunction.
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-2xl"
+            >
+              <nav className="text-sm mb-6">
+                <span className="text-neutral-600">Services</span>
+                <span className="mx-2 text-neutral-400">/</span>
+                <span className="text-gold">Dry Eye Treatment</span>
+              </nav>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+                Dry Eye Treatment
+              </h1>
+              <p className="text-xl text-neutral-600 max-w-xl">
+                Comprehensive evaluation and personalized treatment for dry eye disease
+                and meibomian gland dysfunction.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden lg:block"
+            >
+              <div className="relative aspect-square max-w-md rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/ToUse/dryeyes.png"
+                  alt="Dry eye relief"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
