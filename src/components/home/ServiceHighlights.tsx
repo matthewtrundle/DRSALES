@@ -13,6 +13,7 @@ const situations = [
     href: "/services/cataract",
     image: "/images/dr-sales-or-nyp.jpg",
     imageAlt: "Dr. Sales in the operating room at NewYork-Presbyterian",
+    imageZoom: true, // Zoom in and center on Dr. Sales
   },
   {
     headline: "I want to stop wearing glasses",
@@ -96,6 +97,7 @@ export default function ServiceHighlights() {
                     fill
                     className={`object-cover group-hover:scale-105 transition-transform duration-700 ${'imagePosition' in situation && situation.imagePosition === 'top' ? 'object-top' : ''}`}
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    style={'imageZoom' in situation && situation.imageZoom ? { transform: 'scale(1.4)', objectPosition: '35% 25%' } : undefined}
                   />
                 </div>
 
