@@ -42,8 +42,7 @@ const referralConditions = [
       </svg>
     ),
     conditions: [
-      'LASIK evaluation',
-      'PRK candidates',
+      'EVO ICL evaluation',
       'ICL (Implantable Collamer Lens)',
       'Post-refractive ectasia',
       'Refractive surgery complications',
@@ -109,9 +108,9 @@ const specializations = [
     ),
   },
   {
-    title: 'Refractive Surgery',
+    title: 'EVO ICL',
     highlight: 'Fellowship Trained',
-    description: 'LASIK, PRK, ICL. Fellowship at Joint Warfighter Refractive Surgery Center, Fort Belvoir.',
+    description: 'Implantable Collamer Lens for high prescriptions, thin corneas, or dry eyes. Fellowship at Joint Warfighter Refractive Surgery Center, Fort Belvoir.',
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -125,16 +124,6 @@ const specializations = [
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Surgical Innovation',
-    highlight: 'Patent Holder',
-    description: 'Founder of Oko-Tek Inc. and the Iowa Eye Device Lab. Multiple patents for ophthalmic surgical devices.',
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
   },

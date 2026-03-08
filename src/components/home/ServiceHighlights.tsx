@@ -11,12 +11,12 @@ const situations = [
     headline: "My vision is cloudy or getting worse",
     description: "Cataracts, corneal conditions, and Fuchs' Dystrophy. Dr. Sales will figure out what's going on and walk you through your options.",
     href: "/services/cataract",
-    image: "/images/ToUse/061_Weill Cornell Ophthalmology.JPG",
-    imageAlt: "Dr. Sales examining patient at slit lamp",
+    image: "/images/dr-sales-or-suite.jpg",
+    imageAlt: "Dr. Sales in the operating room",
   },
   {
     headline: "I want to stop wearing glasses",
-    description: "From EVO ICL implantable lenses to LASIK — there are good options, even if you've been told LASIK isn't for you.",
+    description: "EVO ICL implantable lenses offer freedom from glasses and contacts — even for high prescriptions, thin corneas, or dry eyes.",
     href: "/services/vision-correction",
     image: "/images/ToUse/glasses-freedom.png",
     imageAlt: "Freedom from glasses",
@@ -25,8 +25,8 @@ const situations = [
     headline: "My eyes are always dry or irritated",
     description: "Dry eye is real and treatable. We'll find the actual cause and build a plan that works for you — not just eye drops forever.",
     href: "/services/dry-eye",
-    image: "/images/ToUse/dryeyes.png",
-    imageAlt: "Dry eye relief",
+    image: "/images/dry-eye-relief.png",
+    imageAlt: "Relief from dry eye discomfort",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function ServiceHighlights() {
                     src={situation.image}
                     alt={situation.imageAlt}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className={`object-cover group-hover:scale-105 transition-transform duration-700 ${'imagePosition' in situation && situation.imagePosition === 'top' ? 'object-top' : ''}`}
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>

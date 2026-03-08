@@ -38,13 +38,6 @@ const staticGuideContent: Record<string, {
     targetKeywords: ['Fuchs dystrophy', 'Fuchs dystrophy treatment', 'Fuchs dystrophy symptoms'],
     content: null,
   },
-  'lasik-connecticut': {
-    title: 'LASIK in Connecticut: Complete Guide',
-    description: 'Your complete guide to LASIK vision correction in Connecticut.',
-    lastUpdated: '2024-02-01',
-    targetKeywords: ['LASIK Connecticut', 'LASIK Hartford CT', 'laser eye surgery Connecticut'],
-    content: null,
-  },
 };
 
 // Generate static params for all guides

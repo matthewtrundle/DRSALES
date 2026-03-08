@@ -139,7 +139,7 @@ export default function ReferralPage() {
                     "Fuchs' Dystrophy",
                     'Keratoconus',
                     'DMEK/DSAEK',
-                    'LASIK/PRK',
+                    'EVO ICL',
                     'Complex Cataract',
                     'Iris Repair',
                     'Corneal Scar',

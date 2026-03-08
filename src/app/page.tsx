@@ -3,7 +3,6 @@ import ServiceHighlights from '@/components/home/ServiceHighlights';
 import PhotoDivider from '@/components/home/PhotoDivider';
 import DoctorIntro from '@/components/home/DoctorIntro';
 import QuickFacts from '@/components/home/QuickFacts';
-import TestimonialsCarousel from '@/components/home/TestimonialsCarousel';
 import CTASection from '@/components/home/CTASection';
 
 export default function HomePage() {
@@ -32,7 +31,6 @@ export default function HomePage() {
         overlayText="Precision meets patience"
       />
 
-      <TestimonialsCarousel />
       <CTASection />
     </>
   );

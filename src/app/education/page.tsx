@@ -21,8 +21,8 @@ const videos = [
     category: 'Cataract',
   },
   {
-    title: 'LASIK vs PRK: Which is Right for You?',
-    description: 'Compare these popular vision correction procedures.',
+    title: 'EVO ICL: Freedom from Glasses',
+    description: 'Learn about this implantable lens option for vision correction.',
     duration: '6:48',
     category: 'Vision Correction',
   },
@@ -48,8 +48,8 @@ const videos = [
 
 const faqs = [
   {
-    question: 'How do I know if I\'m a candidate for LASIK?',
-    answer: 'Good LASIK candidates are typically 18 or older, have a stable prescription for at least one year, have healthy corneas of adequate thickness, and are not pregnant or nursing. The best way to determine candidacy is through a comprehensive evaluation where we measure your corneal thickness, map your cornea, and assess your overall eye health.',
+    question: 'How do I know if I\'m a candidate for EVO ICL?',
+    answer: 'Good EVO ICL candidates are typically ages 21-45, have a stable prescription for at least one year, and have nearsightedness between -3 and -20 diopters. ICL is an excellent option for patients with thin corneas, dry eyes, or high prescriptions. The best way to determine candidacy is through a comprehensive evaluation where we measure your eye anatomy and assess your overall eye health.',
   },
   {
     question: 'What is the recovery time for DMEK surgery?',
@@ -64,8 +64,8 @@ const faqs = [
     answer: 'Fuchs\' Endothelial Dystrophy is a genetic condition where the cells lining the inner cornea (endothelial cells) gradually deteriorate. It tends to run in families and affects women more often than men. The condition typically appears in the 30s or 40s but may not cause significant symptoms until later in life. Early detection allows for proactive management.',
   },
   {
-    question: 'How long do the results of vision correction surgery last?',
-    answer: 'For most patients, the vision correction from LASIK, PRK, or ICL is permanent. However, the natural aging process can still affect your vision over time. Presbyopia (the need for reading glasses) typically develops in your 40s regardless of whether you\'ve had vision correction. Additionally, cataracts may develop later in life and can be addressed with cataract surgery.',
+    question: 'How long do the results of EVO ICL last?',
+    answer: 'For most patients, the vision correction from EVO ICL is permanent. The lens can remain in place indefinitely, though it can be removed or replaced if needed. However, the natural aging process can still affect your vision over time. Presbyopia (the need for reading glasses) typically develops in your 40s regardless of whether you\'ve had vision correction. Additionally, cataracts may develop later in life and can be addressed with cataract surgery.',
   },
   {
     question: 'Is cataract surgery painful?',
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     question: 'Does insurance cover these procedures?',
-    answer: 'Coverage varies by procedure and insurance plan. Medically necessary procedures like cataract surgery and corneal transplants are typically covered by insurance. Vision correction procedures like LASIK are usually considered elective and not covered. Premium lens options for cataract surgery may have additional out-of-pocket costs. Our staff can help you understand your coverage.',
+    answer: 'Coverage varies by procedure and insurance plan. Medically necessary procedures like cataract surgery and corneal transplants are typically covered by insurance. Vision correction procedures like EVO ICL are usually considered elective and not covered. Premium lens options for cataract surgery may have additional out-of-pocket costs. Our staff can help you understand your coverage.',
   },
 ];
 
@@ -98,8 +98,8 @@ const guides = [
     type: 'PDF',
   },
   {
-    title: 'Vision Correction Surgery Checklist',
-    description: 'Preparation checklist for LASIK, PRK, or ICL procedures.',
+    title: 'EVO ICL Surgery Checklist',
+    description: 'Preparation checklist for EVO ICL vision correction.',
     type: 'PDF',
   },
 ];

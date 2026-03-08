@@ -36,13 +36,13 @@ const locationData: Record<
     region: 'Connecticut',
     title: 'Ophthalmologist in Hartford, CT',
     description:
-      'Expert ophthalmology care for the Greater Hartford area. Dr. Christopher S. Sales specializes in DMEK corneal transplant, LASIK, cataract surgery, and treatment of Fuchs\' dystrophy.',
+      'Expert ophthalmology care for the Greater Hartford area. Dr. Christopher S. Sales specializes in DMEK corneal transplant, EVO ICL, cataract surgery, and treatment of Fuchs\' dystrophy.',
     metaDescription:
-      'Looking for an ophthalmologist in Hartford, CT? Dr. Christopher S. Sales offers DMEK surgery, LASIK, cataract surgery, and corneal care at Starling Physicians in Wethersfield.',
+      'Looking for an ophthalmologist in Hartford, CT? Dr. Christopher S. Sales offers DMEK surgery, EVO ICL, cataract surgery, and corneal care at Starling Physicians in Wethersfield.',
     keywords: [
       'ophthalmologist Hartford CT',
       'eye doctor Hartford',
-      'LASIK Hartford CT',
+      'EVO ICL Hartford CT',
       'cataract surgery Hartford',
       'cornea specialist Hartford',
       'DMEK surgery Connecticut',
@@ -67,9 +67,9 @@ const locationData: Record<
         link: '/services/corneal-transplant',
       },
       {
-        name: 'LASIK & Vision Correction',
+        name: 'EVO ICL Vision Correction',
         description:
-          'Freedom from glasses and contacts with state-of-the-art laser vision correction.',
+          'Freedom from glasses and contacts with implantable lens technology.',
         link: '/services/vision-correction',
       },
       {
@@ -110,11 +110,11 @@ const locationData: Record<
     description:
       'Advanced ophthalmology services for the Greater New Haven area. Dr. Christopher S. Sales offers expert corneal transplantation, vision correction, and treatment of complex eye conditions.',
     metaDescription:
-      'Expert ophthalmologist serving New Haven, CT and surrounding areas. Dr. Christopher S. Sales specializes in DMEK surgery, LASIK, and advanced corneal care.',
+      'Expert ophthalmologist serving New Haven, CT and surrounding areas. Dr. Christopher S. Sales specializes in DMEK surgery, EVO ICL, and advanced corneal care.',
     keywords: [
       'ophthalmologist New Haven CT',
       'eye doctor New Haven',
-      'LASIK New Haven',
+      'EVO ICL New Haven',
       'cornea specialist New Haven',
       'cataract surgery New Haven CT',
     ],
@@ -138,9 +138,9 @@ const locationData: Record<
         link: '/services/corneal-transplant',
       },
       {
-        name: 'Vision Correction Surgery',
+        name: 'EVO ICL Vision Correction',
         description:
-          'LASIK, PRK, and ICL procedures to reduce dependence on glasses and contacts.',
+          'Implantable lens technology to reduce dependence on glasses and contacts.',
         link: '/services/vision-correction',
       },
       {
@@ -468,7 +468,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               Expert Eye Care for {location.city} and Beyond
             </h2>
             <p className="text-white/70 mb-8">
-              Whether you need a consultation for DMEK surgery, LASIK, or another
+              Whether you need a consultation for DMEK surgery, EVO ICL, or another
               condition, Dr. Sales is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

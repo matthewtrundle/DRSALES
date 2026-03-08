@@ -10,12 +10,17 @@ const cornealVideos = [
   {
     presentationId: '163cff2e-4957-4d85-4bf0-4bdb401a4b58',
     fallbackUrl: 'http://fyi.rendia.com/VwXql',
-    title: "Fuchs' Dystrophy",
+    title: "Introduction to Fuchs' Dystrophy",
   },
   {
     presentationId: '58c56749-4a44-4ed3-468a-4fe347f74163',
     fallbackUrl: 'http://fyi.rendia.com/n7ypo',
-    title: 'DMEK Surgery',
+    title: 'DMEK Minimally Invasive Corneal Transplant Surgery',
+  },
+  {
+    presentationId: '29d5dec6-482c-4ecb-48b7-46674cef4f58',
+    fallbackUrl: 'http://fyi.rendia.com/9FixV',
+    title: 'Map-Dot-Fingerprint Dystrophy',
   },
 ];
 
@@ -77,7 +82,7 @@ const procedures = [
       'Outpatient procedure',
       'May prevent need for transplant',
     ],
-    conditions: ['Progressive keratoconus', 'Post-LASIK ectasia'],
+    conditions: ['Progressive keratoconus', 'Corneal ectasia'],
   },
 ];
 

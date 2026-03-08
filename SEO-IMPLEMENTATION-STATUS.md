@@ -26,13 +26,13 @@
 
 - [x] DMEK Surgery Guide (`src/content/guides/dmek-surgery.mdx`)
 - [x] Fuchs' Dystrophy Guide (`src/content/guides/fuchs-dystrophy.mdx`)
-- [x] LASIK Connecticut Guide (`src/content/guides/lasik-connecticut.mdx`)
+- [x] ~~LASIK Connecticut Guide~~ (Removed - EVO ICL focus)
 
 ### Phase 4: Initial Blog Posts ✅
 
 - [x] What is DMEK Surgery?
 - [x] Understanding Fuchs' Dystrophy Symptoms
-- [x] LASIK vs PRK
+- [x] ~~LASIK vs PRK~~ (Removed - EVO ICL focus)
 - [x] Corneal Transplant Recovery
 - [x] Finding the Right Ophthalmologist in Connecticut
 - [x] Keratoconus: Causes, Symptoms, and Treatment
@@ -79,8 +79,8 @@ Create the following in `/public/images/`:
 ### Additional Blog Posts (from original plan)
 - [ ] Dry Eye Disease: More Than Just Discomfort
 - [ ] When is Cataract Surgery Needed?
-- [ ] ICL Surgery: The LASIK Alternative
-- [ ] LASIK in Hartford: Your Complete Guide
+- [ ] EVO ICL: Is It Right for You?
+- [ ] EVO ICL in Connecticut: Your Complete Guide
 - [ ] Corneal Specialist Near Me: What to Look For
 - [ ] Eye Care in West Hartford and Surrounding Areas
 

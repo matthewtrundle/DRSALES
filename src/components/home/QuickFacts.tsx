@@ -19,7 +19,7 @@ const values = [
   {
     label: "No ego.",
     description:
-      "You won't find a wall of awards in the waiting room. Dr. Sales trained at top programs and publishes research because he cares about doing good work — not because he wants you to be impressed.",
+      "You won't find a wall of awards in the waiting room. Dr. Sales trained and served as faculty at leading institutions out of a commitment to excellence — not because he wants you to be impressed.",
   },
 ];
 
@@ -63,8 +63,8 @@ export default function QuickFacts() {
               style={{ transform: `translateY(${offset * -0.4}px)` }}
             >
               <ImagePlaceholder
-                src="/images/headshots/dr-sales-white-coat.jpg"
-                alt="Dr. Sales in white coat"
+                src="/images/ToUse/67.jpg"
+                alt="Dr. Sales"
                 fill
                 className="rounded-xl object-cover"
                 sizes="(max-width: 1024px) 400px, 350px"

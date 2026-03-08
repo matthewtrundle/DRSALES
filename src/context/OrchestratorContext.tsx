@@ -38,7 +38,7 @@ const initialState: OrchestratorState = {
 
 const interestMapping: Record<string, string[]> = {
   '/services/corneal-transplant': ['DMEK', 'Corneal Transplant', 'Fuchs Dystrophy'],
-  '/services/vision-correction': ['LASIK', 'PRK', 'Vision Correction'],
+  '/services/vision-correction': ['EVO ICL', 'ICL', 'Vision Correction'],
   '/services/cataract': ['Cataract Surgery', 'IOL', 'Premium Lenses'],
   '/services/dry-eye': ['Dry Eye', 'Meibomian Gland', 'Tear Film'],
   '/innovation': ['Research', 'Innovation', 'Device Development'],
@@ -47,9 +47,9 @@ const interestMapping: Record<string, string[]> = {
 
 const contentRecommendations: ContentItem[] = [
   { id: '1', title: 'DMEK Surgery Explained', type: 'service', href: '/services/corneal-transplant' },
-  { id: '2', title: 'LASIK Candidacy', type: 'service', href: '/services/vision-correction' },
+  { id: '2', title: 'EVO ICL Vision Correction', type: 'service', href: '/services/vision-correction' },
   { id: '3', title: 'Understanding Fuchs\' Dystrophy', type: 'article', href: '/education' },
-  { id: '4', title: 'Dr. Sales\' Surgical Innovations', type: 'article', href: '/innovation' },
+  { id: '4', title: 'Dry Eye Treatment Options', type: 'service', href: '/services/dry-eye' },
   { id: '5', title: 'Cataract Surgery Options', type: 'service', href: '/services/cataract' },
 ];
 
@@ -167,7 +167,7 @@ export function OrchestratorProvider({ children }: { children: ReactNode }) {
     if (state.inferredInterests.includes('DMEK') || state.inferredInterests.includes('Corneal Transplant')) {
       return 'Discuss Corneal Options';
     }
-    if (state.inferredInterests.includes('LASIK') || state.inferredInterests.includes('Vision Correction')) {
+    if (state.inferredInterests.includes('EVO ICL') || state.inferredInterests.includes('Vision Correction')) {
       return 'Explore Vision Correction';
     }
     if (state.visitCount > 3) {

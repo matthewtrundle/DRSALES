@@ -5,12 +5,12 @@ import { BreadcrumbSchema } from '@/components/seo';
 export const metadata: Metadata = {
   title: 'Locations | Dr. Christopher S. Sales - Ophthalmology',
   description:
-    'Dr. Christopher S. Sales serves patients throughout Connecticut, including Hartford, New Haven, Wethersfield, and surrounding areas. Expert DMEK surgery, LASIK, and corneal care.',
+    'Dr. Christopher S. Sales serves patients throughout Connecticut, including Hartford, New Haven, Wethersfield, and surrounding areas. Expert DMEK surgery, EVO ICL, and corneal care.',
   keywords: [
     'ophthalmologist Hartford CT',
     'eye doctor New Haven',
     'cornea specialist Connecticut',
-    'LASIK Hartford',
+    'EVO ICL Connecticut',
     'DMEK surgery Connecticut',
   ],
   openGraph: {
@@ -33,7 +33,7 @@ const locations = [
       'Serving Hartford, West Hartford, East Hartford, Wethersfield, Newington, and surrounding communities with expert corneal and refractive surgery.',
     highlights: [
       'DMEK corneal transplant',
-      'LASIK & PRK',
+      'EVO ICL vision correction',
       'Cataract surgery',
       'Fuchs\' dystrophy treatment',
     ],

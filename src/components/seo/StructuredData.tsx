@@ -26,12 +26,12 @@ export function PhysicianSchema() {
     knowsAbout: [
       'DMEK Surgery',
       'Corneal Transplantation',
-      'LASIK',
-      'PRK',
+      'EVO ICL',
       'ICL Surgery',
       'Fuchs Dystrophy',
       'Keratoconus',
       'Cataract Surgery',
+      'Dry Eye Treatment',
     ],
     alumniOf: [
       {
@@ -200,9 +200,7 @@ export function LocalBusinessSchema() {
           '@type': 'OfferCatalog',
           name: 'Vision Correction',
           itemListElement: [
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LASIK' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PRK' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ICL Surgery' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'EVO ICL Surgery' } },
           ],
         },
       ],
@@ -403,7 +401,7 @@ export function WebsiteSchema() {
     name: 'Dr. Christopher S. Sales, MD - Ophthalmology',
     url: baseUrl,
     description:
-      'Expert ophthalmology care in Connecticut. Specializing in DMEK corneal transplants, LASIK, and advanced eye surgery.',
+      'Expert ophthalmology care in Connecticut. Specializing in DMEK corneal transplants, EVO ICL vision correction, and advanced eye surgery.',
     potentialAction: {
       '@type': 'SearchAction',
       target: {

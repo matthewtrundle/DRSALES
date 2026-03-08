@@ -6,11 +6,11 @@ import { BreadcrumbSchema } from '@/components/seo';
 export const metadata: Metadata = {
   title: 'Eye Care Blog | Dr. Christopher S. Sales',
   description:
-    'Expert insights on DMEK surgery, LASIK, corneal transplants, and eye health from board-certified ophthalmologist Dr. Christopher S. Sales in Connecticut.',
+    'Expert insights on DMEK surgery, EVO ICL, corneal transplants, and eye health from board-certified ophthalmologist Dr. Christopher S. Sales in Connecticut.',
   keywords: [
     'ophthalmology blog',
     'DMEK surgery information',
-    'LASIK blog',
+    'EVO ICL blog',
     'eye health articles',
     'corneal transplant recovery',
     'Fuchs dystrophy information',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Eye Care Blog | Dr. Christopher S. Sales',
     description:
-      'Expert insights on DMEK surgery, LASIK, corneal transplants, and eye health from board-certified ophthalmologist Dr. Christopher S. Sales.',
+      'Expert insights on DMEK surgery, EVO ICL, corneal transplants, and eye health from board-certified ophthalmologist Dr. Christopher S. Sales.',
     type: 'website',
   },
   alternates: {

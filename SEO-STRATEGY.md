@@ -8,7 +8,7 @@ A comprehensive SEO strategy focusing on local ophthalmology search, procedure-s
 ## 1. Technical SEO Foundation
 
 ### Site Structure
-- [x] Clean URL structure (`/services/dmek-surgery`, `/services/lasik`)
+- [x] Clean URL structure (`/services/dmek-surgery`, `/services/vision-correction`)
 - [ ] Add XML sitemap at `/sitemap.xml`
 - [ ] Add robots.txt with proper directives
 - [ ] Implement structured data (Schema.org)
@@ -45,7 +45,7 @@ Add to each service page:
 | ophthalmologist connecticut | 720 | Medium | HIGH |
 | corneal transplant ct | 110 | Low | HIGH |
 | dmek surgery | 480 | Medium | HIGH |
-| lasik hartford ct | 260 | Medium | HIGH |
+| evo icl connecticut | 260 | Medium | HIGH |
 | fuchs dystrophy specialist | 170 | Low | HIGH |
 
 ### Long-Tail Keywords (Lower Competition)
@@ -54,7 +54,7 @@ Add to each service page:
 | dmek surgery success rate | Informational → Conversion |
 | fuchs dystrophy treatment options | Informational → Conversion |
 | best corneal surgeon in connecticut | High Intent |
-| lasik vs prk which is better | Comparison → Conversion |
+| evo icl vs lasik which is better | Comparison → Conversion |
 | icl surgery for high myopia | Niche Procedure |
 
 ### Local Keywords
@@ -83,9 +83,9 @@ Create comprehensive guides (2,500+ words) for each major service:
    - When surgery is needed
    - Life after DMEK
 
-3. **"LASIK in Connecticut: What You Need to Know"**
+3. **"EVO ICL Vision Correction: What You Need to Know"**
    - Candidacy requirements
-   - Technology used
+   - How EVO ICL differs from laser surgery
    - Cost considerations
    - Recovery expectations
 
@@ -93,12 +93,12 @@ Create comprehensive guides (2,500+ words) for each major service:
 
 | Month | Topic | Target Keywords |
 |-------|-------|----------------|
-| Month 1 | "Am I a Candidate for LASIK? A Self-Assessment Guide" | lasik candidate, lasik requirements |
+| Month 1 | "Am I a Candidate for EVO ICL? A Self-Assessment Guide" | evo icl candidate, icl requirements |
 | Month 2 | "DMEK vs DSAEK: Which Corneal Transplant is Right for You?" | dmek vs dsaek, corneal transplant types |
 | Month 3 | "What to Expect During Cataract Surgery Recovery" | cataract surgery recovery, post cataract care |
 | Month 4 | "Living with Fuchs' Dystrophy: Patient Stories" | fuchs dystrophy symptoms, fuchs treatment |
 | Month 5 | "Premium IOLs Explained: Multifocal, Toric, and EDOF" | premium iol, multifocal lens cataract |
-| Month 6 | "Dry Eye After LASIK: Prevention and Treatment" | lasik dry eye, post lasik care |
+| Month 6 | "Why EVO ICL Causes Less Dry Eye Than Laser Surgery" | icl dry eye, evo icl benefits |
 
 ### Video Content (YouTube SEO)
 - Procedure explainer videos (2-5 minutes)
@@ -190,7 +190,7 @@ Dr. Sales' research background is a major differentiator:
 | Page | Primary Keyword | Title Tag Suggestion |
 |------|----------------|---------------------|
 | /services/corneal-transplant | dmek surgery connecticut | DMEK Corneal Transplant Surgery | Dr. Sales - CT |
-| /services/vision-correction | lasik hartford ct | LASIK & Vision Correction | Dr. Sales - Hartford CT |
+| /services/vision-correction | evo icl connecticut | EVO ICL Vision Correction | Dr. Sales - Connecticut |
 | /services/cataract | cataract surgery connecticut | Premium Cataract Surgery | Dr. Sales - CT |
 | /about | ophthalmologist west hartford | Dr. Christopher Sales - Board Certified Ophthalmologist |
 | /innovation | cornea research | Eye Research & Innovation | Dr. Sales - Iowa Eye Device Lab |

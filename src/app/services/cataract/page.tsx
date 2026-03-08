@@ -8,9 +8,44 @@ import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
 // Rendia video embeds for cataract education
 const cataractVideos = [
   {
-    presentationId: '3c927839-403f-4bb8-4da5-436542f04d0d',
-    fallbackUrl: 'http://fyi.rendia.com/hMaZ8',
-    title: 'Lens Options',
+    presentationId: '77839e82-4a00-4d84-4283-42cb490c4118',
+    fallbackUrl: 'http://fyi.rendia.com/T50S4',
+    title: 'Introduction to Cataract Surgery',
+  },
+  {
+    presentationId: '6c9bc388-4196-4e6f-475d-414b45214907',
+    fallbackUrl: 'http://fyi.rendia.com/mstKw',
+    title: 'Understanding Your Lens Implant Options',
+  },
+  {
+    presentationId: '6170fa4b-4d1e-481c-42c4-45214b734e77',
+    fallbackUrl: 'http://fyi.rendia.com/AchVw',
+    title: 'Lifestyle Considerations When Selecting Your Lens',
+  },
+  {
+    presentationId: '44c8f668-4a63-4d6b-4878-4f3b46eb4d64',
+    fallbackUrl: 'http://fyi.rendia.com/tXKst',
+    title: 'Monofocal Standard Lens Implants',
+  },
+  {
+    presentationId: '7e8db4df-4223-4c06-42e3-493e45cc4626',
+    fallbackUrl: 'http://fyi.rendia.com/7e8lR',
+    title: 'Astigmatism Correcting Lens Implants',
+  },
+  {
+    presentationId: '1816ecee-4e74-45da-41f5-47e740a94646',
+    fallbackUrl: 'http://fyi.rendia.com/2D9Za',
+    title: 'Extended Depth-of-Focus Lens Implants',
+  },
+  {
+    presentationId: '27678fba-402b-4563-4ef1-4433461c4fda',
+    fallbackUrl: 'http://fyi.rendia.com/FbCJO',
+    title: 'Trifocal Lens Implants',
+  },
+  {
+    presentationId: '6a96a190-49fa-4bd8-4d0f-48c1459d408c',
+    fallbackUrl: 'http://fyi.rendia.com/8qgjT',
+    title: 'Laser vs. Conventional Cataract Surgery',
   },
 ];
 

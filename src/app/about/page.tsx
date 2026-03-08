@@ -26,12 +26,10 @@ export default function AboutPage() {
               </h1>
               <p className="text-xl text-neutral-600 leading-relaxed mb-4">
                 Board-certified ophthalmologist, internationally recognized eye surgeon,
-                surgical innovator and coach -- now serving patients in Connecticut.
+                surgical innovator and coach — now serving patients in Connecticut.
               </p>
               <p className="text-neutral-500 leading-relaxed">
-                After training at Harvard, Stanford, Weill Cornell, and the University of Iowa,
-                Dr. Sales brings world-class cataract, DMEK, and ICL surgery to the greater Hartford area
-                through Starling Physicians.
+                After training at Harvard and Stanford and spending a decade on faculty at nationally recognized programs including Weill Cornell and the University of Iowa, Dr. Sales brings world-class cataract, DMEK, and ICL surgery to the greater Hartford area through Starling Physicians.
               </p>
             </div>
             <div className="relative hidden lg:block">
@@ -55,7 +53,7 @@ export default function AboutPage() {
       <Section>
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-neutral-700 italic leading-relaxed mb-12 border-l-4 border-charcoal/30 pl-6">
-            A board-certified ophthalmologist, internationally recognized eye surgeon, surgical innovator, and coach — Dr. Sales brings world-class cataract, EVO ICL, and DMEK surgery to the greater Hartford area after training at Harvard, Stanford, Weill Cornell, and the University of Iowa.
+            Board-certified ophthalmologist Dr. Sales brings advanced cataract, DMEK, and EVO ICL surgery to greater Hartford — trained at Harvard and Stanford and former faculty at Weill Cornell and the University of Iowa.
           </p>
           <SectionHeader title="Biography" centered={false} />
           <div className="prose prose-lg max-w-none text-neutral-700">
@@ -162,14 +160,12 @@ export default function AboutPage() {
           title="Areas of Expertise"
           subtitle="Specialized training and experience across multiple subspecialties"
         />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { title: 'DMEK Surgery', description: 'Gold-standard endothelial keratoplasty for Fuchs\' Dystrophy' },
             { title: 'Cataract Surgery', description: 'Premium IOLs and laser-assisted techniques' },
-            { title: 'EVO ICL', description: 'Implantable lens for high prescriptions and LASIK alternatives' },
-            { title: 'Corneal Transplantation', description: 'Full-thickness and partial-thickness procedures' },
+            { title: 'EVO ICL', description: 'Implantable lens for high prescriptions — no corneal tissue removal' },
             { title: 'Dry Eye Treatment', description: 'Comprehensive evaluation and personalized treatment' },
-            { title: 'Surgical Innovation', description: 'Device development, patents, and Oko-Tek Inc.' },
           ].map((specialty, index) => (
             <div
               key={index}
@@ -193,10 +189,10 @@ export default function AboutPage() {
           />
           <div className="space-y-4 text-neutral-600 leading-relaxed">
             <p>
-              Gold Medal for Notable Contributions to Endothelial Keratoplasty (2024) · National Academy of Inventors inductee (2023) · Achievement Award, American Academy of Ophthalmology · Weingeist Award for Excellence in Teaching, University of Iowa
+              Gold Medal for Notable Contributions to Endothelial Keratoplasty (2024) · National Academy of Inventors Inductee (2023) · Secretariat Award, American Academy of Ophthalmology (2025) · Achievement Award, American Academy of Ophthalmology (2018)
             </p>
             <p className="text-sm text-neutral-500">
-              50+ peer-reviewed publications · Multiple patents for surgical devices · Trained 15+ cornea fellows and 40+ ophthalmology residents worldwide
+              50+ peer-reviewed publications · Coached 300+ surgeons in DMEK at skills transfer labs · Trained 15+ cornea fellows and 40+ ophthalmology residents worldwide
             </p>
           </div>
         </div>

@@ -5,18 +5,18 @@ import { BreadcrumbSchema } from '@/components/seo';
 export const metadata: Metadata = {
   title: 'Eye Care Guides | Dr. Christopher S. Sales',
   description:
-    'Comprehensive guides on DMEK surgery, Fuchs dystrophy, LASIK, and more from board-certified ophthalmologist Dr. Christopher S. Sales.',
+    'Comprehensive guides on DMEK surgery, Fuchs dystrophy, EVO ICL, and more from board-certified ophthalmologist Dr. Christopher S. Sales.',
   keywords: [
     'DMEK surgery guide',
     'Fuchs dystrophy guide',
-    'LASIK Connecticut guide',
+    'EVO ICL guide',
     'corneal transplant information',
     'eye surgery guides',
   ],
   openGraph: {
     title: 'Eye Care Guides | Dr. Christopher S. Sales',
     description:
-      'Comprehensive guides on DMEK surgery, Fuchs dystrophy, LASIK, and more from Dr. Sales.',
+      'Comprehensive guides on DMEK surgery, Fuchs dystrophy, EVO ICL, and more from Dr. Sales.',
     type: 'website',
   },
   alternates: {
@@ -50,14 +50,6 @@ const staticGuides: StaticGuide[] = [
       'A comprehensive guide to Fuchs\' Dystrophy: symptoms, diagnosis, treatment options, and when surgery is needed.',
     icon: '🔬',
     topics: ['Symptoms', 'Diagnosis', 'Treatment options', 'Living with Fuchs\''],
-  },
-  {
-    slug: 'lasik-connecticut',
-    title: 'LASIK in Connecticut: Complete Guide',
-    description:
-      'Your complete guide to LASIK vision correction in Connecticut, including candidacy, procedure details, and choosing a surgeon.',
-    icon: '✨',
-    topics: ['LASIK candidacy', 'LASIK vs PRK', 'Cost in CT', 'Choosing a surgeon'],
   },
 ];
 

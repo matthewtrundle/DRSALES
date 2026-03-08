@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useParallax } from '@/hooks/useParallax';
 
 const rotatingPhrases = [
-  'their time.',
-  'a closer look.',
-  'every question.',
-  'getting it right.',
+  'listen carefully.',
+  'look closer.',
+  'explain clearly.',
+  'involve you in decisions.',
+  'get it right.',
 ];
 
 export default function HeroSection() {
@@ -79,9 +80,9 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              Your eyes deserve
+              Your eyes deserve an MD
               <br />
-              someone who takes{' '}
+              who takes time to{' '}
               <span className="relative inline-flex items-baseline overflow-hidden" style={{ height: '1.25em' }}>
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -115,8 +116,7 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              Cataract surgery, corneal transplants, and vision correction —
-              with the kind of care that starts by actually listening to you.
+              Cataract surgery, premium lens implants, DMEK corneal transplants, ICL vision correction, and dry eye — with the kind of care that starts by listening to you.
             </motion.p>
 
             {/* CTAs */}
@@ -153,7 +153,7 @@ export default function HeroSection() {
               style={{ transform: `translateY(${offset * -0.2}px)` }}
             >
               <Image
-                src="/images/headshots/dr-sales-primary.jpg"
+                src="/images/dr-sales-hero.jpg"
                 alt="Dr. Christopher Sales"
                 fill
                 className="object-cover object-top"

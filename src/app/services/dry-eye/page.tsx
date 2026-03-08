@@ -79,7 +79,10 @@ export default function DryEyePage() {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Dry Eye Treatment
               </h1>
-              <p className="text-xl text-neutral-600 max-w-xl">
+              <p className="text-xl text-neutral-600 max-w-xl mb-4">
+                Not just lubricating drops forever.
+              </p>
+              <p className="text-lg text-neutral-500 max-w-xl">
                 Comprehensive evaluation and personalized treatment for dry eye disease
                 and meibomian gland dysfunction.
               </p>
@@ -92,8 +95,8 @@ export default function DryEyePage() {
             >
               <div className="relative aspect-square max-w-md rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/ToUse/dryeyes.png"
-                  alt="Dry eye relief"
+                  src="/images/dry-eye-relief.png"
+                  alt="Relief from dry eye discomfort"
                   fill
                   className="object-cover"
                 />

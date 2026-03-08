@@ -244,7 +244,7 @@ export function CorneaLayersIcon({ size = 64, className = '', ...props }: IconPr
   );
 }
 
-// Laser Icon - for LASIK/PRK
+// Laser Icon - for vision correction
 export function LaserIcon({ size = 64, className = '', ...props }: IconProps) {
   return (
     <svg

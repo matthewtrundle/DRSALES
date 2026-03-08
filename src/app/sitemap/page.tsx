@@ -34,7 +34,6 @@ const sitemapSections = [
     links: [
       { label: 'DMEK Surgery Guide', href: '/guides/dmek-surgery' },
       { label: "Understanding Fuchs' Dystrophy", href: '/guides/fuchs-dystrophy' },
-      { label: 'LASIK in Connecticut', href: '/guides/lasik-connecticut' },
     ],
   },
   {

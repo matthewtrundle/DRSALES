@@ -15,7 +15,7 @@ export const siteConfig = {
     {
       name: "Wethersfield",
       practice: "Starling Physicians",
-      address: "Wethersfield, CT 06109",
+      address: "1210 Silas Deane Highway, Wethersfield, CT 06109",
     },
     {
       name: "New Britain",
@@ -27,23 +27,23 @@ export const siteConfig = {
 };
 
 export const doctorBio = {
-  shortBio: `Board-certified ophthalmologist, internationally recognized eye surgeon, surgical innovator and coach -- now serving patients in Connecticut. After training at some of the country's most respected eye programs, Dr. Christopher Sales chose to bring his expertise home to Connecticut, specializing in advanced cataract surgery, DMEK corneal transplants, and EVO ICL vision correction.`,
+  shortBio: `Board-certified ophthalmologist Dr. Sales brings advanced cataract, DMEK, and EVO ICL surgery to greater Hartford — trained at Harvard and Stanford and former faculty at Weill Cornell and the University of Iowa.`,
 
   fullBio: `Dr. Christopher S. Sales is a board-certified ophthalmologist and fellowship-trained cornea and refractive surgeon practicing with Starling Physicians in Wethersfield, Connecticut. He brings an extraordinary career spanning the nation's premier medical institutions to serve patients in the greater Hartford area.
 
-Dr. Sales earned his B.A. in International Relations from Brown University before pursuing medicine at Tufts University School of Medicine, where he received both his MD and MPH degrees with Research Honors. He completed his internship at Harvard's Beth Israel Deaconess Medical Center, his ophthalmology residency at Stanford University's Byers Eye Institute under the mentorship of Dr. Mark Blumenkranz, and a clinical fellowship in Cornea, External Diseases, and Refractive Surgery at the Devers Eye Institute under Dr. Mark Terry and at the Joint Warfighter Refractive Surgery Center under Dr. Charles Reilly.
+Dr. Sales earned his MD and MPH with Research Honors from Tufts University School of Medicine after completing his undergraduate studies at Brown. He completed internship training at Harvard's Beth Israel Deaconess Medical Center, ophthalmology residency at Stanford's Byers Eye Institute, and fellowship training in cornea, external disease, and refractive surgery at the Devers Eye Institute and the U.S. military's Joint Warfighter Refractive Surgery Center.
 
-After fellowship, Dr. Sales served as an attending surgeon at the Ophthalmic Consultants of Boston before joining Weill Cornell Medicine and NewYork-Presbyterian Hospital, where he spent four years as an Assistant Professor of Ophthalmology and became the first surgeon in New York City to perform DMEK corneal transplant surgery. He launched the EVO ICL program at Weill Cornell and established himself as a leader in advanced corneal and refractive surgery.
+After fellowship, Dr. Sales served as an attending surgeon at Tufts–Ophthalmic Consultants of Boston before joining Weill Cornell Medicine/NewYork-Presbyterian Hospital, where he advanced to Associate Professor and helped pioneer DMEK surgery in New York City. At Weill Cornell, he also established the laser cataract and ICL programs.
 
-In 2020, he joined the University of Iowa as a tenure-track faculty member, rising to tenured Associate Professor and serving as Vice Chair for Health Equity and a CIRCA Fellow. At Iowa, he founded the Iowa Eye Device Lab, a multidisciplinary innovation hub that brought together ophthalmologists, biomedical engineers, and industry partners to develop patented surgical devices. He also served as Associate Medical Director of the Iowa Lions Eye Bank and launched the university's EVO ICL program.
+In 2020, he joined the University of Iowa, where he became a tenured Associate Professor and served in departmental leadership roles. There, he advanced DMEK techniques for high-risk eyes, launched the HumanOptics prosthetic iris and EVO ICL programs, and founded the Iowa Eye Device Lab and the CIRCAA cornea fellowship.
 
-In 2024, Dr. Sales founded Oko-Tek Inc., a medical device company dedicated to commercializing innovations from his research. He was selected as an inaugural member of the Stanford BioDesign Global Faculty Training Program in MedTech Entrepreneurship that same year.
+In 2024, Dr. Sales founded Oko-Tek Inc., a medical device company dedicated to improving the lives of patients suffering from dry eye. He was selected as an inaugural domestic member of the Stanford BioDesign Global Faculty Training Program in MedTech Entrepreneurship that same year.
 
-Dr. Sales has authored 50+ peer-reviewed publications, holds multiple patents for surgical devices, and was inducted into the National Academy of Inventors in 2023. His expertise in DMEK surgery has made him a sought-after educator worldwide, having trained 15+ cornea fellows and 40+ ophthalmology residents, and leading skills transfer courses at the American Academy of Ophthalmology, ASCRS, and the Cornea Society. He received the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention in 2024.
+Dr. Sales has authored 50+ peer-reviewed publications, holds multiple patents for surgical devices, and was inducted into the National Academy of Inventors in 2023. His expertise in DMEK surgery has made him a sought-after surgical coach worldwide, having trained 15+ cornea fellows and 40+ ophthalmology residents, and leading skills transfer courses at the American Academy of Ophthalmology, ASCRS, and the Cornea Society. He received the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention in 2024 and American Academy of Ophthalmology's Secretariat Award in 2025 for his video contributions to surgical education.
 
-Beyond his clinical and academic work, Dr. Sales has dedicated time to volunteer surgical missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to global eye health and health equity runs throughout his career.`,
+Beyond his clinical and entrepreneurial work, Dr. Sales has dedicated time to volunteer surgical missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to service runs throughout his career.`,
 
-  philosophy: `My approach to patient care is rooted in the belief that every individual deserves access to the most advanced, evidence-based treatments available. I combine cutting-edge surgical techniques with compassionate, personalized care to help each patient achieve their best possible vision. Innovation in surgery should ultimately serve one purpose: improving outcomes for patients.`,
+  philosophy: `My philosophy of care begins with listening and is built on trust and innovation. Patients want to know their physician truly hears and cares about their concerns—not just that they are experienced. With that foundation, I focus on delivering the most advanced, evidence-based treatments available, combining compassionate care with cutting-edge surgical techniques to help each patient achieve their best possible vision. If surgery is not the right option right now, I'll tell you it can wait. If the best procedure for you is one I don't perform, I'll help you find an excellent surgeon who does. And if what you need most is reassurance, I'll give you that too.`,
 };
 
 export const education = [
@@ -91,15 +91,15 @@ export const careerHistory = [
     title: "Ophthalmologist",
     organization: "Starling Physicians",
     location: "Wethersfield, CT",
-    description: "Comprehensive cornea, cataract, and refractive surgery practice serving the greater Hartford area.",
+    description: "Ophthalmology practice with expertise in cataract, premium lens implant, DMEK, and EVO ICL refractive surgery in the greater Hartford area.",
     current: true,
   },
   {
     years: "2024-Present",
-    title: "Founder & CEO",
+    title: "Founder and President",
     organization: "Oko-Tek Inc.",
     location: "Medical Device Company",
-    description: "Founded a medical device company to commercialize patented ophthalmic surgical innovations.",
+    description: "Founded a medical device company dedicated to improving the lives of patients suffering from dry eye.",
     current: true,
   },
   {
@@ -107,21 +107,21 @@ export const careerHistory = [
     title: "Tenured Associate Professor of Ophthalmology",
     organization: "University of Iowa",
     location: "Iowa City, IA",
-    description: "Founding Director of the Iowa Eye Device Lab. Vice Chair for Health Equity. Associate Medical Director, Iowa Lions Eye Bank. CIRCA Fellow.",
+    description: "Founding Director of the Iowa Eye Device Lab. Founder of the CIRCAA cornea fellowship.",
     current: false,
   },
   {
     years: "2016-2020",
-    title: "Assistant Professor of Ophthalmology",
+    title: "Assistant & Associate Professor of Ophthalmology",
     organization: "Weill Cornell Medicine / NewYork-Presbyterian Hospital",
     location: "New York, NY",
-    description: "Clinical cornea and refractive surgery, residency and fellowship education, surgical innovation research.",
+    description: "Helped pioneer DMEK surgery in New York City. Established the laser cataract and ICL programs.",
     current: false,
   },
   {
     years: "2015-2016",
     title: "Attending Surgeon",
-    organization: "Ophthalmic Consultants of Boston",
+    organization: "Tufts–Ophthalmic Consultants of Boston",
     location: "Boston, MA",
     description: "Cornea, cataract, and refractive surgery at one of New England's premier eye care practices.",
     current: false,
@@ -129,6 +129,11 @@ export const careerHistory = [
 ];
 
 export const awards = [
+  {
+    year: "2025",
+    title: "Secretariat Award",
+    organization: "American Academy of Ophthalmology",
+  },
   {
     year: "2024",
     title: "Gold Medal for Notable Contributions to Endothelial Keratoplasty",
@@ -175,12 +180,7 @@ export const awards = [
     organization: "University of Iowa Department of Ophthalmology",
   },
   {
-    year: "2022",
-    title: "Weingeist Award for Excellence in Teaching",
-    organization: "University of Iowa Department of Ophthalmology",
-  },
-  {
-    year: "2017",
+    year: "2018",
     title: "Achievement Award",
     organization: "American Academy of Ophthalmology",
   },
@@ -225,7 +225,7 @@ export const humanitarianWork = [
   {
     year: "2013",
     location: "Guatemala",
-    description: "Remote surgical outreach delivering cataract and corneal surgery to rural communities.",
+    description: "Remote surgical outreach delivering cataract surgery to rural communities.",
   },
   {
     year: "2011-2014",
@@ -240,7 +240,7 @@ export const humanitarianWork = [
   {
     year: "2002",
     location: "Tanzania",
-    description: "Volunteer ophthalmology surgery mission serving communities with limited access to eye care.",
+    description: "Volunteer teacher serving children orphaned by HIV/AIDS.",
   },
 ];
 
@@ -255,8 +255,8 @@ export const affiliations = [
 
 export const stats = [
   { value: 50, label: "Peer-Reviewed Publications", suffix: "+" },
+  { value: 300, label: "Surgeons Coached in DMEK", suffix: "+" },
   { value: 15, label: "Cornea Fellows Trained", suffix: "+" },
-  { value: 40, label: "Residents Trained", suffix: "+" },
   { value: 10, label: "Years of Experience", suffix: "+" },
 ];
 
@@ -290,13 +290,11 @@ export const services = [
   },
   {
     id: "vision-correction",
-    title: "Vision Correction",
-    shortDescription: "EVO ICL implantable lens and refractive surgery for freedom from glasses and contacts.",
-    description: "The EVO ICL is an implantable lens that corrects vision without permanently altering your cornea -- unlike LASIK or PRK. It's an excellent option for patients with high prescriptions, thin corneas, or dry eyes. Dr. Sales launched ICL programs at both Weill Cornell and the University of Iowa before bringing this technology to Connecticut.",
+    title: "EVO ICL Vision Correction",
+    shortDescription: "EVO ICL implantable lens for freedom from glasses and contacts.",
+    description: "The EVO ICL is an implantable lens that corrects vision without permanently altering your cornea. It's an excellent option for patients with high prescriptions, thin corneas, or dry eyes. Dr. Sales launched ICL programs at both Weill Cornell and the University of Iowa before bringing this technology to Connecticut.",
     procedures: [
-      { name: "EVO ICL", description: "Implantable Collamer Lens for high prescriptions and those not suited for LASIK" },
-      { name: "LASIK", description: "Laser-assisted in situ keratomileusis for myopia, hyperopia, and astigmatism" },
-      { name: "PRK", description: "Photorefractive keratectomy - surface laser vision correction" },
+      { name: "EVO ICL", description: "Implantable Collamer Lens for high prescriptions — no corneal tissue removal, reversible, excellent night vision" },
     ],
     icon: "glasses",
     href: "/services/vision-correction",
@@ -361,8 +359,8 @@ export const faqs = [
     answer: "DMEK (Descemet Membrane Endothelial Keratoplasty) is an advanced corneal transplant procedure that replaces only the innermost layer of the cornea. It offers faster visual recovery and lower rejection rates compared to traditional full-thickness transplants.",
   },
   {
-    question: "Am I a candidate for LASIK?",
-    answer: "LASIK candidacy depends on factors including your prescription, corneal thickness, eye health, and lifestyle. A comprehensive evaluation is needed to determine if LASIK or another vision correction procedure is right for you.",
+    question: "Am I a candidate for EVO ICL?",
+    answer: "EVO ICL candidacy depends on factors including your prescription, eye health, and lifestyle. It's an excellent option for high prescriptions, thin corneas, or dry eyes. A comprehensive evaluation is needed to determine if EVO ICL is right for you.",
   },
   {
     question: "What is Fuchs' Dystrophy?",

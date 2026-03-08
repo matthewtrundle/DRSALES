@@ -31,8 +31,8 @@ export default function DoctorIntro() {
                 style={{ transform: `translateY(${offset * -0.3}px)` }}
               >
                 <Image
-                  src="/images/dr-sales-slit-lamp.jpg"
-                  alt="Dr. Sales in exam room with slit lamp equipment"
+                  src="/images/dr-sales-white-coat-scrubs.jpg"
+                  alt="Dr. Christopher Sales, MD"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 500px"
@@ -68,9 +68,9 @@ export default function DoctorIntro() {
             <div className="space-y-4 mb-8">
               <p className="text-body leading-relaxed font-body">
                 Dr. Sales spent 15 years at places like Stanford, Harvard, and Weill Cornell
-                before coming home to Connecticut. He&apos;s done over a thousand corneal transplants.
-                He&apos;s published 50+ research papers. But what his patients tend to mention
-                first is that he actually listens.
+                before coming home to Connecticut. He&apos;s done thousands of cataract and corneal transplants.
+                He&apos;s trained surgeons around the world, and he&apos;s published 50+ research papers
+                and textbook chapters. But what his patients tend to mention first is that he actually listens.
               </p>
               <p className="text-body leading-relaxed font-body">
                 Everything he does is elective — meaning there&apos;s no pressure, no urgency,
@@ -81,7 +81,7 @@ export default function DoctorIntro() {
 
             {/* Subtle credentials line */}
             <p className="text-warm-gray text-sm font-body mb-8 tracking-wide">
-              Brown · Tufts · Harvard · Stanford · Iowa · Cornell
+              Brown · Tufts · Harvard · Stanford · Weill Cornell · University of Iowa
             </p>
 
             {/* CTA */}

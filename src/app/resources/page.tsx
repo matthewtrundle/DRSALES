@@ -22,12 +22,6 @@ const guides = [
     description: "A comprehensive guide to Fuchs' Dystrophy: symptoms, diagnosis, treatment options, and when surgery is needed.",
     topics: ['Symptoms', 'Diagnosis', 'Treatment options', "Living with Fuchs'"],
   },
-  {
-    slug: 'lasik-connecticut',
-    title: 'LASIK in Connecticut: Complete Guide',
-    description: 'Your complete guide to LASIK vision correction in Connecticut, including candidacy, procedure details, and choosing a surgeon.',
-    topics: ['LASIK candidacy', 'LASIK vs PRK', 'Cost in CT', 'Choosing a surgeon'],
-  },
 ];
 
 const videos = [
@@ -44,8 +38,8 @@ const videos = [
     category: 'Cataract',
   },
   {
-    title: 'LASIK vs PRK: Which is Right for You?',
-    description: 'Compare these popular vision correction procedures.',
+    title: 'EVO ICL: Freedom from Glasses',
+    description: 'Learn about this implantable lens option for vision correction.',
     duration: '6:48',
     category: 'Vision Correction',
   },

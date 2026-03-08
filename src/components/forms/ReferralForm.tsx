@@ -255,8 +255,7 @@ export default function ReferralForm() {
                 <option value="corneal-transplant">Corneal Transplant Evaluation</option>
                 <option value="corneal-opacity">Corneal Scarring / Opacity</option>
                 <option value="failed-graft">Failed Corneal Graft</option>
-                <option value="lasik-prk">LASIK / PRK Evaluation</option>
-                <option value="icl">ICL Evaluation</option>
+                <option value="icl">EVO ICL Evaluation</option>
                 <option value="complex-cataract">Complex Cataract</option>
                 <option value="dry-eye">Dry Eye Treatment</option>
                 <option value="anterior-segment-trauma">Anterior Segment Trauma</option>
