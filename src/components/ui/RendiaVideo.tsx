@@ -11,27 +11,27 @@ export default function RendiaVideo({ presentationId, fallbackUrl, title }: Rend
   const embedUrl = `https://share.rendia.com/theater/${presentationId}`;
 
   return (
-    <div className="relative w-full rounded-lg overflow-hidden shadow-lg bg-neutral-100">
-      {title && (
-        <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-charcoal/60 to-transparent p-4 z-10 pointer-events-none">
-          <p className="text-white text-sm font-medium">{title}</p>
+    <div className="w-full">
+      <div className="relative w-full rounded-lg overflow-hidden shadow-lg bg-neutral-800">
+        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            src={embedUrl}
+            className="absolute top-0 left-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title={title || 'Rendia Video'}
+          />
         </div>
-      )}
-      <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-        <iframe
-          src={embedUrl}
-          className="absolute top-0 left-0 w-full h-full border-0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title={title || 'Rendia Video'}
-        />
+        {/* Fallback link */}
+        <noscript>
+          <a href={fallbackUrl} target="_blank" rel="noopener noreferrer">
+            View Video
+          </a>
+        </noscript>
       </div>
-      {/* Fallback link */}
-      <noscript>
-        <a href={fallbackUrl} target="_blank" rel="noopener noreferrer">
-          View Video
-        </a>
-      </noscript>
+      {title && (
+        <p className="text-neutral-700 text-sm font-medium mt-3 text-center">{title}</p>
+      )}
     </div>
   );
 }
