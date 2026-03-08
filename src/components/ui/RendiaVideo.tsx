@@ -13,7 +13,8 @@ export default function RendiaVideo({ presentationId, fallbackUrl, title }: Rend
   return (
     <div className="w-full">
       <div className="relative w-full rounded-lg overflow-hidden shadow-lg bg-neutral-800">
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+        {/* Rendia player needs extra height for their header/controls - using ~70% instead of 56.25% */}
+        <div className="relative w-full" style={{ paddingBottom: '75%' }}>
           <iframe
             src={embedUrl}
             className="absolute top-0 left-0 w-full h-full border-0"
