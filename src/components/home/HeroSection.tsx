@@ -89,7 +89,7 @@ export default function HeroSection() {
                 <AnimatePresence mode="wait">
                   <m.span
                     key={started ? phraseIndex : 'init'}
-                    className={started ? 'text-gold-700 italic' : ''}
+                    className="text-gold-700 italic"
                     initial={started ? { opacity: 0, y: 40 } : { opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -40 }}
