@@ -180,12 +180,12 @@ export default function CataractPageClient() {
                   Basement Membrane Dystrophy (ABMD), and Salzmann Nodular Degeneration.
                 </p>
               </div>
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/headshots/dr-sales-scrubs-white-bg.jpg"
                   alt="Dr. Christopher S. Sales in black scrubs"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                 />
               </div>
