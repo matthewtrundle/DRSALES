@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { useParallax } from '@/hooks/useParallax';
 
 export default function DoctorIntro() {
@@ -19,7 +19,7 @@ export default function DoctorIntro() {
       <div ref={sectionRef} className="container-custom relative z-10">
         <div ref={parallaxRef} className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image column */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
@@ -43,17 +43,17 @@ export default function DoctorIntro() {
               <div className="absolute -bottom-3 -left-3 w-full h-full rounded-xl border-2 border-gold/20 -z-10" />
 
               {/* Decorative element */}
-              <motion.div
+              <m.div
                 className="absolute -top-6 -left-6 w-12 h-12 border-t-2 border-l-2 border-gold/20 rounded-tl-lg"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.6, duration: 0.5 }}
               />
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -67,8 +67,8 @@ export default function DoctorIntro() {
 
             <div className="space-y-4 mb-8">
               <p className="text-body leading-relaxed font-body">
-                Dr. Sales spent 15 years at places like Stanford, Harvard, and Weill Cornell
-                before coming home to Connecticut. He&apos;s done thousands of cataract and corneal transplants.
+                Dr. Sales spent 15 years at places like Stanford, Harvard, and Cornell
+                before coming home to Connecticut. He&apos;s done thousands of cataract, corneal transplant, and refractive surgeries.
                 He&apos;s trained surgeons around the world, and he&apos;s published 50+ research papers
                 and textbook chapters. But what his patients tend to mention first is that he actually listens.
               </p>
@@ -85,7 +85,7 @@ export default function DoctorIntro() {
             </p>
 
             {/* CTA */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.5 }}
@@ -99,8 +99,8 @@ export default function DoctorIntro() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </section>

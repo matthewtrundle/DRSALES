@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Christopher S. Sales, MD, MPH",
   title: "Dr. Christopher S. Sales - Ophthalmologist",
-  description: "Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplantation, EVO ICL vision correction, and dry eye treatment. Starling Physicians, Wethersfield & New Britain, Connecticut.",
+  description: "Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplants, EVO ICL, and dry eye. Wethersfield & New Britain, CT.",
   phone: "(860) 826-4460",
   email: "info@drsalesophthalmology.com",
   location: "Starling Physicians — Wethersfield & New Britain, CT",
@@ -268,9 +268,6 @@ export const services = [
     description: "DMEK is the most advanced form of corneal transplant surgery, offering faster recovery and better visual outcomes than older techniques. Dr. Sales was the first surgeon in New York City to perform DMEK and has trained surgeons worldwide in this technique. He specializes in DMEK for Fuchs' Dystrophy and other conditions causing corneal swelling and vision loss.",
     procedures: [
       { name: "DMEK", description: "Descemet Membrane Endothelial Keratoplasty - the gold standard for treating Fuchs' Dystrophy" },
-      { name: "DSAEK", description: "Descemet Stripping Automated Endothelial Keratoplasty" },
-      { name: "DALK", description: "Deep Anterior Lamellar Keratoplasty for stromal disease" },
-      { name: "PK", description: "Penetrating Keratoplasty - full-thickness corneal transplant" },
     ],
     icon: "eye",
     href: "/services/corneal-transplant",
@@ -281,9 +278,9 @@ export const services = [
     shortDescription: "Premium cataract surgery with advanced technology lens implants and laser-assisted options.",
     description: "Dr. Sales has performed thousands of cataract procedures, including complex cases that other surgeons may not take on. From standard cataract removal to laser-assisted surgery with premium lens implants, every procedure is tailored to your visual goals.",
     procedures: [
-      { name: "Advanced Technology Cataract Surgery", description: "Laser-assisted and premium IOL options" },
-      { name: "Standard Cataract Surgery", description: "Phacoemulsification with IOL implantation" },
-      { name: "Premium IOLs", description: "Multifocal, toric, and extended depth of focus lenses" },
+      { name: "Advanced Technology Cataract Surgery", description: "Laser-assisted and premium lens implant options" },
+      { name: "Standard Cataract Surgery", description: "Phacoemulsification with intraocular lens implantation" },
+      { name: "Premium Lens Implants", description: "Multifocal and astigmatism-correcting lens implants" },
     ],
     icon: "cataract",
     href: "/services/cataract",
@@ -294,7 +291,7 @@ export const services = [
     shortDescription: "EVO ICL implantable lens for freedom from glasses and contacts.",
     description: "The EVO ICL is an implantable lens that corrects vision without permanently altering your cornea. It's an excellent option for patients with high prescriptions, thin corneas, or dry eyes. Dr. Sales launched ICL programs at both Weill Cornell and the University of Iowa before bringing this technology to Connecticut.",
     procedures: [
-      { name: "EVO ICL", description: "Implantable Collamer Lens for high prescriptions — no corneal tissue removal, reversible, excellent night vision" },
+      { name: "EVO ICL", description: "Implantable Collamer Lens for high prescriptions — no corneal tissue removal, reversible, excellent night vision, UV protection. It delivers superb quality of vision." },
     ],
     icon: "glasses",
     href: "/services/vision-correction",
@@ -305,8 +302,8 @@ export const services = [
     shortDescription: "Comprehensive evaluation and treatment for dry eye disease and meibomian gland dysfunction.",
     description: "Dr. Sales takes a systematic approach to identifying the root cause of your symptoms and developing a personalized treatment plan -- from in-office procedures to advanced therapies.",
     procedures: [
-      { name: "Diagnostic Evaluation", description: "Comprehensive dry eye assessment and meibomian gland imaging" },
-      { name: "In-Office Treatments", description: "Thermal pulsation, intense pulsed light, and other advanced therapies" },
+      { name: "Diagnostic Evaluation", description: "Comprehensive dry eye and meibomian gland assessment" },
+      { name: "In-Office Treatments", description: "Thermal and other advanced therapies" },
       { name: "Medical Management", description: "Prescription medications and customized drop regimens" },
       { name: "Lifestyle Optimization", description: "Environmental and behavioral modifications for lasting relief" },
     ],

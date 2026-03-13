@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useParallax } from '@/hooks/useParallax';
 
 const rotatingPhrases = [
@@ -42,8 +42,8 @@ export default function HeroSection() {
       {/* Warm ambient background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-background.png"
-          alt=""
+          src="/images/hero-background.jpg"
+          alt="Dr. Sales ophthalmology practice"
           fill
           className="object-cover opacity-75"
           priority
@@ -54,7 +54,7 @@ export default function HeroSection() {
       <div className="container-custom relative z-10 py-28 md:py-36 lg:py-44">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
           {/* Left: copy in warm frosted container — 7 cols */}
-          <motion.div
+          <m.div
             className="lg:col-span-7 flex flex-col justify-center bg-gradient-to-br from-warm-cream/60 via-white/50 to-gold-50/40 backdrop-blur-md rounded-2xl p-8 md:p-10 lg:p-12 border border-gold/15 shadow-soft"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,28 +64,30 @@ export default function HeroSection() {
             <div className="w-12 h-1 bg-gold rounded-full mb-6" />
 
             {/* Descriptor */}
-            <motion.p
+            <m.p
               className="text-gold-700 font-body text-xs font-semibold tracking-widest uppercase mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               Ophthalmologist &amp; Eye Surgeon
-            </motion.p>
+            </m.p>
 
             {/* Headline — static lines + rotating phrase inline */}
-            <motion.h1
+            <m.h1
               className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-medium text-charcoal mb-6 leading-[1.2] tracking-[-0.01em]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              Your eyes deserve an MD
+              Your eyes deserve
+              <br />
+              an MD
               <br />
               who takes time to{' '}
               <span className="relative inline-flex items-baseline overflow-hidden" style={{ height: '1.25em' }}>
                 <AnimatePresence mode="wait">
-                  <motion.span
+                  <m.span
                     key={started ? phraseIndex : 'init'}
                     className={started ? 'text-gold-700 italic' : ''}
                     initial={started ? { opacity: 0, y: 40 } : { opacity: 1, y: 0 }}
@@ -94,33 +96,33 @@ export default function HeroSection() {
                     transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                   >
                     {rotatingPhrases[started ? phraseIndex : 0]}
-                  </motion.span>
+                  </m.span>
                 </AnimatePresence>
               </span>
-            </motion.h1>
+            </m.h1>
 
             {/* Location */}
-            <motion.p
+            <m.p
               className="text-warm-gray font-body text-sm tracking-wide mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               Wethersfield &amp; New Britain, Connecticut
-            </motion.p>
+            </m.p>
 
             {/* Sub-copy */}
-            <motion.p
+            <m.p
               className="font-body text-[17px] text-body/80 mb-10 leading-[1.8] max-w-md"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               Cataract surgery, premium lens implants, DMEK corneal transplants, ICL vision correction, and dry eye — with the kind of care that starts by listening to you.
-            </motion.p>
+            </m.p>
 
             {/* CTAs */}
-            <motion.div
+            <m.div
               className="flex flex-wrap items-center gap-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -138,11 +140,11 @@ export default function HeroSection() {
               >
                 See if I&apos;m the right fit
               </Link>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           {/* Right: Dr. Sales photo */}
-          <motion.div
+          <m.div
             className="relative hidden lg:block lg:col-span-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -161,7 +163,7 @@ export default function HeroSection() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

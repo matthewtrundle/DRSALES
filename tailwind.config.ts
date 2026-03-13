@@ -69,8 +69,8 @@ const config: Config = {
         stone: "#F0EDE8",
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        body: ["Inter", "sans-serif"],
+        display: ['var(--font-playfair)', 'serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",

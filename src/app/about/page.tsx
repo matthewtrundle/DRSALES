@@ -35,8 +35,8 @@ export default function AboutPage() {
             <div className="relative hidden lg:block">
               <div className="relative w-full max-w-md mx-auto aspect-[4/5] overflow-hidden shadow-2xl image-zoom">
                 <Image
-                  src="/images/headshots/dr-sales-white-coat.jpg"
-                  alt="Dr. Christopher S. Sales in white coat"
+                  src="/images/headshots/dr-sales-sport-coat.jpg"
+                  alt="Dr. Christopher S. Sales"
                   fill
                   className="object-cover object-top"
                   priority
@@ -48,6 +48,28 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Philosophy Section */}
+      <Section className="relative overflow-hidden">
+        <div className="relative max-w-3xl mx-auto text-center">
+          <SectionHeader title="Care Philosophy" />
+          <div className="relative">
+            {/* Quote decoration */}
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 font-display text-[100px] leading-none text-charcoal/10 select-none">
+              &ldquo;
+            </div>
+            <blockquote className="relative text-xl md:text-2xl text-neutral-700 italic mb-8 leading-relaxed font-display">
+              {doctorBio.philosophy}
+            </blockquote>
+          </div>
+          <p className="text-neutral-500 mb-10">
+            — Dr. Christopher S. Sales
+          </p>
+          <Button href="/contact" variant="primary" size="lg">
+            Schedule a Consultation
+          </Button>
+        </div>
+      </Section>
 
       {/* Biography Section */}
       <Section>
@@ -192,7 +214,7 @@ export default function AboutPage() {
               Gold Medal for Notable Contributions to Endothelial Keratoplasty (2024) · National Academy of Inventors Inductee (2023) · Secretariat Award, American Academy of Ophthalmology (2025) · Achievement Award, American Academy of Ophthalmology (2018)
             </p>
             <p className="text-sm text-neutral-500">
-              50+ peer-reviewed publications · Coached 300+ surgeons in DMEK at skills transfer labs · Trained 15+ cornea fellows and 40+ ophthalmology residents worldwide
+              50+ peer-reviewed publications · Coached 300+ surgeons worldwide in DMEK techniques
             </p>
           </div>
         </div>
@@ -219,28 +241,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-      </Section>
-
-      {/* Philosophy Section */}
-      <Section className="relative overflow-hidden">
-        <div className="relative max-w-3xl mx-auto text-center">
-          <SectionHeader title="Care Philosophy" />
-          <div className="relative">
-            {/* Quote decoration */}
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 font-display text-[100px] leading-none text-charcoal/10 select-none">
-              &ldquo;
-            </div>
-            <blockquote className="relative text-xl md:text-2xl text-neutral-700 italic mb-8 leading-relaxed font-display">
-              {doctorBio.philosophy}
-            </blockquote>
-          </div>
-          <p className="text-neutral-500 mb-10">
-            — Dr. Christopher S. Sales
-          </p>
-          <Button href="/contact" variant="primary" size="lg">
-            Schedule a Consultation
-          </Button>
         </div>
       </Section>
 

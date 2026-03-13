@@ -192,8 +192,6 @@ export function LocalBusinessSchema() {
           name: 'Corneal Transplantation',
           itemListElement: [
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DMEK Surgery' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DSAEK Surgery' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DALK Surgery' } },
           ],
         },
         {

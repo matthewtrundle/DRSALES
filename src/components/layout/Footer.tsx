@@ -17,7 +17,7 @@ export default function Footer() {
               Dr. Christopher S. Sales
             </p>
             <p className="text-warm-gray text-sm">
-              Cataract surgery · DMEK corneal transplant · EVO ICL
+              Cataract surgery · DMEK corneal transplantation · EVO ICL · Dry Eye/MGD
             </p>
             <p className="text-warm-gray/70 text-sm mt-1">
               Starling Physicians — Wethersfield &amp; New Britain, CT

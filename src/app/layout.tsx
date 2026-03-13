@@ -1,11 +1,25 @@
 import type { Metadata, Viewport } from 'next';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { OrchestratorProvider } from '@/context/OrchestratorContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import SmoothScroll from '@/components/providers/SmoothScroll';
 import { MainSchemas, GoogleAnalytics } from '@/components/seo';
+import MotionProvider from '@/components/providers/MotionProvider';
 import { siteConfig } from '@/data/siteData';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+});
 
 const baseUrl = 'https://www.drsalesophthalmology.com';
 
@@ -77,9 +91,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: baseUrl,
-  },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
@@ -92,20 +103,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
       <head>
         <GoogleAnalytics />
         <MainSchemas />
       </head>
       <body className="font-body antialiased">
         <OrchestratorProvider>
-          <SmoothScroll>
-            <div className="flex flex-col min-h-screen">
-              <Header />
-              <main className="flex-grow">{children}</main>
-              <Footer />
-            </div>
-          </SmoothScroll>
+          <MotionProvider>
+            <SmoothScroll>
+              <div className="flex flex-col min-h-screen">
+                <Header />
+                <main className="flex-grow">{children}</main>
+                <Footer />
+              </div>
+            </SmoothScroll>
+          </MotionProvider>
         </OrchestratorProvider>
       </body>
     </html>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import ImagePlaceholder from '@/components/ui/ImagePlaceholder';
 import { useParallax } from '@/hooks/useParallax';
 
@@ -52,7 +52,7 @@ export default function QuickFacts() {
       <div className="container-custom relative z-10">
         <div ref={parallaxRef} className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           {/* Left — image column with parallax + B&W */}
-          <motion.div
+          <m.div
             className="lg:col-span-2"
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -72,22 +72,22 @@ export default function QuickFacts() {
               {/* Subtle overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/10 to-transparent" />
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right — values */}
           <div className="lg:col-span-3">
-            <motion.h2
+            <m.h2
               className="heading-lg text-charcoal mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
               A different kind of eye doctor
-            </motion.h2>
+            </m.h2>
 
             <div className="space-y-10">
               {values.map((value, index) => (
-                <motion.div
+                <m.div
                   key={value.label}
                   className="border-l-2 border-gold-200 pl-8 hover:border-gold transition-colors duration-500"
                   custom={index}
@@ -101,7 +101,7 @@ export default function QuickFacts() {
                   <p className="text-body leading-relaxed font-body">
                     {value.description}
                   </p>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

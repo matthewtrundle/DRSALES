@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import { siteConfig } from '@/data/siteData';
 
 export default function CTASection() {
@@ -21,7 +21,7 @@ export default function CTASection() {
       <div className="absolute bottom-8 right-8 w-16 h-16 border-b-2 border-r-2 border-gold/20 rounded-br-lg hidden md:block" />
 
       <div className="container-custom relative z-10">
-        <motion.div
+        <m.div
           className="max-w-2xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -64,7 +64,7 @@ export default function CTASection() {
               {siteConfig.phone}
             </a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Bottom gold rule separator before footer */}

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Image from 'next/image';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -75,10 +75,10 @@ export default function ContactPage() {
                 Schedule a consultation with Dr. Sales to discuss your vision goals.
                 Every great outcome begins with a conversation.
               </p>
-            </motion.div>
+            </m.div>
 
             {/* Right Side - Contact Cards */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-5 gap-16">
             {/* Contact Form Section */}
-            <motion.div
+            <m.div
               className="lg:col-span-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -166,10 +166,10 @@ export default function ContactPage() {
                   information with third parties.
                 </p>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Sidebar */}
-            <motion.div
+            <m.div
               className="lg:col-span-2 space-y-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -250,7 +250,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -260,7 +260,7 @@ export default function ContactPage() {
         {/* Section Header */}
         <div className="py-12 border-b border-neutral-100">
           <div className="container-custom">
-            <motion.div
+            <m.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -276,7 +276,7 @@ export default function ContactPage() {
               <p className="text-neutral-600">
                 Two convenient locations in Wethersfield and New Britain, Connecticut
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
@@ -295,7 +295,7 @@ export default function ContactPage() {
           />
 
           {/* Floating Info Card */}
-          <motion.div
+          <m.div
             className="absolute bottom-6 left-6 right-6 md:left-6 md:right-auto md:w-72"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -329,14 +329,14 @@ export default function ContactPage() {
                 </svg>
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-neutral-50">
         <div className="container-custom text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -360,7 +360,7 @@ export default function ContactPage() {
               </svg>
               Call {contactInfo.phone}
             </a>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </div>

@@ -3,10 +3,17 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
 import Section from '@/components/ui/Section';
 
 const situations = [
+  {
+    headline: "I want to stop wearing glasses",
+    description: "EVO ICL implantable lenses offer freedom from glasses and contacts — even for high prescriptions, thin corneas, or dry eyes.",
+    href: "/services/vision-correction",
+    image: "/images/ToUse/glasses-freedom.jpg",
+    imageAlt: "Freedom from glasses",
+  },
   {
     headline: "My vision is cloudy or getting worse",
     description: "Cataracts, corneal conditions, and Fuchs' Dystrophy. Dr. Sales will figure out what's going on and walk you through your options.",
@@ -16,17 +23,10 @@ const situations = [
     imageZoom: true, // Zoom in and center on Dr. Sales
   },
   {
-    headline: "I want to stop wearing glasses",
-    description: "EVO ICL implantable lenses offer freedom from glasses and contacts — even for high prescriptions, thin corneas, or dry eyes.",
-    href: "/services/vision-correction",
-    image: "/images/ToUse/glasses-freedom.png",
-    imageAlt: "Freedom from glasses",
-  },
-  {
     headline: "My eyes are always dry or irritated",
     description: "Dry eye is real and treatable. We'll find the actual cause and build a plan that works for you — not just eye drops forever.",
     href: "/services/dry-eye",
-    image: "/images/dry-eye-relief.png",
+    image: "/images/dry-eye-relief.jpg",
     imageAlt: "Relief from dry eye discomfort",
   },
 ];
@@ -62,7 +62,7 @@ export default function ServiceHighlights() {
     <Section background="white">
       <div ref={sectionRef}>
         {/* Header */}
-        <motion.div
+        <m.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -74,17 +74,17 @@ export default function ServiceHighlights() {
           <h2 className="heading-lg text-charcoal">
             What brings you in?
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* Situation Cards */}
-        <motion.div
+        <m.div
           className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
         >
           {situations.map((situation) => (
-            <motion.div key={situation.headline} variants={cardVariants}>
+            <m.div key={situation.headline} variants={cardVariants}>
               <Link
                 href={situation.href}
                 className="group block h-full bg-white border border-gold/10 rounded-xl overflow-hidden hover:shadow-card-hover transition-all duration-500 hover:-translate-y-1 hover:border-gold/30"
@@ -118,9 +118,9 @@ export default function ServiceHighlights() {
                   </span>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </Section>
   );

@@ -18,7 +18,8 @@ export default function RendiaVideo({ presentationId, fallbackUrl, title }: Rend
           <iframe
             src={embedUrl}
             className="absolute top-0 left-0 w-full h-full border-0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            loading="lazy"
             allowFullScreen
             // @ts-expect-error - webkitallowfullscreen for Safari
             webkitallowfullscreen="true"

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 interface WordRevealProps {
   text: string;
@@ -28,14 +28,14 @@ export default function WordReveal({ text, delay = 0, className = '' }: WordReve
   const words = text.split(' ');
 
   return (
-    <motion.span
+    <m.span
       className={className}
       initial="hidden"
       animate="visible"
       transition={{ delayChildren: delay }}
     >
       {words.map((word, i) => (
-        <motion.span
+        <m.span
           key={`${word}-${i}`}
           className="inline-block"
           custom={i}
@@ -43,8 +43,8 @@ export default function WordReveal({ text, delay = 0, className = '' }: WordReve
         >
           {word}
           {i < words.length - 1 && <span>&nbsp;</span>}
-        </motion.span>
+        </m.span>
       ))}
-    </motion.span>
+    </m.span>
   );
 }

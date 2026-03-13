@@ -59,7 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const guidePages = [
     'dmek-surgery',
     'fuchs-dystrophy',
-    'lasik-connecticut',
   ].map((guide) => ({
     url: `${baseUrl}/guides/${guide}`,
     lastModified: new Date(),

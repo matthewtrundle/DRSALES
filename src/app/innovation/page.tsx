@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 
 const publications = [
@@ -125,15 +125,15 @@ export default function InnovationPage() {
         {/* Content */}
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl">
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-gold font-medium tracking-[0.3em] text-sm mb-6"
             >
               Research & Innovation
-            </motion.p>
-            <motion.h1
+            </m.p>
+            <m.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -144,8 +144,8 @@ export default function InnovationPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold to-charcoal">
                 Future of Vision
               </span>
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -154,10 +154,10 @@ export default function InnovationPage() {
               From laboratory breakthroughs to commercial medical devices, Dr. Sales has spent
               his career advancing the science of ophthalmology through research, device development,
               and global education.
-            </motion.p>
+            </m.p>
 
             {/* Stats Row */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -171,7 +171,7 @@ export default function InnovationPage() {
                   <p className="text-sm text-neutral-500">{stat.label}</p>
                 </div>
               ))}
-            </motion.div>
+            </m.div>
           </div>
         </div>
 
@@ -324,7 +324,7 @@ export default function InnovationPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {researchAreas.map((area, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -343,7 +343,7 @@ export default function InnovationPage() {
                     {area.description}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -366,7 +366,7 @@ export default function InnovationPage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {patents.map((patent, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -395,7 +395,7 @@ export default function InnovationPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -433,7 +433,7 @@ export default function InnovationPage() {
             <div className="lg:col-span-2">
               <div className="space-y-4">
                 {publications.map((pub, index) => (
-                  <motion.div
+                  <m.div
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +459,7 @@ export default function InnovationPage() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
 

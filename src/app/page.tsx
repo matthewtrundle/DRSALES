@@ -13,7 +13,7 @@ export default function HomePage() {
 
       {/* Warm horizontal banner */}
       <PhotoDivider
-        src="/images/horizontal-banner.png"
+        src="/images/horizontal-banner.jpg"
         alt="Warm office consultation setting"
         grayscale={false}
         height="h-48 md:h-64"
@@ -24,7 +24,7 @@ export default function HomePage() {
 
       {/* B&W photo divider — surgery */}
       <PhotoDivider
-        src="/images/dr-sales-surgery-bw.jpg"
+        src="/images/dr-sales-surgery-microscope-bw.jpg"
         alt="Dr. Sales performing surgery at microscope"
         grayscale={false}
         height="h-48 md:h-64"
