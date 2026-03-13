@@ -186,6 +186,7 @@ export default function CataractPageClient() {
                   alt="Dr. Christopher S. Sales in black scrubs"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
             </div>

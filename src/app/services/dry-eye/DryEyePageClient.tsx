@@ -164,6 +164,7 @@ export default function DryEyePageClient() {
                   alt="Dr. Sales"
                   fill
                   className="object-cover object-top"
+                  priority
                 />
               </div>
             </m.div>

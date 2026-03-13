@@ -142,6 +142,7 @@ export default function VisionCorrectionPageClient() {
                   alt="Freedom from glasses"
                   fill
                   className="object-cover"
+                  priority
                 />
                 {/* Decorative frame */}
                 <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold/30 rounded-lg -z-10" />
@@ -181,12 +182,13 @@ export default function VisionCorrectionPageClient() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/headshots/dr-sales-scrubs-white-bg.jpg"
                   alt="Dr. Christopher S. Sales in black scrubs"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
+                  priority
                 />
               </div>
             </m.div>
