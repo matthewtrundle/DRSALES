@@ -11,10 +11,11 @@ const contactInfo = {
   locations: [
     {
       name: 'Wethersfield',
-      street: 'Wethersfield',
+      street: '1210 Silas Deane Highway',
       city: 'Wethersfield',
       state: 'CT',
       zip: '06109',
+      phone: '(860) 721-8960',
     },
     {
       name: 'New Britain',
@@ -22,10 +23,12 @@ const contactInfo = {
       city: 'New Britain',
       state: 'CT',
       zip: '06052',
+      phone: '(860) 826-4460',
     },
   ],
+  afterHoursPhone: '(860) 826-4460',
   address: {
-    street: 'Wethersfield',
+    street: '1210 Silas Deane Highway',
     city: 'Wethersfield',
     state: 'CT',
     zip: '06109',
@@ -120,10 +123,30 @@ export default function ContactPage() {
                       <p className="text-neutral-600">
                         {loc.city}, {loc.state} {loc.zip}
                       </p>
+                      <a href={`tel:${loc.phone.replace(/[^0-9]/g, '')}`} className="text-gold hover:text-gold-700 font-medium text-sm mt-1 inline-block transition-colors">
+                        {loc.phone}
+                      </a>
                     </div>
                   </div>
                 </div>
               ))}
+
+              {/* After Hours Card */}
+              <div className="bg-charcoal/5 backdrop-blur-sm border border-charcoal/10 rounded-lg p-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-charcoal/10 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm text-neutral-500 mb-1">After Hours</p>
+                    <a href={`tel:${contactInfo.afterHoursPhone.replace(/[^0-9]/g, '')}`} className="text-xl font-display text-charcoal hover:text-gold transition-colors">
+                      {contactInfo.afterHoursPhone}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </m.div>
           </div>
         </div>

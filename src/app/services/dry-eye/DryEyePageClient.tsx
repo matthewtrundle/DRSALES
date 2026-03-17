@@ -158,12 +158,12 @@ export default function DryEyePageClient() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hidden lg:block"
             >
-              <div className="relative aspect-[3/4] max-w-md rounded-lg overflow-hidden shadow-lg">
+              <div className="relative aspect-[2/3] max-w-md rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/headshots/dr-sales-scrubs-black-bg.jpg"
                   alt="Dr. Sales"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   priority
                 />
               </div>

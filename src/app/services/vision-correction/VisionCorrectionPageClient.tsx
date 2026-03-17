@@ -22,16 +22,6 @@ const iclVideos = [
     fallbackUrl: 'http://fyi.rendia.com/P8Qq0',
     title: 'ICL vs. Other Vision Correction Options',
   },
-  {
-    presentationId: '4de147c3-4536-461e-4393-4f604fed409b',
-    fallbackUrl: 'http://fyi.rendia.com/ZiGfU',
-    title: 'Refractive Error Introduction',
-  },
-  {
-    presentationId: '3943a6b4-4242-42e2-486a-436a445e42e5',
-    fallbackUrl: 'http://fyi.rendia.com/UXViq',
-    title: 'ICL: Post-Op',
-  },
 ];
 
 const iclBenefits = [

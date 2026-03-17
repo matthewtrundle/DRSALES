@@ -43,7 +43,11 @@ Dr. Sales has authored 50+ peer-reviewed publications, holds multiple patents fo
 
 Beyond his clinical and entrepreneurial work, Dr. Sales has dedicated time to volunteer surgical missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to service runs throughout his career.`,
 
-  philosophy: `My philosophy of care begins with listening and is built on trust and innovation. Patients want to know their physician truly hears and cares about their concerns—not just that they are experienced. With that foundation, I focus on delivering the most advanced, evidence-based treatments available, combining compassionate care with cutting-edge surgical techniques to help each patient achieve their best possible vision. If surgery is not the right option right now, I'll tell you it can wait. If the best procedure for you is one I don't perform, I'll help you find an excellent surgeon who does. And if what you need most is reassurance, I'll give you that too.`,
+  philosophy: [
+    `There's a saying in medicine: patients don't care what you know until they know that you care.`,
+    `My philosophy of care begins with listening and is built on a foundation of trust and innovation. I focus on delivering the most advanced, evidence-based treatments available, combining compassionate care with cutting-edge surgical techniques to help each patient achieve their best possible vision.`,
+    `If surgery is not the right option right now, I'll tell you it can wait. If the best procedure for you is one I don't perform, I'll help you find an excellent surgeon who does. And if what you need most is reassurance, I'll give you that too.`,
+  ],
 };
 
 export const education = [
@@ -265,7 +269,7 @@ export const services = [
     id: "corneal-transplant",
     title: "Corneal Transplantation",
     shortDescription: "Advanced DMEK corneal transplant surgery -- the gold standard for Fuchs' Dystrophy and corneal disease.",
-    description: "DMEK is the most advanced form of corneal transplant surgery, offering faster recovery and better visual outcomes than older techniques. Dr. Sales was the first surgeon in New York City to perform DMEK and has trained surgeons worldwide in this technique. He specializes in DMEK for Fuchs' Dystrophy and other conditions causing corneal swelling and vision loss.",
+    description: "DMEK is the most advanced form of corneal transplant surgery, offering faster recovery and better visual outcomes than older techniques. Dr. Sales was among the first surgeons in New York City to perform DMEK and has trained surgeons worldwide in this technique. He specializes in DMEK for Fuchs' Dystrophy and other conditions causing corneal swelling and vision loss.",
     procedures: [
       { name: "DMEK", description: "Descemet Membrane Endothelial Keratoplasty - the gold standard for treating Fuchs' Dystrophy" },
     ],

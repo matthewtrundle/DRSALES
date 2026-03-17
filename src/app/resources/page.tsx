@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import Section, { SectionHeader } from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
+import FuchsFAQ from './FuchsFAQ';
 
 export const metadata: Metadata = {
   title: 'Resources',
@@ -28,42 +28,18 @@ export default function ResourcesPage() {
           title="Educational Guides"
           subtitle="In-depth resources to help you understand your condition and treatment options"
         />
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Fuchs' Dystrophy Guide */}
-          <Link
-            href="/guides/fuchs-dystrophy"
-            className="group block bg-white rounded-xl border border-neutral-200 p-8 hover:border-gold/40 hover:shadow-card-hover transition-all duration-300"
-          >
-            <h3 className="text-xl font-display font-semibold text-charcoal mb-3 group-hover:text-gold transition-colors">
-              Understanding Fuchs&apos; Dystrophy
-            </h3>
-            <p className="text-neutral-600 text-sm mb-4">
-              A comprehensive guide to Fuchs&apos; Dystrophy: symptoms, diagnosis, treatment options, and when surgery is needed.
-            </p>
-            <ul className="space-y-2 mb-6">
-              {['Symptoms', 'Diagnosis', 'Treatment options', "Living with Fuchs'"].map((topic) => (
-                <li key={topic} className="flex items-center text-sm text-neutral-500">
-                  <svg className="w-4 h-4 mr-2 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {topic}
-                </li>
-              ))}
-            </ul>
-            <span className="inline-flex items-center text-gold font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-              Read Guide
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </span>
-          </Link>
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Fuchs' Dystrophy FAQ — spans 2 cols */}
+          <div className="lg:col-span-2">
+            <FuchsFAQ />
+          </div>
 
           {/* External Resource */}
           <a
             href="https://www.cornealdystrophyfoundation.org/an-introduction-to-fuchs-dystrophy-for-patients/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-white rounded-xl border border-neutral-200 p-8 hover:border-gold/40 hover:shadow-card-hover transition-all duration-300"
+            className="group block bg-white rounded-xl border border-neutral-200 p-8 hover:border-gold/40 hover:shadow-card-hover transition-all duration-300 h-fit"
           >
             <div className="flex items-center gap-2 mb-3">
               <span className="text-xs font-medium uppercase tracking-wider text-gold bg-gold/10 px-2 py-1 rounded">

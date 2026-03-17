@@ -58,8 +58,10 @@ export default function AboutPage() {
             <div className="absolute -top-8 left-1/2 -translate-x-1/2 font-display text-[100px] leading-none text-charcoal/10 select-none">
               &ldquo;
             </div>
-            <blockquote className="relative text-xl md:text-2xl text-neutral-700 italic mb-8 leading-relaxed font-display">
-              {doctorBio.philosophy}
+            <blockquote className="relative text-xl md:text-2xl text-neutral-700 italic mb-8 leading-relaxed font-display space-y-6">
+              {doctorBio.philosophy.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </blockquote>
           </div>
           <p className="text-neutral-500 mb-10">

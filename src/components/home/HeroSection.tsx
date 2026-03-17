@@ -158,7 +158,7 @@ export default function HeroSection() {
                 src="/images/dr-sales-hero.jpg"
                 alt="Dr. Christopher Sales"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[center_20%]"
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />

@@ -103,24 +103,6 @@ const lensOptions = [
     best: 'Active patients motivated to reduce dependence on glasses and comfortable with the potential for nighttime halos or glare',
     features: ['Distance, intermediate, and near vision', 'Reduced glasses need', 'Nighttime halos/glare with activities such as driving'],
   },
-  {
-    name: 'Extended Depth of Focus',
-    description: 'Provides continuous range of vision with fewer visual disturbances than multifocals.',
-    best: 'Patients wanting range without halos',
-    features: ['Continuous vision range', 'Fewer halos/glare', 'Good intermediate vision'],
-  },
-  {
-    name: 'Light Adjustable Lens',
-    description: 'The only IOL that can be adjusted after surgery using UV light to optimize your prescription.',
-    best: 'Patients wanting precise outcomes',
-    features: ['Post-op adjustment', 'Customized results', 'Premium precision'],
-  },
-  {
-    name: 'Combined Solutions',
-    description: 'Mix-and-match approaches using different lenses in each eye to maximize visual range.',
-    best: 'Patients with specific visual demands',
-    features: ['Personalized approach', 'Balanced vision', 'Lifestyle-focused'],
-  },
 ];
 
 export default function CataractPageClient() {

@@ -82,7 +82,7 @@ export function PhysicianSchema() {
       name: 'Starling Physicians',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Wethersfield',
+        streetAddress: '1210 Silas Deane Highway',
         addressLocality: 'Wethersfield',
         addressRegion: 'CT',
         postalCode: '06109',
@@ -136,7 +136,7 @@ export function LocalBusinessSchema() {
       'Expert ophthalmology services including cataract surgery, DMEK corneal transplants, EVO ICL vision correction, and dry eye treatment in Connecticut. Led by Dr. Christopher S. Sales.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Starling Physicians',
+      streetAddress: '1210 Silas Deane Highway',
       addressLocality: 'Wethersfield',
       addressRegion: 'CT',
       postalCode: '06109',
