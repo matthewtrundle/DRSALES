@@ -95,7 +95,7 @@ export const careerHistory = [
     title: "Ophthalmologist",
     organization: "Starling Physicians",
     location: "Wethersfield, CT",
-    description: "Ophthalmology practice with expertise in cataract, premium lens implant, DMEK, and EVO ICL refractive surgery in the greater Hartford area.",
+    description: "Ophthalmology practice with expertise in cataract, premium lens implants, DMEK, and EVO ICL refractive surgery in the greater Hartford area.",
     current: true,
   },
   {
