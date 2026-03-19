@@ -132,7 +132,7 @@ export default function TestimonialsCarousel() {
 
             <div aria-live="polite">
               <blockquote
-                className={`font-body text-xl md:text-2xl text-charcoal leading-relaxed mb-8 transition-all duration-400 ease-out ${
+                className={`font-body text-lg sm:text-xl md:text-2xl text-charcoal leading-relaxed mb-8 transition-all duration-400 ease-out ${
                   isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'
                 }`}
               >

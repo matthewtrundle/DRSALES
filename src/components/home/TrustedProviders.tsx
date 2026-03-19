@@ -17,7 +17,7 @@ export default function TrustedProviders() {
           Training &amp; Affiliations
         </p>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+      <div className="flex flex-wrap justify-center items-center gap-5 sm:gap-8 md:gap-12">
         {affiliations.map((affiliation) => (
           <div
             key={affiliation.name}

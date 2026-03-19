@@ -102,7 +102,7 @@ export default function ServiceHighlights() {
                 </div>
 
                 <div className="p-8 text-center">
-                  <h3 className="font-display font-medium text-xl text-charcoal mb-4 leading-snug group-hover:text-gold-700 transition-colors duration-300">
+                  <h3 className="font-display font-medium text-lg sm:text-xl text-charcoal mb-4 leading-snug group-hover:text-gold-700 transition-colors duration-300">
                     {situation.headline}
                   </h3>
 

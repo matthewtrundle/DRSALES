@@ -58,7 +58,7 @@ export default function Header() {
 
           {/* Center Logo */}
           <Link href="/" className="text-center group absolute left-1/2 -translate-x-1/2">
-            <span className="text-lg md:text-2xl font-display font-medium text-charcoal tracking-wide">
+            <span className="text-base sm:text-lg md:text-2xl font-display font-medium text-charcoal tracking-wide whitespace-nowrap">
               Dr. Christopher S. Sales
             </span>
             <span className="block text-[10px] tracking-[0.3em] text-charcoal/60 mt-0.5">

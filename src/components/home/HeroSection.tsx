@@ -51,11 +51,11 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-cream/40 via-warm-cream/25 to-transparent" />
       </div>
 
-      <div className="container-custom relative z-10 py-28 md:py-36 lg:py-44">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
-          {/* Left: copy in warm frosted container — 7 cols */}
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-28 md:py-36 lg:py-44">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+          {/* Left: copy in warm frosted container */}
           <m.div
-            className="lg:col-span-7 flex flex-col justify-center bg-gradient-to-br from-warm-cream/60 via-white/50 to-gold-50/40 backdrop-blur-md rounded-2xl p-8 md:p-10 lg:p-12 border border-gold/15 shadow-soft"
+            className="flex flex-col justify-center bg-gradient-to-br from-warm-cream/60 via-white/50 to-gold-50/40 backdrop-blur-md rounded-2xl p-8 md:p-10 lg:p-12 border border-gold/15 shadow-soft"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
             {/* Sub-copy */}
             <m.p
-              className="font-body text-[17px] text-body/80 mb-10 leading-[1.8] max-w-md"
+              className="font-body text-[15px] sm:text-[17px] text-body/80 mb-10 leading-[1.8] max-w-xs sm:max-w-md"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -123,7 +123,7 @@ export default function HeroSection() {
 
             {/* CTAs */}
             <m.div
-              className="flex flex-wrap items-center gap-4"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
@@ -145,20 +145,20 @@ export default function HeroSection() {
 
           {/* Right: Dr. Sales photo */}
           <m.div
-            className="relative hidden lg:block lg:col-span-5"
+            className="relative hidden lg:block"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div
-              className="relative rounded-2xl overflow-hidden h-full min-h-[500px] shadow-2xl"
+              className="relative rounded-2xl overflow-hidden h-full shadow-soft border border-gold/15"
               style={{ transform: `translateY(${offset * -0.2}px)` }}
             >
               <Image
                 src="/images/dr-sales-hero-v2.jpg"
                 alt="Dr. Christopher Sales"
                 fill
-                className="object-cover object-[50%_0%]"
+                className="object-cover object-[50%_0%] scale-105"
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />

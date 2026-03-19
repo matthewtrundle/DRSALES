@@ -59,7 +59,7 @@ export default function QuickFacts() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
             <div
-              className="relative rounded-xl overflow-hidden aspect-[3/4] max-w-sm mx-auto lg:mx-0 shadow-soft"
+              className="relative rounded-xl overflow-hidden aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0 shadow-soft"
               style={{ transform: `translateY(${offset * -0.4}px)` }}
             >
               <ImagePlaceholder
@@ -89,7 +89,7 @@ export default function QuickFacts() {
               {values.map((value, index) => (
                 <m.div
                   key={value.label}
-                  className="border-l-2 border-gold-200 pl-8 hover:border-gold transition-colors duration-500"
+                  className="border-l-2 border-gold-200 pl-5 sm:pl-8 hover:border-gold transition-colors duration-500"
                   custom={index}
                   variants={itemVariants}
                   initial="hidden"

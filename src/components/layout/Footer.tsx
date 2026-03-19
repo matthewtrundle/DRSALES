@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="font-display text-xl text-charcoal mb-2">
               Dr. Christopher S. Sales
             </p>
-            <p className="text-warm-gray text-sm">
+            <p className="text-warm-gray text-sm max-w-xs sm:max-w-none mx-auto text-balance">
               Cataract surgery · DMEK corneal transplantation · EVO ICL · Dry Eye/MGD
             </p>
             <p className="text-warm-gray/70 text-sm mt-1">

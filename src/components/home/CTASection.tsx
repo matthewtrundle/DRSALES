@@ -41,7 +41,7 @@ export default function CTASection() {
           <div className="flex flex-wrap justify-center gap-5">
             <Link
               href="/contact"
-              className="bg-gold text-white rounded-lg font-body font-semibold px-10 py-4 text-lg hover:bg-gold-600 transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center gap-2 hover:-translate-y-1"
+              className="bg-gold text-white rounded-lg font-body font-semibold px-6 py-3 text-base sm:px-10 sm:py-4 sm:text-lg hover:bg-gold-600 transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center gap-2 hover:-translate-y-1"
             >
               Schedule a visit
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export default function CTASection() {
 
             <a
               href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-              className="text-charcoal/70 font-body font-medium px-8 py-4 text-lg hover:text-charcoal transition-colors inline-flex items-center gap-3 border border-charcoal/15 rounded-lg hover:border-charcoal/30"
+              className="text-charcoal/70 font-body font-medium px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg hover:text-charcoal transition-colors inline-flex items-center gap-3 border border-charcoal/15 rounded-lg hover:border-charcoal/30"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
