@@ -62,6 +62,37 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
+      {/* Video Resources */}
+      <Section background="light">
+        <SectionHeader
+          title="Videos from Dr. Sales"
+          subtitle="Watch Dr. Sales explain common conditions and what to expect before and after surgery"
+        />
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {[
+            { title: 'Fuchs\' Dystrophy 101', vimeoId: '1174611919', hash: '82c202ed85', aspect: '75%' },
+            { title: 'Choosing the Right Lens Implant', vimeoId: '1174611822', hash: '0f299a896c', aspect: '56.25%' },
+            { title: 'Cataract Post-Op Instructions', vimeoId: '1174612124', hash: '054dedea20', aspect: '56.25%' },
+            { title: 'DMEK Post-Op Instructions', vimeoId: '1174612043', hash: '448e6c9226', aspect: '56.25%' },
+          ].map((video) => (
+            <div key={video.vimeoId} className="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-soft">
+              <div style={{ padding: `${video.aspect} 0 0 0`, position: 'relative' }}>
+                <iframe
+                  src={`https://player.vimeo.com/video/${video.vimeoId}?h=${video.hash}&badge=0&autopause=0&player_id=0&app_id=58479`}
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                  title={video.title}
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-display font-semibold text-charcoal text-sm">{video.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* CTA */}
       <Section background="dark" className="text-center">
         <h2 className="heading-lg text-white mb-4">Have Questions?</h2>

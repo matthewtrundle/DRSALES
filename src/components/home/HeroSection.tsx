@@ -85,7 +85,7 @@ export default function HeroSection() {
               an MD
               <br />
               who takes time to{' '}
-              <span className="relative inline-flex items-baseline overflow-hidden" style={{ height: '1.25em' }}>
+              <span className="relative inline-flex items-baseline overflow-hidden whitespace-nowrap" style={{ height: '1.25em' }}>
                 <AnimatePresence mode="wait">
                   <m.span
                     key={started ? phraseIndex : 'init'}
@@ -158,7 +158,7 @@ export default function HeroSection() {
                 src="/images/dr-sales-hero.jpg"
                 alt="Dr. Christopher Sales"
                 fill
-                className="object-cover object-[center_20%]"
+                className="object-cover object-top"
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
