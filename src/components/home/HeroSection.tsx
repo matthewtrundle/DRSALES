@@ -155,7 +155,7 @@ export default function HeroSection() {
               style={{ transform: `translateY(${offset * -0.2}px)` }}
             >
               <Image
-                src="/images/dr-sales-hero-v2.jpg"
+                src="/images/dr-sales-hero-v3.jpg"
                 alt="Dr. Christopher Sales"
                 fill
                 className="object-cover object-[50%_0%] scale-105"
