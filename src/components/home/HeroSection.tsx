@@ -37,7 +37,7 @@ export default function HeroSection() {
   return (
     <section
       ref={parallaxRef}
-      className="relative flex items-center overflow-hidden min-h-[92vh]"
+      className="relative flex items-center overflow-hidden min-h-[auto] lg:min-h-[92vh]"
     >
       {/* Warm ambient background image */}
       <div className="absolute inset-0">
@@ -51,7 +51,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-cream/40 via-warm-cream/25 to-transparent" />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-28 md:py-36 lg:py-44">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-36 lg:py-44">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {/* Left: copy in warm frosted container */}
           <m.div
@@ -143,22 +143,22 @@ export default function HeroSection() {
             </m.div>
           </m.div>
 
-          {/* Right: Dr. Sales photo */}
+          {/* Right (desktop) / Below (mobile): Dr. Sales photo */}
           <m.div
-            className="relative hidden lg:block"
+            className="relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div
-              className="relative rounded-2xl overflow-hidden h-full shadow-soft border border-gold/15"
+              className="relative rounded-2xl overflow-hidden shadow-soft border border-gold/15 aspect-[3/4] sm:aspect-[4/3] lg:aspect-auto lg:h-full"
               style={{ transform: `translateY(${offset * -0.2}px)` }}
             >
               <Image
                 src="/images/dr-sales-hero-v3.jpg"
                 alt="Dr. Christopher Sales"
                 fill
-                className="object-cover object-[50%_0%] scale-105"
+                className="object-cover object-[50%_10%] scale-105"
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
