@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://www.drsalesophthalmology.com';
+const baseUrl = 'https://www.drchristophersales.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

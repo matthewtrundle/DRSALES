@@ -122,7 +122,6 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul>
               <li>Phone: <a href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}>{siteConfig.phone}</a></li>
-              <li>Email: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></li>
               <li>
                 Office: {siteConfig.address.practice}, {siteConfig.address.city},{' '}
                 {siteConfig.address.state} {siteConfig.address.zip}

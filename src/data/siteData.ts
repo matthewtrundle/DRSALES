@@ -3,7 +3,6 @@ export const siteConfig = {
   title: "Dr. Christopher S. Sales - Ophthalmologist",
   description: "Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplants, EVO ICL, and dry eye. Wethersfield & New Britain, CT.",
   phone: "(860) 826-4460",
-  email: "info@drsalesophthalmology.com",
   location: "Starling Physicians — Wethersfield & New Britain, CT",
   address: {
     practice: "Starling Physicians",
@@ -248,14 +247,8 @@ export const humanitarianWork = [
   },
 ];
 
-export const affiliations = [
-  { name: "Stanford University", logo: "/images/logos/stanford.png" },
-  { name: "University of Iowa", logo: "/images/logos/iowa.png" },
-  { name: "Harvard Medical School", logo: "/images/logos/harvard.png" },
-  { name: "Weill Cornell Medicine", logo: "/images/logos/cornell.png" },
-  { name: "Brown University", logo: "/images/logos/brown.png" },
-  { name: "Tufts University", logo: "/images/logos/tufts.png" },
-];
+// TODO: Ask Chris — stats say "300 Surgeons Coached in DMEK" but bio says "40+ ophthalmology residents."
+// Which number is correct? Update stats below once confirmed.
 
 export const stats = [
   { value: 50, label: "Peer-Reviewed Publications", suffix: "+" },
@@ -324,12 +317,8 @@ export const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-export const socialLinks = [
-  { name: "Facebook", href: "", placeholder: true },
-  { name: "YouTube", href: "", placeholder: true },
-  { name: "Instagram", href: "", placeholder: true },
-  { name: "LinkedIn", href: "", placeholder: true },
-];
+// Social links removed — add back when Chris provides real URLs
+// export const socialLinks = [...];
 
 export const videoLinks = [
   {

@@ -8,12 +8,27 @@ import {
   GuideFrontmatter,
 } from '@/lib/mdx';
 import { TableOfContents, AuthorCard, BlogCTA } from '@/components/blog';
-import { ArticleSchema, BreadcrumbSchema } from '@/components/seo';
+import { ArticleSchema, BreadcrumbSchema, FAQSchema } from '@/components/seo';
+import { faqs } from '@/data/siteData';
 
 interface GuidePageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+// Map guide slugs to relevant FAQ questions
+const guideFaqKeywords: Record<string, string[]> = {
+  'dmek-surgery': ['DMEK', 'corneal transplant', 'recovery after corneal'],
+  'fuchs-dystrophy': ['Fuchs', 'DMEK'],
+};
+
+function getFaqsForGuide(slug: string) {
+  const keywords = guideFaqKeywords[slug];
+  if (!keywords) return [];
+  return faqs.filter((faq) =>
+    keywords.some((kw) => faq.question.includes(kw) || faq.answer.includes(kw))
+  );
 }
 
 // Static guide content for when MDX files don't exist yet
@@ -119,6 +134,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
           { name: title, url: `/guides/${slug}` },
         ]}
       />
+      {getFaqsForGuide(slug).length > 0 && (
+        <FAQSchema faqs={getFaqsForGuide(slug)} />
+      )}
 
       {/* Hero Section */}
       <section className="bg-cream text-charcoal py-16 md:py-20">

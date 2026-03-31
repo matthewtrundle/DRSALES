@@ -1,11 +1,11 @@
 # Robots.txt for Dr. Christopher S. Sales Ophthalmology Website
-# https://www.drsalesophthalmology.com
+# https://www.drchristophersales.com
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.drsalesophthalmology.com/sitemap.xml
+Sitemap: https://www.drchristophersales.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /api/

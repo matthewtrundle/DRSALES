@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BreadcrumbSchema, MedicalProcedureSchema } from '@/components/seo';
 import DryEyePageClient from './DryEyePageClient';
 
-const baseUrl = 'https://www.drsalesophthalmology.com';
+const baseUrl = 'https://www.drchristophersales.com';
 
 export const metadata: Metadata = {
   title: 'Dry Eye Treatment',

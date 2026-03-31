@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder');
 
 const CHRIS_EMAIL = process.env.NOTIFICATION_EMAIL || 'chris@example.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'Dr. Sales Office <noreply@drsales.com>';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'Dr. Sales Office <noreply@drchristophersales.com>';
 
 interface ContactFormData {
   firstName: string;
@@ -97,7 +97,7 @@ function buildNotificationEmail(data: ContactFormData): string {
         <tr>
           <td style="padding:20px 40px 28px;border-top:1px solid #f0ede8;text-align:center;">
             <p style="margin:0;color:#8C8578;font-size:12px;">
-              This message was sent from the consultation form at drsales.com
+              This message was sent from the consultation form at drchristophersales.com
             </p>
           </td>
         </tr>
@@ -190,7 +190,7 @@ function buildConfirmationEmail(data: ContactFormData): string {
                   <p style="margin:0 0 4px;color:#8C8578;font-size:12px;">Starling Physicians</p>
                   <p style="margin:0 0 12px;color:#8C8578;font-size:12px;">Wethersfield &amp; New Britain, Connecticut</p>
                   <p style="margin:0;color:#8C8578;font-size:11px;">
-                    <a href="https://drsales.com" style="color:#C9A96E;text-decoration:none;">drsales.com</a>
+                    <a href="https://drchristophersales.com" style="color:#C9A96E;text-decoration:none;">drchristophersales.com</a>
                     &nbsp;&bull;&nbsp;
                     <a href="tel:8608264460" style="color:#8C8578;text-decoration:none;">(860) 826-4460</a>
                   </p>
@@ -205,7 +205,7 @@ function buildConfirmationEmail(data: ContactFormData): string {
         <tr>
           <td style="padding:20px 40px;text-align:center;">
             <p style="margin:0;color:#b0b0b0;font-size:11px;">
-              You received this email because you submitted a consultation request at drsales.com. This is a one-time confirmation &mdash; you will not be added to any mailing list.
+              You received this email because you submitted a consultation request at drchristophersales.com. This is a one-time confirmation &mdash; you will not be added to any mailing list.
             </p>
           </td>
         </tr>

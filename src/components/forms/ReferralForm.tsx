@@ -41,15 +41,32 @@ export default function ReferralForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const [error, setError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch('/api/referral', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result.error || 'Something went wrong.');
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please call us at (860) 826-4460.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -76,6 +93,11 @@ export default function ReferralForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+          {error}
+        </div>
+      )}
       {/* Referring Physician Section */}
       <div>
         <h3 className="text-lg font-display font-semibold text-neutral-800 mb-4 flex items-center gap-2">

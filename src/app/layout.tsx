@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
 });
 
-const baseUrl = 'https://www.drsalesophthalmology.com';
+const baseUrl = 'https://www.drchristophersales.com';
 
 export const viewport: Viewport = {
   width: 'device-width',

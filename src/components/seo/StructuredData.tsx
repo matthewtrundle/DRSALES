@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-const baseUrl = 'https://www.drsalesophthalmology.com';
+const baseUrl = 'https://www.drchristophersales.com';
 
 // Physician Schema for Dr. Sales
 export function PhysicianSchema() {
@@ -12,10 +12,9 @@ export function PhysicianSchema() {
     familyName: 'Sales',
     honorificPrefix: 'Dr.',
     honorificSuffix: 'MD, MPH',
-    image: `${baseUrl}/images/dr-sales-headshot.jpg`,
+    image: `${baseUrl}/images/headshots/dr-sales-headshot.jpg`,
     url: baseUrl,
     telephone: '(860) 826-4460',
-    email: 'info@drsalesophthalmology.com',
     description:
       'Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplantation, EVO ICL vision correction, and dry eye treatment in Connecticut.',
     medicalSpecialty: [
