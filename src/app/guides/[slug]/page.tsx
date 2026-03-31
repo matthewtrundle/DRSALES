@@ -8,7 +8,7 @@ import {
   GuideFrontmatter,
 } from '@/lib/mdx';
 import { TableOfContents, AuthorCard, BlogCTA } from '@/components/blog';
-import { ArticleSchema, BreadcrumbSchema, FAQSchema } from '@/components/seo';
+import { ArticleSchema, BreadcrumbSchema, FAQSchema, MedicalConditionSchema } from '@/components/seo';
 import { faqs } from '@/data/siteData';
 
 interface GuidePageProps {
@@ -16,6 +16,23 @@ interface GuidePageProps {
     slug: string;
   }>;
 }
+
+// Medical condition data for structured schema
+const guideConditionData: Record<string, {
+  name: string;
+  description: string;
+  symptoms?: string[];
+  riskFactors?: string[];
+  treatments?: string[];
+}> = {
+  'fuchs-dystrophy': {
+    name: "Fuchs' Endothelial Dystrophy",
+    description: "A progressive eye disease affecting the cornea's inner endothelial layer, causing corneal swelling and vision loss. Affects approximately 4% of adults over 40.",
+    symptoms: ['Morning blur that improves throughout the day', 'Glare and halos around lights', 'Cloudy or hazy vision', 'Eye discomfort or pain', 'Difficulty seeing in low light'],
+    riskFactors: ['Family history of Fuchs dystrophy', 'Age over 40', 'Female gender (3:1 ratio)', 'Genetic predisposition'],
+    treatments: ['DMEK corneal transplant surgery', 'Hypertonic saline eye drops', 'Soft contact lens bandage', 'Hair dryer therapy for corneal dehydration'],
+  },
+};
 
 // Map guide slugs to relevant FAQ questions
 const guideFaqKeywords: Record<string, string[]> = {
@@ -136,6 +153,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
       />
       {getFaqsForGuide(slug).length > 0 && (
         <FAQSchema faqs={getFaqsForGuide(slug)} />
+      )}
+      {guideConditionData[slug] && (
+        <MedicalConditionSchema
+          {...guideConditionData[slug]}
+          url={`/guides/${slug}`}
+        />
       )}
 
       {/* Hero Section */}

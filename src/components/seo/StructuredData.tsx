@@ -390,6 +390,63 @@ export function ArticleSchema({
   );
 }
 
+// Medical Condition Schema - for condition-focused content pages
+interface MedicalConditionSchemaProps {
+  name: string;
+  description: string;
+  symptoms?: string[];
+  riskFactors?: string[];
+  treatments?: string[];
+  url: string;
+}
+
+export function MedicalConditionSchema({
+  name,
+  description,
+  symptoms,
+  riskFactors,
+  treatments,
+  url,
+}: MedicalConditionSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalCondition',
+    name,
+    description,
+    url: `${baseUrl}${url}`,
+    ...(symptoms && {
+      signOrSymptom: symptoms.map((s) => ({
+        '@type': 'MedicalSignOrSymptom',
+        name: s,
+      })),
+    }),
+    ...(riskFactors && {
+      riskFactor: riskFactors.map((r) => ({
+        '@type': 'MedicalRiskFactor',
+        name: r,
+      })),
+    }),
+    ...(treatments && {
+      possibleTreatment: treatments.map((t) => ({
+        '@type': 'MedicalTherapy',
+        name: t,
+      })),
+    }),
+    medicalSpecialty: {
+      '@type': 'MedicalSpecialty',
+      name: 'Ophthalmology',
+    },
+  };
+
+  return (
+    <Script
+      id={`condition-schema-${name.toLowerCase().replace(/\s+/g, '-')}`}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 // Website Schema (for homepage)
 export function WebsiteSchema() {
   const schema = {

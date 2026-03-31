@@ -139,6 +139,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <AuthorCard name={frontmatter.author} compact />
               <span>·</span>
               <time dateTime={frontmatter.date}>{formatDate(frontmatter.date)}</time>
+              <span>·</span>
+              <span>Medically reviewed by Dr. Christopher S. Sales, MD, MPH</span>
             </div>
           </header>
 

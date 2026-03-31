@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getSortedBlogPosts } from '@/lib/mdx';
 
 const baseUrl = 'https://www.drchristophersales.com';
 
@@ -40,6 +41,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/for-physicians`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/refer`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
   ];
 
   // Service pages - high priority for SEO
@@ -77,6 +96,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Blog pages - individual posts
+  const blogPosts = getSortedBlogPosts().map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.frontmatter.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   // Blog index
   const blogIndex = {
     url: `${baseUrl}/blog`,
@@ -91,5 +118,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guidePages,
     ...locationPages,
     blogIndex,
+    ...blogPosts,
   ];
 }

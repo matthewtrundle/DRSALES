@@ -2,6 +2,7 @@ export {
   PhysicianSchema,
   LocalBusinessSchema,
   MedicalProcedureSchema,
+  MedicalConditionSchema,
   FAQSchema,
   BreadcrumbSchema,
   ArticleSchema,
