@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
+import ServiceFAQ from '@/components/ui/ServiceFAQ';
 
 // Rendia video embeds for cataract education
 const cataractVideos = [
@@ -105,7 +106,9 @@ const lensOptions = [
   },
 ];
 
-export default function CataractPageClient() {
+interface FAQItem { question: string; answer: string; }
+
+export default function CataractPageClient({ faqs }: { faqs?: FAQItem[] }) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -326,6 +329,9 @@ export default function CataractPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqs && <ServiceFAQ faqs={faqs} />}
 
       {/* CTA */}
       <section className="py-24 bg-neutral-100">

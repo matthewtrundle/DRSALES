@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
+import ServiceFAQ from '@/components/ui/ServiceFAQ';
 
 // Rendia video embeds for dry eye education
 const dryEyeVideos = [
@@ -123,7 +124,9 @@ const symptoms = [
   'Difficulty wearing contact lenses',
 ];
 
-export default function DryEyePageClient() {
+interface FAQItem { question: string; answer: string; }
+
+export default function DryEyePageClient({ faqs }: { faqs?: FAQItem[] }) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -287,6 +290,9 @@ export default function DryEyePageClient() {
         sectionTitle="Understanding Dry Eye"
         sectionSubtitle="Watch these short videos to learn more about dry eye disease and the treatment options available."
       />
+
+      {/* FAQ Section */}
+      {faqs && <ServiceFAQ faqs={faqs} />}
 
       {/* CTA */}
       <section className="py-24 bg-neutral-100">

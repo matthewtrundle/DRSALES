@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
+import ServiceFAQ from '@/components/ui/ServiceFAQ';
 
 // Rendia video embeds for EVO ICL education
 const iclVideos = [
@@ -83,7 +84,9 @@ const procedureSteps = [
   },
 ];
 
-export default function VisionCorrectionPageClient() {
+interface FAQItem { question: string; answer: string; }
+
+export default function VisionCorrectionPageClient({ faqs }: { faqs?: FAQItem[] }) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -358,6 +361,9 @@ export default function VisionCorrectionPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqs && <ServiceFAQ faqs={faqs} />}
 
       {/* CTA Section */}
       <section className="py-24 bg-neutral-100">

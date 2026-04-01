@@ -181,6 +181,13 @@ export function LocalBusinessSchema() {
         closes: '16:00',
       },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      ratingCount: '150',
+      reviewCount: '150',
+    },
     medicalSpecialty: 'Ophthalmology',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

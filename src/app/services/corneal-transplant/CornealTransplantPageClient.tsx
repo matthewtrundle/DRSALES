@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
+import ServiceFAQ from '@/components/ui/ServiceFAQ';
 
 // Rendia video embeds for corneal education
 const cornealVideos = [
@@ -31,7 +32,9 @@ const stats = [
   { stat: 'High', label: 'Success Rate' },
 ];
 
-export default function CornealTransplantPageClient() {
+interface FAQItem { question: string; answer: string; }
+
+export default function CornealTransplantPageClient({ faqs }: { faqs?: FAQItem[] }) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -239,6 +242,9 @@ export default function CornealTransplantPageClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqs && <ServiceFAQ faqs={faqs} />}
 
       {/* CTA */}
       <section className="py-24 bg-neutral-100">
