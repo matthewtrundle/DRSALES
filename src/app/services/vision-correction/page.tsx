@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/services/vision-correction`,
   },
   openGraph: {
-    title: 'EVO ICL Vision Correction | Dr. Christopher S. Sales, MD',
+    title: 'EVO ICL Vision Correction | Christopher S. Sales, M.D., M.P.H',
     description:
       'EVO ICL implantable lens surgery by Dr. Christopher Sales in Connecticut. An alternative to LASIK.',
     url: `${baseUrl}/services/vision-correction`,

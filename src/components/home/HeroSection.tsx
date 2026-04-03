@@ -108,7 +108,10 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Wethersfield &amp; New Britain, Connecticut
+              <span className="font-medium text-charcoal/70">Starling Physicians</span>
+              <br className="sm:hidden" />
+              <span className="hidden sm:inline"> &bull; </span>
+              1210 Silas Deane Highway, Wethersfield, CT 06109
             </m.p>
 
             {/* Sub-copy */}

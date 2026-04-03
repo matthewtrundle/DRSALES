@@ -140,7 +140,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span>·</span>
               <time dateTime={frontmatter.date}>{formatDate(frontmatter.date)}</time>
               <span>·</span>
-              <span>Medically reviewed by Dr. Christopher S. Sales, MD, MPH</span>
+              <span>Medically reviewed by Dr. Christopher S. Sales, M.D., M.P.H</span>
             </div>
           </header>
 

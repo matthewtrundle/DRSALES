@@ -207,7 +207,7 @@ export async function POST(request: NextRequest) {
         <tr>
           <td style="background-color:#3D3D3D;padding:32px 40px;text-align:center;">
             <h1 style="margin:0 0 4px;color:#ffffff;font-size:22px;font-weight:normal;">Dr. Christopher S. Sales</h1>
-            <p style="margin:0;color:#C9A96E;font-size:12px;letter-spacing:3px;text-transform:uppercase;">MD, MPH &bull; Ophthalmology</p>
+            <p style="margin:0;color:#C9A96E;font-size:12px;letter-spacing:3px;text-transform:uppercase;">M.D., M.P.H &bull; Ophthalmology</p>
           </td>
         </tr>
         <tr><td style="background-color:#C9A96E;height:3px;"></td></tr>
@@ -232,7 +232,7 @@ export async function POST(request: NextRequest) {
         </tr>
         <tr>
           <td style="padding:24px 40px 32px;border-top:1px solid #f0ede8;text-align:center;">
-            <p style="margin:0 0 4px;color:#3D3D3D;font-size:14px;font-weight:600;">Dr. Christopher S. Sales, MD, MPH</p>
+            <p style="margin:0 0 4px;color:#3D3D3D;font-size:14px;font-weight:600;">Dr. Christopher S. Sales, M.D., M.P.H</p>
             <p style="margin:0 0 4px;color:#8C8578;font-size:12px;">Starling Physicians</p>
             <p style="margin:0;color:#8C8578;font-size:12px;">Wethersfield &amp; New Britain, Connecticut</p>
           </td>

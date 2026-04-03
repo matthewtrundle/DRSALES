@@ -32,7 +32,7 @@ export default function DoctorIntro() {
               >
                 <Image
                   src="/images/dr-sales-white-coat-scrubs.jpg"
-                  alt="Dr. Christopher Sales, MD"
+                  alt="Dr. Christopher Sales, M.D., M.P.H"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 500px"
@@ -62,7 +62,7 @@ export default function DoctorIntro() {
               Your doctor
             </p>
             <h2 className="heading-lg text-charcoal mb-6">
-              Chris Sales, MD
+              Chris Sales, M.D.
             </h2>
 
             <div className="space-y-4 mb-8">

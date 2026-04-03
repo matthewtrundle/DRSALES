@@ -22,7 +22,7 @@ export default function AboutPage() {
                 Meet Your Surgeon
               </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 leading-tight">
-                Christopher S. Sales, MD, MPH
+                Christopher S. Sales, M.D., M.P.H
               </h1>
               <p className="text-xl text-neutral-600 leading-relaxed mb-4">
                 Board-certified ophthalmologist, internationally recognized eye surgeon,

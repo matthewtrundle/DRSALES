@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Sitemap',
-  description: 'Complete directory of all pages on the website of Dr. Christopher S. Sales, MD, MPH.',
+  description: 'Complete directory of all pages on the website of Dr. Christopher S. Sales, M.D., M.P.H.',
 };
 
 const sitemapSections = [

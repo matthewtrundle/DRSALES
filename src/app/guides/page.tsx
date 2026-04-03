@@ -78,7 +78,7 @@ export default function GuidesPage() {
             </h1>
             <p className="text-xl text-gray-600">
               In-depth resources to help you understand your condition and
-              treatment options. Written by Dr. Christopher S. Sales, MD, MPH.
+              treatment options. Written by Dr. Christopher S. Sales, M.D., M.P.H.
             </p>
           </div>
         </div>

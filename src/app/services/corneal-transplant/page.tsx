@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/services/corneal-transplant`,
   },
   openGraph: {
-    title: 'DMEK Corneal Transplant | Dr. Christopher S. Sales, MD',
+    title: 'DMEK Corneal Transplant | Christopher S. Sales, M.D., M.P.H',
     description:
       'DMEK corneal transplant surgery by Dr. Sales, a recognized leader in endothelial keratoplasty, in CT.',
     url: `${baseUrl}/services/corneal-transplant`,

@@ -9,7 +9,7 @@ interface AuthorCardProps {
 }
 
 export default function AuthorCard({
-  name = 'Dr. Christopher S. Sales, MD, MPH',
+  name = 'Dr. Christopher S. Sales, M.D., M.P.H',
   image = '/images/dr-sales-headshot.jpg',
   bio = 'Ophthalmologist specializing in cataract surgery, DMEK corneal transplantation, and EVO ICL vision correction. Trained at Stanford, Harvard, Weill Cornell, and the University of Iowa with 50+ publications.',
   compact = false,

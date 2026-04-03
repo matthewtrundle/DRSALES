@@ -11,14 +11,14 @@ const baseUrl = 'https://www.drchristophersales.com';
 export const metadata: Metadata = {
   title: 'Ophthalmologist in Connecticut | Cataract, DMEK & ICL Surgery',
   description:
-    'Dr. Christopher S. Sales — board-certified ophthalmologist in Wethersfield & New Britain, CT. Specializing in cataract surgery, DMEK corneal transplants, EVO ICL vision correction, and dry eye treatment.',
+    'Christopher S. Sales, M.D., M.P.H — board-certified ophthalmologist at Starling Physicians in Wethersfield, CT. Specializing in cataract surgery, DMEK corneal transplants, EVO ICL vision correction, and dry eye treatment.',
   alternates: {
     canonical: baseUrl,
   },
   openGraph: {
-    title: 'Dr. Christopher S. Sales, MD — Ophthalmologist in Connecticut',
+    title: 'Christopher S. Sales, M.D., M.P.H — Ophthalmologist in Connecticut',
     description:
-      'Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplants, EVO ICL, and dry eye. Wethersfield & New Britain, CT.',
+      'Board-certified ophthalmologist at Starling Physicians, 1210 Silas Deane Highway, Wethersfield, CT. Cataract surgery, DMEK corneal transplants, EVO ICL, and dry eye.',
     url: baseUrl,
     images: [
       {

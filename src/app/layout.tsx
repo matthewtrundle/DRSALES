@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    siteName: 'Dr. Christopher S. Sales, MD - Ophthalmology',
+    siteName: 'Christopher S. Sales, M.D., M.P.H - Ophthalmology',
     images: [
       {
         url: '/images/og-image.jpg',

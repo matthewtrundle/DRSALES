@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/services/cataract`,
   },
   openGraph: {
-    title: 'Cataract Surgery | Dr. Christopher S. Sales, MD',
+    title: 'Cataract Surgery | Christopher S. Sales, M.D., M.P.H',
     description:
       'Advanced cataract surgery with premium lens options by Dr. Christopher Sales in Connecticut.',
     url: `${baseUrl}/services/cataract`,

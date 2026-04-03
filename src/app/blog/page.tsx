@@ -52,7 +52,7 @@ export default function BlogPage() {
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Expert articles on vision correction, corneal surgery, and eye health
-              from Dr. Christopher S. Sales, MD, MPH
+              from Dr. Christopher S. Sales, M.D., M.P.H
             </p>
 
             {/* Category filters */}

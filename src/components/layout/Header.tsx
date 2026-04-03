@@ -62,7 +62,7 @@ export default function Header() {
               Dr. Christopher S. Sales
             </span>
             <span className="block text-[10px] tracking-[0.3em] text-charcoal/60 mt-0.5">
-              MD, MPH &nbsp;&bull;&nbsp; Ophthalmology
+              M.D., M.P.H &nbsp;&bull;&nbsp; Ophthalmology
             </span>
           </Link>
 
@@ -99,6 +99,11 @@ export default function Header() {
               )}
             </svg>
           </button>
+        </div>
+
+        {/* Practice & Address Bar — desktop only */}
+        <div className="hidden md:flex justify-center items-center py-1.5 text-[11px] tracking-wide text-charcoal/50">
+          Starling Physicians &nbsp;&bull;&nbsp; 1210 Silas Deane Highway, Wethersfield, CT 06109
         </div>
 
         {/* Bottom Row: Navigation */}

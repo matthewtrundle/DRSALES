@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/contact`,
   },
   openGraph: {
-    title: 'Contact | Dr. Christopher S. Sales, MD',
+    title: 'Contact | Christopher S. Sales, M.D., M.P.H',
     description:
       'Schedule a consultation with Dr. Christopher Sales in Wethersfield or New Britain, CT. Call (860) 826-4460 or submit a request online.',
     url: `${baseUrl}/contact`,

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/services`,
   },
   openGraph: {
-    title: 'Eye Care Services | Dr. Christopher S. Sales, MD',
+    title: 'Eye Care Services | Christopher S. Sales, M.D., M.P.H',
     description:
       'Cataract surgery, DMEK corneal transplants, EVO ICL vision correction, and dry eye treatment by Dr. Christopher Sales in Connecticut.',
     url: `${baseUrl}/services`,

@@ -19,9 +19,11 @@ export default function Footer() {
             <p className="text-warm-gray text-sm max-w-xs sm:max-w-none mx-auto text-balance">
               Cataract surgery · DMEK corneal transplantation · EVO ICL · Dry Eye/MGD
             </p>
-            <p className="text-warm-gray/70 text-sm mt-1">
-              Starling Physicians — Wethersfield &amp; New Britain, CT
-            </p>
+            <div className="text-warm-gray/70 text-sm mt-2 space-y-0.5">
+              <p>Starling Physicians</p>
+              <p>1210 Silas Deane Highway, Wethersfield, CT 06109</p>
+              <p>1 Lake St Building C, New Britain, CT 06052</p>
+            </div>
           </div>
 
           {/* Middle: Compact links + contact in a simple row */}
@@ -66,7 +68,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 text-xs text-warm-gray/60">
             <p>
-              &copy; {currentYear} Christopher S. Sales, MD, MPH
+              &copy; {currentYear} Christopher S. Sales, M.D., M.P.H
             </p>
             <div className="flex gap-5">
               <Link href="/privacy" className="hover:text-charcoal transition-colors">

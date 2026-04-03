@@ -1,11 +1,12 @@
 export const siteConfig = {
-  name: "Christopher S. Sales, MD, MPH",
+  name: "Christopher S. Sales, M.D., M.P.H",
   title: "Dr. Christopher S. Sales - Ophthalmologist",
-  description: "Board-certified ophthalmologist specializing in cataract surgery, DMEK corneal transplants, EVO ICL, and dry eye. Wethersfield & New Britain, CT.",
+  description: "Board-certified ophthalmologist at Starling Physicians, 1210 Silas Deane Highway, Wethersfield, CT. Specializing in cataract surgery, DMEK corneal transplants, EVO ICL, and dry eye.",
   phone: "(860) 826-4460",
-  location: "Starling Physicians — Wethersfield & New Britain, CT",
+  location: "Starling Physicians — 1210 Silas Deane Highway, Wethersfield, CT 06109",
   address: {
     practice: "Starling Physicians",
+    streetAddress: "1210 Silas Deane Highway",
     city: "Wethersfield",
     state: "CT",
     zip: "06109",

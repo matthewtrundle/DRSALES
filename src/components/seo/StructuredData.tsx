@@ -7,11 +7,11 @@ export function PhysicianSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Physician',
-    name: 'Dr. Christopher S. Sales, MD, MPH',
+    name: 'Christopher S. Sales, M.D., M.P.H',
     givenName: 'Christopher',
     familyName: 'Sales',
     honorificPrefix: 'Dr.',
-    honorificSuffix: 'MD, MPH',
+    honorificSuffix: 'M.D., M.P.H',
     image: `${baseUrl}/images/headshots/dr-sales-headshot.jpg`,
     url: baseUrl,
     telephone: '(860) 826-4460',
@@ -126,7 +126,7 @@ export function LocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
     '@id': `${baseUrl}/#organization`,
-    name: 'Dr. Christopher S. Sales, MD - Ophthalmology',
+    name: 'Christopher S. Sales, M.D., M.P.H',
     image: `${baseUrl}/images/office.jpg`,
     url: baseUrl,
     telephone: '(860) 826-4460',
@@ -266,7 +266,7 @@ export function MedicalProcedureSchema({
     ...(followup && { followup }),
     performedBy: {
       '@type': 'Physician',
-      name: 'Dr. Christopher S. Sales, MD, MPH',
+      name: 'Christopher S. Sales, M.D., M.P.H',
       url: baseUrl,
     },
   };
@@ -352,7 +352,7 @@ export function ArticleSchema({
   description,
   publishedTime,
   modifiedTime,
-  author = 'Dr. Christopher S. Sales, MD, MPH',
+  author = 'Christopher S. Sales, M.D., M.P.H',
   image,
   url,
 }: ArticleSchemaProps) {
@@ -368,7 +368,7 @@ export function ArticleSchema({
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Dr. Christopher S. Sales, MD',
+      name: 'Christopher S. Sales, M.D., M.P.H',
       logo: {
         '@type': 'ImageObject',
         url: `${baseUrl}/images/logo.png`,
@@ -459,7 +459,7 @@ export function WebsiteSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Dr. Christopher S. Sales, MD - Ophthalmology',
+    name: 'Christopher S. Sales, M.D., M.P.H - Ophthalmology',
     url: baseUrl,
     description:
       'Expert ophthalmology care in Connecticut. Specializing in DMEK corneal transplants, EVO ICL vision correction, and advanced eye surgery.',

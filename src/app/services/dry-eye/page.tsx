@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/services/dry-eye`,
   },
   openGraph: {
-    title: 'Dry Eye Treatment | Dr. Christopher S. Sales, MD',
+    title: 'Dry Eye Treatment | Christopher S. Sales, M.D., M.P.H',
     description:
       'Comprehensive dry eye evaluation and personalized treatment by Dr. Christopher Sales in Connecticut.',
     url: `${baseUrl}/services/dry-eye`,
