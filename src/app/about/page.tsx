@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-cream text-charcoal py-24 overflow-hidden">
+      <section className="relative bg-cream text-charcoal pt-36 pb-24 md:pt-40 overflow-hidden">
 
         <div className="container-custom relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

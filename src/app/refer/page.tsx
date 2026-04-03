@@ -8,7 +8,7 @@ export default function ReferralPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-20 md:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 pt-36 pb-20 md:pt-40 md:pb-24 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{

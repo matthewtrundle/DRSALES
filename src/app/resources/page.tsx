@@ -12,7 +12,7 @@ export default function ResourcesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-cream py-20 pt-32">
+      <section className="bg-cream pt-36 pb-20 md:pt-40">
         <div className="container-custom">
           <h1 className="heading-xl text-charcoal mb-6">Resources</h1>
           <p className="text-xl text-neutral-600 max-w-3xl">

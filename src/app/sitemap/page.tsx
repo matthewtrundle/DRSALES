@@ -56,7 +56,7 @@ export default function SitemapPage() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-neutral-900 py-16">
+      <section className="bg-neutral-900 pt-32 pb-16 md:pt-40">
         <div className="container-custom">
           <h1 className="font-display text-3xl md:text-4xl text-white mb-3">Sitemap</h1>
           <p className="text-neutral-400">A complete directory of all pages on this website.</p>

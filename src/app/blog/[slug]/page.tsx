@@ -114,7 +114,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         ]}
       />
 
-      <article className="py-12 md:py-16">
+      <article className="pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
           <header className="max-w-4xl mx-auto mb-10">

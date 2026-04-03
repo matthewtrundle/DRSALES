@@ -38,7 +38,7 @@ export default function CornealTransplantPageClient({ faqs }: { faqs?: FAQItem[]
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-cream pt-20 md:pt-24">
         <div className="absolute inset-0">
           <Image
             src="/images/dr-sales-surgery-bw.jpg"

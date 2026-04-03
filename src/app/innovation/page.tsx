@@ -106,7 +106,7 @@ export default function InnovationPage() {
   return (
     <div className="bg-white">
       {/* Cinematic Hero */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-cream">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-cream pt-20 md:pt-24">
         {/* Animated Background Grid */}
         <div className="absolute inset-0 opacity-20">
           <div

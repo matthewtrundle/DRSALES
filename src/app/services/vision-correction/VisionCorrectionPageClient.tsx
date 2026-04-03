@@ -90,7 +90,7 @@ export default function VisionCorrectionPageClient({ faqs }: { faqs?: FAQItem[] 
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-cream via-warm-cream to-gold-50/30">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-cream via-warm-cream to-gold-50/30 pt-20 md:pt-24">
         <div className="container-custom relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}

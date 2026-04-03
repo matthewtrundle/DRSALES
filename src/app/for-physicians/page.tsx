@@ -143,7 +143,7 @@ export default function ForPhysiciansPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-cream text-charcoal py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-cream text-charcoal pt-36 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{

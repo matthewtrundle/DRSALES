@@ -23,7 +23,7 @@ export default function ServicesPageClient() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream text-charcoal py-24">
+      <section className="bg-cream text-charcoal pt-36 pb-24 md:pt-40">
         <div className="container-custom text-center">
           <p className="text-gold font-medium mb-4 tracking-[0.2em] text-sm">
             Services

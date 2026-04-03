@@ -108,7 +108,7 @@ export default function EducationPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-cream text-charcoal py-20">
+      <section className="bg-cream text-charcoal pt-36 pb-20 md:pt-40">
         <div className="container-custom">
           <h1 className="heading-xl text-charcoal mb-6">Patient Education</h1>
           <p className="text-xl text-neutral-600 max-w-3xl">

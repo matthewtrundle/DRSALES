@@ -64,7 +64,7 @@ export default function LocationsPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-charcoal/5 to-white py-16 md:py-20">
+      <section className="bg-gradient-to-b from-charcoal/5 to-white pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-charcoal mb-4">

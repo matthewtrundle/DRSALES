@@ -226,7 +226,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
       />
 
       {/* Hero Section */}
-      <section className="bg-cream text-charcoal py-16 md:py-20">
+      <section className="bg-cream text-charcoal pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}

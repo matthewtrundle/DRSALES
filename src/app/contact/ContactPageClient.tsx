@@ -39,7 +39,7 @@ export default function ContactPageClient() {
   return (
     <div className="bg-white">
       {/* Hero Section - Muted, Elegant */}
-      <section className="relative bg-cream py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-cream pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         {/* Subtle Background Pattern */}
         <div
           className="absolute inset-0 opacity-10"

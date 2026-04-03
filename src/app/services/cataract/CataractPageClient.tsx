@@ -112,7 +112,7 @@ export default function CataractPageClient({ faqs }: { faqs?: FAQItem[] }) {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-warm-cream via-cream to-gold-50/30">
+      <section className="relative pt-36 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-warm-cream via-cream to-gold-50/30">
         <div className="container-custom">
           <div className="max-w-3xl">
             <m.div
