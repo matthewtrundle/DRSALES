@@ -418,7 +418,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
                       <p className="font-medium text-charcoal">
                         Starling Physicians
                       </p>
-                      <p className="text-gray-600">Wethersfield, CT</p>
+                      <p className="text-gray-600">1210 Silas Deane Highway</p>
+                      <p className="text-gray-600">Wethersfield, CT 06109</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Phone</p>

@@ -297,7 +297,7 @@ export default function ContactPageClient() {
         {/* Map Container */}
         <div className="relative h-[400px] md:h-[500px] bg-neutral-100">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23870.4!2d-72.6823!3d41.7143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65525bfe9a7c7%3A0x8a1b0124db3a06d7!2sWethersfield%2C%20CT%2006109!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.5!2d-72.6823!3d41.7143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e654e43aed4c3b%3A0x1!2s1210+Silas+Deane+Hwy%2C+Wethersfield%2C+CT+06109!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}

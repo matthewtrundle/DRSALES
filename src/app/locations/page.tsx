@@ -185,7 +185,8 @@ export default function LocationsPage() {
               <p className="text-lg font-medium text-charcoal">
                 Starling Physicians
               </p>
-              <p className="text-gray-600">Wethersfield, CT</p>
+              <p className="text-gray-600">1210 Silas Deane Highway</p>
+              <p className="text-gray-600">Wethersfield, CT 06109</p>
               <p className="text-accent-600 font-medium mt-2">
                 (860) 826-4460
               </p>

@@ -459,14 +459,6 @@ export function WebsiteSchema() {
     url: baseUrl,
     description:
       'Expert ophthalmology care in Connecticut. Specializing in DMEK corneal transplants, EVO ICL vision correction, and advanced eye surgery.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 
   return (
