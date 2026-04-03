@@ -34,8 +34,8 @@ export default function CTASection() {
             Want to come in?
           </h2>
           <p className="text-warm-gray mb-12 text-lg md:text-xl font-body leading-relaxed">
-            We&apos;re accepting new patients at both our Wethersfield and New Britain
-            offices. Give us a call or schedule online — whatever&apos;s easier.
+            We&apos;re accepting new patients at our Wethersfield office.
+            Give us a call or schedule online — whatever&apos;s easier.
           </p>
 
           <div className="flex flex-wrap justify-center gap-5">

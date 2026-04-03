@@ -17,11 +17,6 @@ export const siteConfig = {
       practice: "Starling Physicians",
       address: "1210 Silas Deane Highway, Wethersfield, CT 06109",
     },
-    {
-      name: "New Britain",
-      practice: "Starling Physicians",
-      address: "1 Lake St Building C, New Britain, CT 06052",
-    },
   ],
   tagline: "World-Class Cataract, DMEK, & ICL Surgery. Now in Connecticut.",
 };

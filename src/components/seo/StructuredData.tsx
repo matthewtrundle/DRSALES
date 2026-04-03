@@ -158,10 +158,6 @@ export function LocalBusinessSchema() {
       },
       {
         '@type': 'City',
-        name: 'New Britain',
-      },
-      {
-        '@type': 'City',
         name: 'West Hartford',
       },
       {

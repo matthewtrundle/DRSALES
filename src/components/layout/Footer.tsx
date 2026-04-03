@@ -22,7 +22,6 @@ export default function Footer() {
             <div className="text-warm-gray/70 text-sm mt-2 space-y-0.5">
               <p>Starling Physicians</p>
               <p>1210 Silas Deane Highway, Wethersfield, CT 06109</p>
-              <p>1 Lake St Building C, New Britain, CT 06052</p>
             </div>
           </div>
 

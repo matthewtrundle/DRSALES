@@ -188,7 +188,7 @@ function buildConfirmationEmail(data: ContactFormData): string {
                 <td style="text-align:center;">
                   <p style="margin:0 0 4px;color:#3D3D3D;font-size:14px;font-weight:600;">Dr. Christopher S. Sales, M.D., M.P.H</p>
                   <p style="margin:0 0 4px;color:#8C8578;font-size:12px;">Starling Physicians</p>
-                  <p style="margin:0 0 12px;color:#8C8578;font-size:12px;">Wethersfield &amp; New Britain, Connecticut</p>
+                  <p style="margin:0 0 12px;color:#8C8578;font-size:12px;">1210 Silas Deane Highway, Wethersfield, CT 06109</p>
                   <p style="margin:0;color:#8C8578;font-size:11px;">
                     <a href="https://drchristophersales.com" style="color:#C9A96E;text-decoration:none;">drchristophersales.com</a>
                     &nbsp;&bull;&nbsp;

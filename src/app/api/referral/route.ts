@@ -234,7 +234,7 @@ export async function POST(request: NextRequest) {
           <td style="padding:24px 40px 32px;border-top:1px solid #f0ede8;text-align:center;">
             <p style="margin:0 0 4px;color:#3D3D3D;font-size:14px;font-weight:600;">Dr. Christopher S. Sales, M.D., M.P.H</p>
             <p style="margin:0 0 4px;color:#8C8578;font-size:12px;">Starling Physicians</p>
-            <p style="margin:0;color:#8C8578;font-size:12px;">Wethersfield &amp; New Britain, Connecticut</p>
+            <p style="margin:0;color:#8C8578;font-size:12px;">1210 Silas Deane Highway, Wethersfield, CT 06109</p>
           </td>
         </tr>
       </table>

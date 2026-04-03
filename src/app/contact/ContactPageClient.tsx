@@ -14,14 +14,6 @@ const contactInfo = {
       city: 'Wethersfield',
       state: 'CT',
       zip: '06109',
-      phone: '(860) 721-8960',
-    },
-    {
-      name: 'New Britain',
-      street: '1 Lake St Building C',
-      city: 'New Britain',
-      state: 'CT',
-      zip: '06052',
       phone: '(860) 826-4460',
     },
   ],
@@ -296,7 +288,7 @@ export default function ContactPageClient() {
                 Visit Our Offices
               </h2>
               <p className="text-neutral-600">
-                Two convenient locations in Wethersfield and New Britain, Connecticut
+                Wethersfield, Connecticut
               </p>
             </m.div>
           </div>
