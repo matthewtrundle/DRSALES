@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cataract',
     'vision-correction',
     'dry-eye',
+    'myopia-control',
   ].map((service) => ({
     url: `${baseUrl}/services/${service}`,
     lastModified: new Date(),

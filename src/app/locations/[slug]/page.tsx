@@ -477,7 +477,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold/90 text-charcoal font-medium rounded-[40px] transition-colors"
               >
-                Schedule Consultation
+                Schedule a Consultation
               </Link>
               <a
                 href="tel:+18608264460"

@@ -9,10 +9,17 @@ import Section from '@/components/ui/Section';
 const situations = [
   {
     headline: "I want to stop wearing glasses",
-    description: "EVO ICL implantable lenses offer freedom from glasses and contacts — even for high prescriptions, thin corneas, or dry eyes.",
+    description: "Looking for an alternative to LASIK? EVO ICL implantable lenses offer freedom from glasses and contacts — even for high prescriptions, thin corneas, or dry eyes.",
     href: "/services/vision-correction",
     image: "/images/ToUse/glasses-freedom.jpg",
     imageAlt: "Freedom from glasses",
+  },
+  {
+    headline: "My child's nearsightedness is getting worse",
+    description: "New preventative treatments can stop your child's myopia from getting worse.",
+    href: "/services/myopia-control",
+    image: "/images/myopia/child-phoropter.jpg",
+    imageAlt: "Child during an eye exam",
   },
   {
     headline: "My vision is cloudy or getting worse",
@@ -26,7 +33,7 @@ const situations = [
     headline: "My eyes are always dry or irritated",
     description: "Dry eye is real and treatable. We'll find the actual cause and build a plan that works for you — not just eye drops forever.",
     href: "/services/dry-eye",
-    image: "/images/dry-eye-relief.jpg",
+    image: "/images/dry-eye-woman.jpg",
     imageAlt: "Relief from dry eye discomfort",
   },
 ];
@@ -78,7 +85,7 @@ export default function ServiceHighlights() {
 
         {/* Situation Cards */}
         <m.div
-          className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}

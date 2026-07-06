@@ -10,6 +10,7 @@
 - [Cataract Surgery](/services/cataract): Advanced cataract surgery with premium lens options including multifocal, toric, and extended depth of focus lenses. Laser-assisted options available.
 - [EVO ICL Vision Correction](/services/vision-correction): EVO Implantable Collamer Lens for myopia correction without permanently altering the cornea. Alternative to LASIK for high prescriptions, thin corneas, or dry eyes.
 - [Dry Eye Treatment](/services/dry-eye): Comprehensive dry eye evaluation and personalized treatment including thermal therapies, prescription medications, and lifestyle optimization.
+- [Nearsightedness Prevention (Myopia Control)](/services/myopia-control): Pediatric myopia control — dilute atropine drops, defocus glasses and contact lenses, outdoor-time counseling, and axial length monitoring to stop nearsightedness from progressing.
 
 ## Patient Guides
 - [Complete Guide to DMEK Surgery](/guides/dmek-surgery): Everything about DMEK corneal transplant — candidacy, procedure, recovery timeline, success rates (80-90% achieve 20/25+), risks, and FAQs.

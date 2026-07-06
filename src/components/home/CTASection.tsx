@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import Link from 'next/link';
 import { m, useInView } from 'framer-motion';
-import { siteConfig } from '@/data/siteData';
 
 export default function CTASection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,7 +34,7 @@ export default function CTASection() {
           </h2>
           <p className="text-warm-gray mb-12 text-lg md:text-xl font-body leading-relaxed">
             We&apos;re accepting new patients at our Wethersfield office.
-            Give us a call or schedule online — whatever&apos;s easier.
+            Give us a call.
           </p>
 
           <div className="flex flex-wrap justify-center gap-5">
@@ -43,26 +42,11 @@ export default function CTASection() {
               href="/contact"
               className="bg-gold text-white rounded-lg font-body font-semibold px-6 py-3 text-base sm:px-10 sm:py-4 sm:text-lg hover:bg-gold-600 transition-all duration-300 shadow-md hover:shadow-xl inline-flex items-center gap-2 hover:-translate-y-1"
             >
-              Schedule a visit
+              Schedule a Consultation
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-
-            <a
-              href={`tel:${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-              className="text-charcoal/70 font-body font-medium px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg hover:text-charcoal transition-colors inline-flex items-center gap-3 border border-charcoal/15 rounded-lg hover:border-charcoal/30"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              {siteConfig.phone}
-            </a>
           </div>
         </m.div>
       </div>

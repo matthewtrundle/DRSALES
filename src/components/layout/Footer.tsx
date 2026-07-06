@@ -57,7 +57,7 @@ export default function Footer() {
               href="/contact"
               className="text-gold hover:text-gold-600 font-medium transition-colors"
             >
-              Schedule a visit
+              Schedule a Consultation
             </Link>
           </div>
 

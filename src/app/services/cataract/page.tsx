@@ -11,7 +11,7 @@ const cataractFaqs = [
   },
   {
     question: 'What are premium lens implants for cataract surgery?',
-    answer: 'Premium lens implants (IOLs) go beyond standard single-vision lenses to reduce dependence on glasses after surgery. Options include toric lenses for astigmatism, multifocal lenses for distance and near vision, and extended depth of focus lenses. Dr. Sales will help you choose the best option based on your visual goals and lifestyle.',
+    answer: 'Premium lens implants (IOLs) go beyond standard single-vision lenses to reduce dependence on glasses after surgery. Options include toric lenses for astigmatism, multifocal lenses for distance and near vision, extended depth of focus lenses, and light adjustable lenses. Dr. Sales will help you choose the best option based on your visual goals and lifestyle.',
   },
   {
     question: 'How long does cataract surgery take?',

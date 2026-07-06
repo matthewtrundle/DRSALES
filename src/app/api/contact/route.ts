@@ -21,6 +21,7 @@ const serviceLabels: Record<string, string> = {
   'cataract': 'Cataract Surgery',
   'vision-correction': 'Vision Correction (ICL)',
   'dry-eye': 'Dry Eye Treatment',
+  'myopia-control': 'Nearsightedness Prevention (Myopia Control)',
   'other': 'Other / General Inquiry',
 };
 

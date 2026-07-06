@@ -5,6 +5,8 @@ import PhotoDivider from '@/components/home/PhotoDivider';
 import DoctorIntro from '@/components/home/DoctorIntro';
 import QuickFacts from '@/components/home/QuickFacts';
 import CTASection from '@/components/home/CTASection';
+import ReviewsSection from '@/components/ui/ReviewsSection';
+import { homepageReviews } from '@/data/reviews';
 
 const baseUrl = 'https://www.drchristophersales.com';
 
@@ -47,6 +49,8 @@ export default function HomePage() {
 
       <DoctorIntro />
       <QuickFacts />
+
+      <ReviewsSection reviews={homepageReviews} />
 
       {/* B&W photo divider — surgery */}
       <PhotoDivider

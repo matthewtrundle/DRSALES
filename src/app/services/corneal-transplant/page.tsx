@@ -15,7 +15,7 @@ const cornealFaqs = [
   },
   {
     question: 'How long is recovery after DMEK surgery?',
-    answer: 'Most DMEK patients begin to see improvement within the first few weeks. Functional vision for daily activities typically returns within 1-2 months, with final visual results at 3-6 months. You will need to use eye drops for several months and attend follow-up appointments to monitor healing.',
+    answer: 'Most DMEK patients begin to see improvement within the first few weeks. Functional vision for daily activities typically returns within 2-3 weeks, with final visual results at 3-6 months. You will need to use eye drops for several months and attend follow-up appointments to monitor healing.',
   },
   {
     question: 'What makes Dr. Sales qualified for corneal transplant surgery?',

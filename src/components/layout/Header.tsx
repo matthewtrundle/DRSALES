@@ -81,7 +81,7 @@ export default function Header() {
               href="/contact"
               className="bg-gold text-charcoal font-body font-medium text-xs px-5 py-2.5 rounded-lg hover:bg-gold-600 transition-colors"
             >
-              Schedule a visit
+              Schedule a Consultation
             </Link>
           </div>
 
@@ -263,7 +263,7 @@ export default function Header() {
             className="mt-6 bg-gold text-charcoal font-body font-medium text-sm px-8 py-3 rounded-lg hover:bg-gold-600 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Schedule a visit
+            Schedule a Consultation
           </Link>
         </nav>
       </div>

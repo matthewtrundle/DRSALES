@@ -187,6 +187,7 @@ export default function ContactForm() {
             <option value="cataract">Cataract Surgery</option>
             <option value="vision-correction">Vision Correction (ICL)</option>
             <option value="dry-eye">Dry Eye Treatment</option>
+            <option value="myopia-control">Nearsightedness Prevention (Myopia Control)</option>
             <option value="other">Other / General Inquiry</option>
           </select>
         </div>

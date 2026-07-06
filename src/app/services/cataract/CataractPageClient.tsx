@@ -5,6 +5,8 @@ import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
 import ServiceFAQ from '@/components/ui/ServiceFAQ';
+import ReviewsSection from '@/components/ui/ReviewsSection';
+import { cataractReviews } from '@/data/reviews';
 
 // Rendia video embeds for cataract education
 const cataractVideos = [
@@ -85,6 +87,33 @@ const cataractVideos = [
   },
 ];
 
+const journeySteps = [
+  {
+    step: '01',
+    title: 'Comprehensive Evaluation',
+    description:
+      'A detailed examination of your cornea, iris, cataract, retina, and optic nerve to assess the overall health of your eye and frame the discussion about intraocular lens implant options.',
+  },
+  {
+    step: '02',
+    title: 'Lens Selection',
+    description:
+      "We review your testing, your lifestyle, vision goals, and budget — and choose a lens and surgical approach, with or without laser assistance, that's right for you.",
+  },
+  {
+    step: '03',
+    title: 'The Procedure',
+    description:
+      'A 10-15 minute outpatient procedure where the cataract is removed and a lens implant takes its place. Sedation and numbing medications ensure comfort.',
+  },
+  {
+    step: '04',
+    title: 'Recovery',
+    description:
+      "Most patients see clearly within 1-2 weeks. You'll take eye drops for one month. We do your other eye two weeks later — and if you need or want glasses, you'll get them one month after your second eye.",
+  },
+];
+
 const lensOptions = [
   {
     name: 'Monofocal IOL',
@@ -103,6 +132,12 @@ const lensOptions = [
     description: 'Multiple focal points for vision at distance, intermediate, and near.',
     best: 'Active patients motivated to reduce dependence on glasses and comfortable with the potential for nighttime halos or glare',
     features: ['Distance, intermediate, and near vision', 'Reduced glasses need', 'Nighttime halos/glare with activities such as driving'],
+  },
+  {
+    name: 'Light Adjustable Lens with or without Blended Monovision',
+    description: 'The only lens that can be fine-tuned after surgery with light treatments, letting you test-drive your vision before locking it in.',
+    best: 'Active patients who have had LASIK and may be at higher risk of nighttime glare or halos with a multifocal or EDOF lens — who want less dependence on glasses, crisp nighttime vision, and are comfortable setting one eye for intermediate vision but want to try it out first',
+    features: ['Adjustable after surgery', 'Crisp nighttime vision', 'Try blended monovision before committing'],
   },
 ];
 
@@ -179,73 +214,33 @@ export default function CataractPageClient({ faqs }: { faqs?: FAQItem[] }) {
         </div>
       </section>
 
-      {/* Patient Education Videos */}
-      <RendiaVideoSection
-        videos={cataractVideos}
-        sectionTitle="Understanding Your Lens Options"
-        sectionSubtitle="Watch these videos to learn about the different lens implant options for your cataract surgery."
-      />
-
-      {/* Lens Options */}
-      <section className="py-24 bg-white">
+      {/* Your Cataract Journey */}
+      <section className="py-24 bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
-              Personalized Options
+            <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              The Process
             </p>
-            <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
-              Intraocular Lens Options
+            <h2 className="text-4xl md:text-5xl font-display text-neutral-800">
+              Your Cataract Journey
             </h2>
-            <p className="text-neutral-600 max-w-2xl mx-auto">
-              Choose the lens that best fits your visual goals and lifestyle.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {lensOptions.map((lens, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {journeySteps.map((step, index) => (
               <m.div
-                key={index}
+                key={step.step}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="h-full bg-white rounded-lg shadow-soft p-6 border border-neutral-100">
-                  <h3 className="text-xl font-display font-semibold text-charcoal mb-2">{lens.name}</h3>
-                  <p className="text-neutral-700 mb-4">{lens.description}</p>
-                  <div className="mb-4">
-                    <span className="text-sm font-medium text-gold">Best for: </span>
-                    <span className="text-sm text-neutral-600">{lens.best}</span>
-                  </div>
-                  <ul className="space-y-1">
-                    {lens.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
-                        <svg className="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-neutral-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <div className="text-5xl font-display font-bold text-gold/30 mb-4">{step.step}</div>
+                <h3 className="text-xl font-display font-semibold text-neutral-800 mb-3">{step.title}</h3>
+                <p className="text-neutral-600 text-sm">{step.description}</p>
               </m.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Image Break */}
-      <section className="relative h-80 md:h-96">
-        <Image
-          src="/images/dr-sales-surgery-bw.jpg"
-          alt="Dr. Sales performing surgery"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-charcoal/50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <p className="font-display text-3xl md:text-4xl mb-4">See Life Clearly Again</p>
-            <p className="text-neutral-200 text-lg">Premium lens options for every lifestyle</p>
           </div>
         </div>
       </section>
@@ -330,6 +325,80 @@ export default function CataractPageClient({ faqs }: { faqs?: FAQItem[] }) {
         </div>
       </section>
 
+      {/* Patient Education Videos */}
+      <RendiaVideoSection
+        videos={cataractVideos}
+        sectionTitle="Understanding Your Lens Options"
+        sectionSubtitle="Watch these videos to learn about the different lens implant options for your cataract surgery."
+      />
+
+      {/* Lens Options */}
+      <section className="py-24 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              Personalized Options
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
+              Intraocular Lens Options
+            </h2>
+            <p className="text-neutral-600 max-w-2xl mx-auto">
+              Choose the lens that best fits your visual goals and lifestyle.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {lensOptions.map((lens, index) => (
+              <m.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="h-full bg-white rounded-lg shadow-soft p-6 border border-neutral-100">
+                  <h3 className="text-xl font-display font-semibold text-charcoal mb-2">{lens.name}</h3>
+                  <p className="text-neutral-700 mb-4">{lens.description}</p>
+                  <div className="mb-4">
+                    <span className="text-sm font-medium text-gold">Best for: </span>
+                    <span className="text-sm text-neutral-600">{lens.best}</span>
+                  </div>
+                  <ul className="space-y-1">
+                    {lens.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm">
+                        <svg className="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-neutral-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </m.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Break */}
+      <section className="relative h-80 md:h-96">
+        <Image
+          src="/images/dr-sales-surgery-bw.jpg"
+          alt="Dr. Sales performing surgery"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-charcoal/50 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <p className="font-display text-3xl md:text-4xl mb-4">See Life Clearly Again</p>
+            <p className="text-neutral-200 text-lg">Premium lens options for every lifestyle</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Patient Reviews */}
+      <ReviewsSection reviews={cataractReviews} />
+
       {/* FAQ Section */}
       {faqs && <ServiceFAQ faqs={faqs} />}
 
@@ -346,13 +415,13 @@ export default function CataractPageClient({ faqs }: { faqs?: FAQItem[] }) {
               Take the Next Step
             </p>
             <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-4">
-              Schedule Your Cataract Evaluation
+              Schedule a Consultation
             </h2>
             <p className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
               Learn about your lens options and find out which approach is best for your vision goals.
             </p>
             <Button href="/contact" variant="primary" size="lg">
-              Request Consultation
+              Schedule a Consultation
             </Button>
           </m.div>
         </div>

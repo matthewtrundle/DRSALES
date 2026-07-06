@@ -36,51 +36,61 @@ In 2024, Dr. Sales founded Oko-Tek Inc., a medical device company dedicated to i
 
 Dr. Sales has authored 50+ peer-reviewed publications, holds multiple patents for surgical devices, and was inducted into the National Academy of Inventors in 2023. His expertise in DMEK surgery has made him a sought-after surgical coach worldwide, having trained 15+ cornea fellows and 40+ ophthalmology residents, and leading skills transfer courses at the American Academy of Ophthalmology, ASCRS, and the Cornea Society. He received the Gold Medal for Notable Contributions to Endothelial Keratoplasty from the Indian Intraocular Implant & Refractive Surgery Convention in 2024 and American Academy of Ophthalmology's Secretariat Award in 2025 for his video contributions to surgical education.
 
-Beyond his clinical and entrepreneurial work, Dr. Sales has dedicated time to volunteer surgical missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to service runs throughout his career.`,
+Beyond his clinical and entrepreneurial work, Dr. Sales has dedicated time to volunteer missions in Tanzania, Guatemala, and Mauritius, and served in relief efforts following Hurricane Katrina. His commitment to service runs throughout his career.`,
 
   philosophy: [
-    `There's a saying in medicine: patients don't care what you know until they know that you care.`,
+    `There's a saying in medicine: Patients don't care what you know until they know that you care.`,
     `My philosophy of care begins with listening and is built on a foundation of trust and innovation. I focus on delivering the most advanced, evidence-based treatments available, combining compassionate care with cutting-edge surgical techniques to help each patient achieve their best possible vision.`,
     `If surgery is not the right option right now, I'll tell you it can wait. If the best procedure for you is one I don't perform, I'll help you find an excellent surgeon who does. And if what you need most is reassurance, I'll give you that too.`,
   ],
 };
 
+// To show an institution logo on the Education & Training timeline, drop a
+// black-and-white transparent PNG into public/images/institutions/ and set the
+// `icon` field below (e.g. icon: "/images/institutions/brown.png"). Entries
+// without an icon fall back to the standard timeline dot.
 export const education = [
   {
     year: "2003",
     degree: "B.A. International Relations",
     institution: "Brown University",
     location: "Providence, RI",
+    icon: undefined as string | undefined, // "/images/institutions/brown.png"
   },
   {
     year: "2010",
     degree: "M.D. (Research Honors) & M.P.H.",
     institution: "Tufts University School of Medicine",
     location: "Boston, MA",
+    icon: undefined as string | undefined, // "/images/institutions/tufts.png"
   },
   {
     year: "2010-2011",
     degree: "Internal Medicine Internship",
     institution: "Harvard Beth Israel Deaconess Medical Center",
     location: "Boston, MA",
+    icon: undefined as string | undefined, // "/images/institutions/harvard.png"
   },
   {
     year: "2011-2014",
     degree: "Ophthalmology Residency",
     institution: "Stanford University - Byers Eye Institute",
     location: "Palo Alto, CA",
+    icon: undefined as string | undefined, // "/images/institutions/stanford.png"
   },
   {
     year: "2014-2015",
     degree: "Cornea, External Disease & Refractive Surgery Fellowship",
     institution: "Devers Eye Institute & Joint Warfighter Refractive Surgery Center",
     location: "Portland, OR & San Antonio, TX",
+    icon: undefined as string | undefined, // "/images/institutions/devers.png"
   },
   {
     year: "2024",
     degree: "Global Faculty Training Program in MedTech Entrepreneurship",
     institution: "Stanford Byers Center for BioDesign",
     location: "Palo Alto, CA",
+    icon: undefined as string | undefined, // "/images/institutions/stanford-biodesign.png"
   },
 ];
 
@@ -302,6 +312,20 @@ export const services = [
     ],
     icon: "surface",
     href: "/services/dry-eye",
+  },
+  {
+    id: "myopia-control",
+    title: "Nearsightedness Prevention",
+    shortDescription: "Myopia control for children -- eye drops, defocus lenses, and habits that stop nearsightedness from getting worse.",
+    description: "Most childhood nearsightedness comes from the eye growing too long over time. New, evidence-based treatments -- dilute atropine eye drops, defocus glasses, and defocus contact lenses -- can slow that growth and stop your child's prescription from climbing year after year. Dr. Sales pairs these treatments with axial length monitoring to confirm they're working.",
+    procedures: [
+      { name: "Dilute Atropine Eye Drops", description: "Low-dose drops from a specialty pharmacy that slow the eye's growth" },
+      { name: "Defocus Glasses & Contact Lenses", description: "Specialized lenses that correct vision while slowing myopia progression" },
+      { name: "Axial Length Monitoring", description: "Precise eye-length measurement every 3-6 months to track that treatment is working" },
+      { name: "Lifestyle Counseling", description: "Outdoor time and screen-use habits proven to help prevent myopia — for free" },
+    ],
+    icon: "eye",
+    href: "/services/myopia-control",
   },
 ];
 

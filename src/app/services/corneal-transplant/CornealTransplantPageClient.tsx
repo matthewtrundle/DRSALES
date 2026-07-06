@@ -5,6 +5,8 @@ import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
 import ServiceFAQ from '@/components/ui/ServiceFAQ';
+import ReviewsSection from '@/components/ui/ReviewsSection';
+import { cornealTransplantReviews } from '@/data/reviews';
 
 // Rendia video embeds for corneal education
 const cornealVideos = [
@@ -29,7 +31,7 @@ const stats = [
   { stat: '1000+', label: 'DMEK Procedures Performed' },
   { stat: '300+', label: 'Surgeons Trained Worldwide' },
   { stat: '50+', label: 'Peer-Reviewed Publications and Textbook Chapters' },
-  { stat: 'High', label: 'Success Rate' },
+  { stat: '>99%', label: 'Success Rate' },
 ];
 
 interface FAQItem { question: string; answer: string; }
@@ -223,9 +225,9 @@ export default function CornealTransplantPageClient({ faqs }: { faqs?: FAQItem[]
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: 'International Recognition', description: 'Trained surgeons worldwide in DMEK techniques' },
-              { title: 'Research Leadership', description: 'Founding director of Iowa Eye Device Lab' },
+              { title: 'Sub-Specialty Experience', description: 'One corneal transplant procedure — DMEK — performed in high volume and mastered in depth' },
               { title: 'Published Expert', description: '50+ peer-reviewed publications and textbook chapters' },
-              { title: 'Award-Winning', description: 'AAO Achievement Award recipient' },
+              { title: 'DMEK Pioneer', description: 'Developed new technologies and techniques that have improved DMEK surgery worldwide' },
             ].map((item, index) => (
               <m.div
                 key={index}
@@ -242,6 +244,9 @@ export default function CornealTransplantPageClient({ faqs }: { faqs?: FAQItem[]
           </div>
         </div>
       </section>
+
+      {/* Patient Reviews */}
+      <ReviewsSection reviews={cornealTransplantReviews} />
 
       {/* FAQ Section */}
       {faqs && <ServiceFAQ faqs={faqs} />}
@@ -265,7 +270,7 @@ export default function CornealTransplantPageClient({ faqs }: { faqs?: FAQItem[]
               Schedule a consultation to learn which corneal transplant procedure is right for you.
             </p>
             <Button href="/contact" variant="primary" size="lg">
-              Request Consultation
+              Schedule a Consultation
             </Button>
           </m.div>
         </div>

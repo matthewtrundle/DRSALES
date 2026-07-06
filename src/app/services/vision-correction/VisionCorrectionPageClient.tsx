@@ -5,6 +5,8 @@ import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
 import ServiceFAQ from '@/components/ui/ServiceFAQ';
+import ReviewsSection from '@/components/ui/ReviewsSection';
+import { iclReviews } from '@/data/reviews';
 
 // Rendia video embeds for EVO ICL education
 const iclVideos = [
@@ -111,7 +113,7 @@ export default function VisionCorrectionPageClient({ faqs }: { faqs?: FAQItem[] 
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button href="/contact" variant="primary">
-                  Schedule Consultation
+                  Schedule a Consultation
                 </Button>
                 <a
                   href="#benefits"
@@ -319,7 +321,7 @@ export default function VisionCorrectionPageClient({ faqs }: { faqs?: FAQItem[] 
 
               <div className="mt-10">
                 <Button href="/contact" variant="primary">
-                  Schedule Your Evaluation
+                  Schedule a Consultation
                 </Button>
               </div>
             </div>
@@ -362,6 +364,9 @@ export default function VisionCorrectionPageClient({ faqs }: { faqs?: FAQItem[] 
         </div>
       </section>
 
+      {/* Patient Reviews */}
+      <ReviewsSection reviews={iclReviews} />
+
       {/* FAQ Section */}
       {faqs && <ServiceFAQ faqs={faqs} />}
 
@@ -387,7 +392,7 @@ export default function VisionCorrectionPageClient({ faqs }: { faqs?: FAQItem[] 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">
-                Request Consultation
+                Schedule a Consultation
               </Button>
               <Button href="tel:8608264460" variant="outline" size="lg">
                 Call (860) 826-4460

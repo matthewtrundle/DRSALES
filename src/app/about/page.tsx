@@ -53,13 +53,16 @@ export default function AboutPage() {
       <Section className="relative overflow-hidden">
         <div className="relative max-w-3xl mx-auto text-center">
           <SectionHeader title="Care Philosophy" />
+          <p className="text-xl md:text-2xl text-neutral-700 italic leading-relaxed border-l-4 border-charcoal/30 pl-6 text-left mb-12">
+            {doctorBio.philosophy[0]}
+          </p>
           <div className="relative">
             {/* Quote decoration */}
             <div className="absolute -top-8 left-1/2 -translate-x-1/2 font-display text-[100px] leading-none text-charcoal/10 select-none">
               &ldquo;
             </div>
             <blockquote className="relative text-xl md:text-2xl text-neutral-700 italic mb-8 leading-relaxed font-display space-y-6">
-              {doctorBio.philosophy.map((paragraph, index) => (
+              {doctorBio.philosophy.slice(1).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </blockquote>
@@ -155,8 +158,20 @@ export default function AboutPage() {
                     index % 2 === 0 ? 'md:flex-row-reverse' : ''
                   }`}
                 >
-                  {/* Timeline dot */}
-                  <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-charcoal rounded-full transform -translate-x-1/2 border-4 border-white shadow-sm" />
+                  {/* Timeline marker: institution icon when provided, dot fallback */}
+                  {edu.icon ? (
+                    <div className="absolute left-4 md:left-1/2 w-12 h-12 md:w-14 md:h-14 bg-white rounded-full transform -translate-x-1/2 border border-neutral-200 shadow-sm flex items-center justify-center overflow-hidden">
+                      <Image
+                        src={edu.icon}
+                        alt={`${edu.institution} logo`}
+                        width={40}
+                        height={40}
+                        className="object-contain grayscale"
+                      />
+                    </div>
+                  ) : (
+                    <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-charcoal rounded-full transform -translate-x-1/2 border-4 border-white shadow-sm" />
+                  )}
 
                   {/* Content */}
                   <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:ml-auto'}`}>

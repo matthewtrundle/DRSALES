@@ -171,9 +171,9 @@ export function OrchestratorProvider({ children }: { children: ReactNode }) {
       return 'Explore Vision Correction';
     }
     if (state.visitCount > 3) {
-      return 'Schedule Your Consultation';
+      return 'Schedule a Consultation';
     }
-    return 'Request Consultation';
+    return 'Schedule a Consultation';
   };
 
   const getRecommendedContent = (): ContentItem[] => {

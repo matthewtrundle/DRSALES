@@ -5,6 +5,8 @@ import { m } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { RendiaVideoSection } from '@/components/ui/RendiaVideo';
 import ServiceFAQ from '@/components/ui/ServiceFAQ';
+import ReviewsSection from '@/components/ui/ReviewsSection';
+import { dryEyeReviews } from '@/data/reviews';
 
 // Rendia video embeds for dry eye education
 const dryEyeVideos = [
@@ -122,6 +124,29 @@ const symptoms = [
   'Redness and irritation',
   'Sensitivity to light',
   'Difficulty wearing contact lenses',
+];
+
+const riskFactors = [
+  'Perimenopause or menopause',
+  'Thyroid disease',
+  'Antidepressant or anti-anxiety medications',
+  'Allergies',
+  'Antihistamine medications',
+  'Blood pressure medications',
+  'Glaucoma eye drops',
+  'Sleep apnea',
+  'Rosacea',
+  'Acne',
+  "Sjögren's disease",
+  'Prior eyelid surgery (blepharoplasty)',
+  'Being over 40',
+  "Parkinson's disease",
+  'Dementia',
+  'Heavy screen use',
+  'Stress',
+  'Gastrointestinal malabsorption',
+  'A past severe case of pink eye',
+  'Dehydration',
 ];
 
 interface FAQItem { question: string; answer: string; }
@@ -242,6 +267,44 @@ export default function DryEyePageClient({ faqs }: { faqs?: FAQItem[] }) {
         </div>
       </section>
 
+      {/* Risk Factors */}
+      <section className="py-24 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <p className="text-charcoal font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              Common Risk Factors
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display text-neutral-800 mb-6">
+              What Could Be Contributing?
+            </h2>
+            <p className="text-neutral-600 max-w-2xl mx-auto">
+              Many patients with dry eye don&apos;t realize that one — or several — of these
+              everyday factors could be contributing to their symptoms.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {riskFactors.map((factor, index) => (
+              <m.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
+                viewport={{ once: true }}
+                className="bg-neutral-50 rounded-lg p-4 border border-neutral-100 shadow-sm"
+              >
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-charcoal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-neutral-700 text-sm">{factor}</span>
+                </div>
+              </m.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Treatment Approaches */}
       <section className="py-24 bg-white">
         <div className="container-custom">
@@ -290,6 +353,9 @@ export default function DryEyePageClient({ faqs }: { faqs?: FAQItem[] }) {
         sectionTitle="Understanding Dry Eye"
         sectionSubtitle="Watch these short videos to learn more about dry eye disease and the treatment options available."
       />
+
+      {/* Patient Reviews */}
+      <ReviewsSection reviews={dryEyeReviews} />
 
       {/* FAQ Section */}
       {faqs && <ServiceFAQ faqs={faqs} />}

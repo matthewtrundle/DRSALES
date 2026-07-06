@@ -265,7 +265,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                         href="/contact"
                         className="text-sm text-accent-600 hover:text-accent-700 font-medium"
                       >
-                        Schedule a consultation →
+                        Schedule a Consultation →
                       </Link>
                     </div>
                   </div>

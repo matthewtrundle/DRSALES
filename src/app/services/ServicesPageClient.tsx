@@ -11,6 +11,7 @@ const tabs = [
   { id: 'cataract', label: 'Cataract' },
   { id: 'vision-correction', label: 'Vision Correction' },
   { id: 'dry-eye', label: 'Dry Eye' },
+  { id: 'myopia-control', label: 'Myopia Control' },
 ];
 
 export default function ServicesPageClient() {
@@ -32,7 +33,7 @@ export default function ServicesPageClient() {
             Eye Care Services
           </h1>
           <p className="text-neutral-600 max-w-2xl mx-auto">
-            Specialized eye care from cataract surgery and DMEK corneal transplants to EVO ICL vision correction and dry eye treatment.
+            Specialized eye care from cataract surgery and DMEK corneal transplants to EVO ICL vision correction, dry eye treatment, and nearsightedness prevention for children.
           </p>
         </div>
       </section>
@@ -111,7 +112,7 @@ export default function ServicesPageClient() {
             href="/contact"
             className="bg-charcoal text-white px-8 py-4 font-medium hover:bg-charcoal/90 transition-colors inline-block rounded-[40px]"
           >
-            Request Consultation
+            Schedule a Consultation
           </Link>
         </div>
       </section>
