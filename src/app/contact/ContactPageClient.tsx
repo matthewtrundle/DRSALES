@@ -66,7 +66,7 @@ export default function ContactPageClient() {
                 <span className="text-neutral-600">to Better Vision</span>
               </h1>
               <p className="text-lg text-neutral-600 max-w-lg">
-                Schedule a consultation with Dr. Sales to discuss your vision goals.
+                Schedule a Consultation with Dr. Sales to discuss your vision goals.
                 Every great outcome begins with a conversation.
               </p>
             </m.div>
@@ -296,8 +296,10 @@ export default function ContactPageClient() {
 
         {/* Map Container */}
         <div className="relative h-[400px] md:h-[500px] bg-neutral-100">
+          {/* Query the Starling listing by name — a bare address query makes Google
+              attach whatever business it has registered there (currently "Dr Ding") */}
           <iframe
-            src="https://maps.google.com/maps?q=1210+Silas+Deane+Hwy,+Wethersfield,+CT+06109&z=15&output=embed"
+            src="https://maps.google.com/maps?q=Starling+Physicians+Eye+Center,+1210+Silas+Deane+Hwy,+Wethersfield,+CT&z=15&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -363,7 +365,7 @@ export default function ContactPageClient() {
               Take the First Step
             </h2>
             <p className="text-neutral-600 text-lg mb-8 max-w-2xl mx-auto">
-              Schedule your consultation today and discover how Dr. Sales can help you achieve your vision goals.
+              Schedule your Consultation today and discover how Dr. Sales can help you achieve your vision goals.
             </p>
             <a
               href={`tel:${contactInfo.phone.replace(/[^0-9]/g, '')}`}

@@ -304,7 +304,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
                       </h2>
                       <p className="text-gray-600 max-w-md mx-auto mb-6">
                         This comprehensive guide is currently being prepared by Dr. Sales.
-                        In the meantime, please schedule a consultation to discuss your specific needs.
+                        In the meantime, please schedule a Consultation to discuss your specific needs.
                       </p>
                       <Link
                         href="/contact"
