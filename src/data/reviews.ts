@@ -1,8 +1,6 @@
 // Real five-star Google reviews from Dr. Sales' Google Business Profile.
 // Reviews are displayed anonymously on the site (no reviewer names rendered).
 // The `ref` field identifies the source review for maintenance only — never render it.
-// Entries marked [PLACEHOLDER] could not be retrieved automatically; paste the
-// review text from the Google Business Profile and remove the placeholder marker.
 
 export interface Review {
   /** Internal reference to the source review — do not render */
@@ -10,7 +8,6 @@ export interface Review {
   quote: string;
   /** Shown under the quote, e.g. "Cataract Surgery · Connecticut" */
   context: string;
-  placeholder?: boolean;
 }
 
 export const homepageReviews: Review[] = [
@@ -23,23 +20,20 @@ export const homepageReviews: Review[] = [
   {
     ref: 'Jon Sallade',
     quote:
-      '[PLACEHOLDER — paste Jon Sallade’s Google review text here]',
-    context: 'Google Review · New York',
-    placeholder: true,
+      'I saw Dr. Sales for scratched cornea. He was very thorough in explaining exactly what had happened and how to correct the problem. He followed up later to make sure I was clear on the treatment plan and was super patient with my irrational fear of people touching my eyes. 10/10 experience.',
+    context: 'Corneal Care',
   },
   {
-    ref: 'Zafira Azoulay',
+    ref: 'Zaphira Azoulay',
     quote:
-      '[PLACEHOLDER — paste Zafira Azoulay’s Google review text here]',
-    context: 'Google Review · Iowa',
-    placeholder: true,
+      'Dr. Sales is an excellent doctor in many respects—vast knowledge and surgical experience in his field, warm and friendly attitude towards his patients. He gives complete explanations to all questions and is always accessible.',
+    context: 'Comprehensive Eye Care',
   },
   {
     ref: 'Carol Rosenberg',
     quote:
-      '[PLACEHOLDER — paste Carol Rosenberg’s Google review text here]',
-    context: 'Google Review · Connecticut',
-    placeholder: true,
+      "Dr. Sales is by far the best doctor I have ever been privileged to be treated by. He is absolutely brilliant, compassionate & patient. He explains everything fully and makes sure you understand. I have 100% trust in his opinion. I don't say that about many doctors.",
+    context: 'Patient Experience',
   },
 ];
 
@@ -62,9 +56,8 @@ export const cornealTransplantReviews: Review[] = [
   {
     ref: 'Ronald Reader',
     quote:
-      '[PLACEHOLDER — paste Ronald Reader’s Google review text here]',
-    context: 'DMEK',
-    placeholder: true,
+      "I struggled with Fuchs' disease for 20 years and have had the good fortune of meeting and having Dr. Sales perform DMEK on my right eye. It has been a painless procedure that has resulted in perfect crystal clear vision within 8 days.",
+    context: 'DMEK · Fuchs’ Dystrophy',
   },
   {
     ref: 'Andrea (Andria)',
@@ -87,8 +80,7 @@ export const dryEyeReviews: Review[] = [
   {
     ref: 'Heidi Paradysz',
     quote:
-      '[PLACEHOLDER — paste Heidi Paradysz’s Google review text here]',
+      'Dr. Sales is an incredible person in general! By far the most thorough eye doctor we have ever seen. Dr. Sales is an outstanding doctor, who would be great for any eye care, especially the difficult ones like my fiancé has. He explains things very well and always allows time for questions or concerns.',
     context: 'Dry Eye Treatment',
-    placeholder: true,
   },
 ];
